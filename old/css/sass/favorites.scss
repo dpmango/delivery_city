@@ -1,0 +1,73 @@
+/*favorite-shops section on main*/
+
+.favorite_shops {
+  width: 100%;
+  background: #323A42;
+  padding: 30px 20px 50px 20px;
+  h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
+.favorite_shop_item {
+  height: 140px;
+  width: 140px;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 6px;
+  margin: 20px auto;
+  color: #ccc;
+  text-align: center;
+  cursor: pointer;
+  padding: 0 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  span {
+    display: inline-block;
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.95);
+    line-height: 1.1;
+    word-wrap: break-word;
+    text-decoration: underline;
+    color: red;
+    transition: 0.3s linear;
+    opacity: 0;
+  }
+  a:hover {
+    text-decoration: none;
+    span {
+      opacity: 1;
+    }
+  }
+}
+
+.active_favorite:hover span {
+  visibility: hidden !important;
+}
+
+.favorite_shop_item a i {
+  display: inline;
+  vertical-align: middle;
+}
+
+#style-switcher {
+  top: 0 !important;
+  left: 0 !important;
+  width: auto;
+}
+
+.favorite_shop_item img {
+  max-width: 100%;
+  display: inline-block;
+  max-height: 132px;
+}

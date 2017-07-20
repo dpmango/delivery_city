@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html style="min-height:100%">
+<head>
+	<title>Simple php5.4 to js translator</title>
+	<link rel="stylesheet" href="./0.css" type="text/css"/>
+	<script src="./jquery-1.11.0.min.js" type="text/javascript"></script>
+	<script src="./lib.js" type="text/javascript"></script>
+	<script src="./formstorage.js" type="text/javascript"></script>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<style>
+		input[type=text] {width:250px;}
+	</style>
+</head>
+<body style="font-family:geneva,arial; height:100%">
+	<form id="orderForm" target="_blank" style="margin:0px auto; border:1px solid #B5C7CE;background-color:#B5C7CE;width:80%; min-height:100%" action="/doc/helper/postrequest.php" method="POST">
+		<div style="padding:12px;">
+			<div>
+				<label for="host">Сервер, на который будет отправлен запрос</label>
+			</div>
+			<div>
+				<input type="text" value="http://apideliverycity.ru/api" name="host" id="host">
+			</div>
+			<div>
+				<label for="methodApi">Метод Api</label>
+			</div>
+			<div>
+				<input type="text" value="loginASSnUserMobile" name="methodApi" id="methodApi">
+			</div>
+			<br>
+			<div>
+				<label> Имя параметра 1
+					<input type="text" value="stamp" name="vars[]" id="v15">
+				</label>
+				<label> Значение параметра 1
+					<input type="text" value="e6jUtPo5tfznyTQ22oBx6wF9xvHq4JZQDiiOnw38" name="vals[]" id="v14">
+				</label>
+			</div>
+			<div>
+				<label> Имя параметра 2
+					<input type="text" value="" name="vars[]" id="v13">
+				</label>
+				<label> Значение параметра 2
+					<input type="text" value="" name="vals[]" id="v12">
+				</label>
+			</div>
+			<div>
+				<label> Имя параметра 3
+					<input type="text" value="" name="vars[]" id="v110">
+				</label>
+				<label> Значение параметра 3
+					<input type="text" value="" name="vals[]" id="v10">
+				</label>
+			</div>
+			<div>
+				<label> Имя параметра 4
+					<input type="text" value="" name="vars[]" id="v-2">
+				</label>
+				<label> Значение параметра 4
+					<input type="text" value="" name="vals[]" id="v-1">
+				</label>
+			</div>
+			<div>
+				<label> Имя параметра 5
+					<input type="text" value="" name="vars[]" id="v0">
+				</label>
+				<label> Значение параметра 5
+					<input type="text" value="" name="vals[]" id="v1">
+				</label>
+			</div>
+			<div>
+				<label> Имя параметра 6
+					<input type="text" value="" name="vars[]" id="v2">
+				</label>
+				<label> Значение параметра 6
+					<input type="text" value="" name="vals[]" id="v3">
+				</label>
+			</div>
+			<div>
+				<label> Имя параметра 7
+					<input type="text" value="" name="vars[]" id="v4">
+				</label>
+				<label> Значение параметра 7
+					<input type="text" value="" name="vals[]" id="v5">
+				</label>
+			</div>
+			<div>
+				<label> Имя параметра 8
+					<input type="text" value="" name="vars[]" id="v6">
+				</label>
+				<label> Значение параметра 8
+					<input type="text" value="" name="vals[]" id="v7">
+				</label>
+			</div>
+			<div>
+				<label> Имя параметра 9
+					<input type="text" value="" name="vars[]" id="v8" > 
+				</label>
+				<label> Значение параметра 9
+					<input type="text" value="" name="vals[]" id="v9">
+				</label>
+			</div>
+			<div style="text-align:right">
+				<input type="submit" value="Send request">
+			</div>
+		</div>
+	</form>
+	<script>
+		$(function(){
+			window.Flipcat.OrderFormStorage.init({});
+			
+			$('#orderForm').submit(function() {
+				
+			});
+		});
+	</script>
+</body>
+</html>

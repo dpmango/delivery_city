@@ -1,0 +1,131 @@
+/*Фильтры*/
+.filters { /*общие стили блока-обертки с фильтрами*/
+  background: #fff;
+  border: 1px solid #efefef;
+  border-radius: 4px;
+  padding: 0;
+  position: relative;
+  margin-bottom: 15px;
+  &:hover {
+    border-color: darken(#efefef, 15%);
+  }
+}
+.filters__toggler { /*стили кнопки раскрывающей/закрывающей блок фильтров*/
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  text-decoration: none;
+  background: #fff;
+  color: $int-el-txt-color;
+  &:after {
+    content: "+";
+  }
+  &:hover {
+    background: darken(#fff, 1%);
+    text-decoration: none;
+    color: $int-el-txt-color;
+  }
+  &:focus {
+    color: $int-el-txt-color;
+    text-decoration: none;
+  }
+}
+.filters__toggler.expanded {
+  border-radius:  4px 4px 0 0;
+  color: $int-el-txt-color;
+  &:after {
+    content: "-";
+  }
+}
+.filters__content { /*стили блока-контента фильтров*/
+  display: none;
+  padding: 0 10px;
+  font-size: 14px;
+  background: #fff;
+  > div:first-child {
+    margin-top: 15px;
+  }
+}
+.filters__heading { /*подзаголовки для каждого фильтра*/
+  display: block;
+  margin-bottom: 10px;
+}
+
+/*Стили фильтра сортировки*/
+.filters__sort-block {
+  margin-bottom: 20px;
+}
+.filters__radio-buttons {
+  margin-bottom: 7px;
+  label {
+    margin: 0;
+  }
+  input[type="radio"] { /*маскируем дефолтные радиокнопки и придаем им нужный вид*/
+    display: none;
+    &:not(checked) + label {
+      display: block;
+      padding: 8px 0;
+      text-align: center;
+      border: 1px solid #efefef;
+      width: 100%;
+      border-radius: 4px;
+      cursor: pointer;
+      &:hover {
+        background: #efefef;
+      }
+    }
+    &:checked + label {
+      color: #fff;
+      background: $theme-color;
+      border: 1px solid #efefef;
+      cursor: default;
+      &:hover {
+        background: $theme-color;
+      }
+    }
+  }
+}
+
+/*Стили фильтра по кухням*/
+.filters__kitchens {
+  margin-bottom: 15px;
+}
+.filters__more-toggler {
+  @include reset-a;
+  color: $int-el-txt-color;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+    color: darken($int-el-txt-color, 10%);
+  }
+}
+.filters__add-content {
+  display: none;
+}
+/*видоизмененные чекбоксы (см. файл _inputs.scss)*/
+
+.filters-mobile__button {
+  @extend .filters__toggler;
+  margin-bottom: 15px;
+  &:focus {
+    outline: 0;
+  }
+  &:active,
+  &:hover,
+  &:visited {
+    background: #fff!important;
+    color: $int-el-txt-color!important;
+  }
+}
+.opens-filters {
+  .filters__content {
+    display: block;
+  }
+}

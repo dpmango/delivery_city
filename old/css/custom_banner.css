@@ -1,0 +1,47 @@
+.main_title {
+		background-image: url(../img/custom_banner/banner-bg.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		line-height: 1;
+		height: 388px;
+	}
+	.main_title__title_wrapper {
+		background-image: url(../img/custom_banner/banner-text-bg.png);
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: center 0;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.main_title h1 {
+		line-height: 1;
+		display: inline-block;
+		margin: 50px 75px 75px;
+		font-size: 40px;
+		transform: skewY(-3deg);
+	}
+	.main_title h1 a{
+		color: white;
+		text-decoration: none;
+	}
+	.main_title h1 a:hover {
+		color: #cbcbcb;
+		text-decoration: none;
+	}
+	@media screen and (max-width: 768px) {
+		.main_title {
+			height: 123px;
+		}
+		.main_title h1 {
+			font-size: 12.57px;
+			margin: 25px 25px 25px;
+		}
+	}

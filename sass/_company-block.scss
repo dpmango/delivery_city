@@ -1,0 +1,236 @@
+.company-block {
+  position: relative;
+  display: block;
+  padding: 15px;
+  border: 1px solid #efefef;
+  background: #fff;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  &:last-child{
+    margin-bottom: 0;
+  }
+  &:hover {
+    border-color: darken(#efefef, 15%);
+  }
+}
+.company-block__right-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  hr {
+    width: 100%;
+  }
+}
+.company-block__link {
+  color: inherit;
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+    h4 {
+      color: $theme-color;
+    }
+  }
+}
+.company-block__image-wrapper {
+  background: url(../img/default-logo.png) center center no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 160px;
+}
+.company-block__image-layout {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  @include display-flex-row;
+  align-items: center;
+  opacity: 1;
+}
+.company-block__image-layout {
+  opacity: 0;
+  &.loaded {
+    opacity: 1;
+  }
+}
+.company-block__review-rating {
+  position: relative;
+  width: 160px;
+  margin: 10px auto 0 auto;
+  height: 24px;
+}
+.company-block__stars {
+  @include display-flex-row;
+  width: 100%;
+  height: 100%;
+}
+.company-block__stars-masks {
+  @include display-flex-row;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 160px;
+}
+.company-block__progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 24px;
+  overflow: hidden;
+}
+.company-block__star {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  z-index: 4;
+  background: url(../img/star.svg) center bottom no-repeat;
+  background-size: contain;
+}
+.company-block__star-mask {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  z-index: 5;
+  background: url(../img/star_mask.svg) center bottom no-repeat;
+  background-size: contain;
+}
+
+.company-block__header {
+  align-items: center;
+}
+.company-block__heading {
+  margin-bottom: 0;
+  font-size: 22px;
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.company-block__body {
+  font-size: 14px;
+  line-height: 1.3;
+  width: 100%;
+  max-height: 36px;
+  overflow: hidden;
+}
+
+.company-block__description {
+  display: inline-block;
+  float: right;
+  width: 100%;
+  margin-left: -5px;
+  color: #9e9e9e;
+}
+.company-block__footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  * {
+    flex: 1;
+  }
+}
+.company-block__options.company-block__options_spacer {
+  display: none;
+}
+.company-block__option-name {
+  font-size: 12px;
+  color: #aaa;
+  margin-bottom: 15px;
+  display: block;
+}
+.company-block__option-value {
+  font-size: 16px;
+  display: block;
+  font-weight: normal;
+}
+@media (max-width: 1200px) {
+  .company-block__image-wrapper {
+    height: 126px;
+  }
+  .company-block__review-rating {
+    width: 126px;
+  }
+  .company-block__stars-masks {
+    width: 126px;
+  }
+}
+@media (max-width: 992px) {
+  .company-block__image-wrapper {
+    margin: 0 auto;
+    width: 90px;
+    height: 90px;
+  }
+  .company-block__review-rating {
+    width: 90px;
+  }
+  .company-block__stars-masks {
+    width: 90px;
+  }
+  .company-block__option-name {
+    font-size: 10px;
+  }
+  .company-block__option-value {
+    font-size: 12px;
+  }
+  .company-block__header {
+    margin-bottom: 10px;
+  }
+  .company-block__description {
+    font-size: 13px;
+    max-height: 33px;
+  }
+  .company-block__option-name {
+    margin-bottom: 7.5px;
+  }
+}
+@media (max-width: 575px) {
+  .company-block {
+    margin: 0 -15px 15px -15px;
+    border-radius: 0;
+  }
+  hr {
+    margin: 8px 0;
+  }
+}
+/*@media (max-width: 400px) {
+  .company-block__heading {
+    font-size: 18px;
+  }
+  .company-block__image-wrapper {
+    margin: 0 auto;
+    width: 75px;
+    height: 75px;
+  }
+  .company-block__review-rating {
+    width: 75px;
+  }
+  .company-block__stars-masks {
+    width: 75px;
+  }
+}*/
+@media (max-width: 400px) {
+  .company-block__heading {
+    font-size: 16px;
+  }
+  .company-block__option-name {
+    font-size: 9px;
+  }
+  .company-block__option-value {
+    font-size: 9px;
+  }
+  .company-block__image-wrapper {
+    margin: 0 auto;
+    width: 70px;
+    height: 70px;
+  }
+  .company-block__review-rating {
+    width: 70px;
+  }
+  .company-block__stars-masks {
+    width: 70px;
+  }
+  .company-block__option-name {
+    margin-bottom: 3px;
+  }
+}
+

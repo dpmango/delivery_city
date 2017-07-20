@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>test-layout1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/prelanding.css">
+    <script src="js/modernizr-custom.js"></script>
+    <script>
+        function imgLoaded(img){
+            var imgWrapper = img.parentNode;
+            imgWrapper.className += imgWrapper.className ? ' loaded' : 'loaded';
+        }
+    </script>
+</head>
+<body ontouchstart>
+    <header class="pr-header">
+        <div class="pr-header__video-wrapper">
+            <video class="pr-header__video media" data-object-fit="cover"  loop="loop" autoplay="autoplay" preload="auto">
+                <source src="video/header-video.mp4">
+                <source src="video/header-video.webm">
+            </video>
+        </div>
+        <div class="pr-header__layout"></div>
+        <div class="container text-center">
+            <div class="row justify-content-end text-right">
+                <div class="col">
+                    <a class="pr-header__phone hidden-sm-down" href="tel:+79829172236">+7 982 917 22 36</a>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-6 col-md-4 col-lg-4">
+                    <img class="pr-header__logo img-fluid" src="img/prelanding/logo.png" alt="logo">
+                </div>
+            </div>
+            <div class="row justify-content-center hidden-sm-down">
+                <div class="col">
+                    <span class="pr-header__slogan">Просто. Быстро. Удобно.</span>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-sm-10 col-md-11 col-lg-9 col-xl-7">
+                    <div class="pr-header__geolocation-wrapper">
+                        <span class="pr-header__geolocation-agitation hidden-sm-down">Введите ваш адрес</span>
+                        <form class="pr-header__geolocation-form">
+                            <div class="header__compositional-input">
+                                <div class="header__input_city">
+                                    <select id="city" title="Выберите ваш город">
+                                        <option>Город</option>
+                                        <option>Москва</option>
+                                        <option>Санкт-Петербург</option>
+                                        <option>Архангельск</option>
+                                        <option>Тюмень</option>
+                                    </select>
+                                </div>
+                                <input class="header__input header__input_street" type="text" id="street" placeholder="Улица">
+                                <input class="header__input header__input_house" type="text" id="house" placeholder="Дом">
+                            </div>
+                            <a class="pr-header__geolocation-skip-button" href="#" id="skip">Пропустить</a>
+                            <a class="pr-header__geolocation-start-button hidden" href="#" id="start">Начать</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="pr-steps">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="pr-steps__block">
+                        <span class="pr-steps__number">1</span>
+                        <img src="img/prelanding/address-icon.png" alt="icon">
+                        <span class="pr-steps__heading">Введите адрес</span>
+                        <span class="pr-steps__text">
+                            Ищем все рестораны <br>
+                            в вашей зоне
+                        </span>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="pr-steps__block">
+                        <span class="pr-steps__number">2</span>
+                        <img src="img/prelanding/restoran-icon.png" alt="icon">
+                        <span class="pr-steps__heading">Выберите ресторан</span>
+                        <span class="pr-steps__text">
+                            Мы собрали лучшие <br>
+                            рестораны города
+                        </span>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <div class="pr-steps__block">
+                        <span class="pr-steps__number">3</span>
+                        <img src="img/prelanding/truck-icon.png" alt="icon">
+                        <span class="pr-steps__heading">Ожидайте доставку</span>
+                        <span class="pr-steps__text">
+                            Привезем быстро, <br>
+                            а накормим вкусно!
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pr-news">
+        <div class="container">
+            <h2 class="pr-news__heading text-center">Новости и акции</h2>
+            <div class="row">
+                <div class="col-md-12 col-lg-6">
+                    <div class="news-block">
+                        <div class="news-block__image-wrapper">
+                            <div class="news-block__image-layout">
+                                <img class="news-block__image img-fluid" src="" alt="shop-logo"
+                                     height="100" width="100" onload="imgLoaded(this)">
+                            </div>
+                        </div>
+                        <div class="news-block__content">
+                            <h5 class="news-block__heading">Шестая пицца бесплатно! И седьмая</h5>
+                            <p class="news-block__text">При заказе 5-ти кругов пиццы - 6-ой вы получаете в подарок.
+                                Блаблаблаблаблаб албалаблабалаалабалб аллал аамиадрррвадррв дардыырвар рырыи срывсрвы исрв ыисвыис
+                                ыврс
+                            </p>
+                            <div class="news-block__footer">
+                                <span class="news-block__company-name">Кафе Ассорти - Шмасорти длинное название невероятно просто какое длинное </span>
+                                <a class="news-block__button" href="#" ontouchstart>Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-6">
+                    <div class="news-block">
+                        <div class="news-block__image-wrapper">
+                            <div class="news-block__image-layout">
+                                <img class="news-block__image img-fluid" src="img/prelanding/news-image.png" alt="shop-logo"
+                                     height="100" width="100" onload="imgLoaded(this)">
+                            </div>
+                        </div>
+                        <div class="news-block__content">
+                            <h5 class="news-block__heading">Шестая пицца бесплатно!</h5>
+                            <p class="news-block__text">При заказе 5-ти кругов пиццы - 6-ой вы получаете в подарок.
+                                Блаблаблабла блабалбалаблаба лаалаб албаллалаа миадрррвад ррвдард ыырвары рдвар ырварыр арыиар ырыисры всрвыис рвыис выисыврс
+                            </p>
+                            <div class="news-block__footer">
+                                <span class="news-block__company-name">Кафе Ассорти</span>
+                                <a class="news-block__button" href="#" ontouchstart>Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--row-->
+            <div class="row">
+                <div class="col-md-12 col-lg-6">
+                    <div class="news-block">
+                        <div class="news-block__image-wrapper">
+                            <div class="news-block__image-layout">
+                                <img class="news-block__image img-fluid" src="img/prelanding/news-image.png" alt="shop-logo"
+                                     height="100" width="100" onload="imgLoaded(this)">
+                            </div>
+                        </div>
+                        <div class="news-block__content">
+                            <h5 class="news-block__heading">Шестая пицца бесплатно!</h5>
+                            <p class="news-block__text">При заказе 5-ти кругов пиццы - 6-ой вы получаете в подарок.
+                                Блаблаблабла блабалбалаблаба лаалаб албаллалаа миадрррвад ррвдард ыырвары рдвар ырварыр арыиар ырыисры всрвыис рвыис выисыврс
+                            </p>
+                            <div class="news-block__footer">
+                                <span class="news-block__company-name">Кафе Ассорти</span>
+                                <a class="news-block__button" href="#" ontouchstart>Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-6">
+                    <div class="news-block">
+                        <div class="news-block__image-wrapper">
+                            <div class="news-block__image-layout">
+                                <img class="news-block__image img-fluid" src="img/prelanding/news-image.png" alt="shop-logo"
+                                     height="100" width="100" onload="imgLoaded(this)">
+                            </div>
+                        </div>
+                        <div class="news-block__content">
+                            <h5 class="news-block__heading">Шестая пицца бесплатно!</h5>
+                            <p class="news-block__text">При заказе 5-ти кругов пиццы - 6-ой вы получаете в подарок.
+                                Блаблаблабла блабалбалаблаба лаалаб албаллалаа миадрррвад ррвдард ыырвары рдвар ырварыр арыиар ырыисры всрвыис рвыис выисыврс
+                            </p>
+                            <div class="news-block__footer">
+                                <span class="news-block__company-name">Кафе Ассорти</span>
+                                <a class="news-block__button" href="#" ontouchstart>Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--row-->
+        </div><!--container-->
+    </section>
+    <section class="pr-widget">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="pr-widget__vk">WIDGET</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pr-promo">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-md-10 col-sm-12">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <h2 class="pr-promo__heading">Заказывать через приложение еще удобнее и быстрее</h2>
+                            <div class="pr-promo__mobile-markets row">
+                                <div class="col-6 col-md-8">
+                                    <a class="pr-promo__appstore" href="#"><img class="img-fluid" src="img/appstore-big.png"></a>
+                                </div>
+                                <div class="col-6 col-md-8">
+                                    <a class="pr-promo__google-play" href="#"><img class="img-fluid" src="img/google-play-big.png"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <img class="pr-promo__image img-fluid" src="img/prelanding/phones_desktop.png" alt="promo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="row align-content-start">
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                    <ul class="footer__menu">
+                        <li><a href="#" ontouchstart>Партнерам</a></li>
+                        <li><a href="#" ontouchstart>Обратная связь</a></li>
+                        <li><a href="#" ontouchstart>О нас</a></li>
+                    </ul>
+                    <span class="footer__copyrights">2017 &copy; Сделано в DC</span>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                    <span class="footer__description">Сервис заказов "ЗакаЖика" - ресторанам и магазинам предоставляем новый источник заказов без абонентской платы и расходов на рекламу! Пользователям предоставляем доступ к меню всех популярных ресторанов и магазинов в одном месте с возможностью сделать заказ с доставкой на дом. Заказывайте легко, быстро и в удовольствие! </span>
+                    <div class="text-center">
+                        <img class="footer__payment-types img-fluid" src="img/vm.png" alt="payment-types">
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                    <div class="footer__mobile-markets">
+                        <a class="footer__appstore" href="#" target="_blank" ></a>
+                        <a class="footer__google-play" href="#" target="_blank" ></a>
+                    </div>
+                    <div class="footer__social-networks">
+                        <span class="footer__social-networks-heading">Мы в социальных сетях:</span>
+                        <div class="footer__social-network-links-wrapper">
+                            <a class="footer__social-network-button footer__social-network-button_vk" href="#" target="_blank"></a>
+                            <a class="footer__social-network-button footer__social-network-button_fb" href="#" target="_blank"></a>
+                            <a class="footer__social-network-button footer__social-network-button_inst" href="#" target="_blank"></a>
+                            <a class="footer__social-network-button footer__social-network-button_yout" href="#" target="_blank"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="container">
+        <a href="#" class="" data-toggle="modal"
+                data-target="#success-modal">SUCCESS</a>
+        <a href="#" data-toggle="modal"
+           data-target="#fail-modal">FAIL</a>
+    </div>
+
+    <!--попапы ошибок\успехов-->
+
+    <div class="modal fade" id="success-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content success-modal">
+                <div class="row">
+                    <div class="modal__close">
+                        <button class="modal__close-button" data-dismiss="modal" aria-label="Close">
+                        </button>
+                    </div>
+                    <div class="col-12">
+                        Тебе повезло, ничего не случилось.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="modal fade" id="fail-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content fail-modal">
+                <div class="row">
+                    <div class="modal__close">
+                        <button class="modal__close-button" data-dismiss="modal" aria-label="Close">
+                        </button>
+                    </div>
+                    <div class="col-12">
+                        Шеф, усе пропало!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/jQuery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/objectFitPolyfill.min.js"></script>
+    <script>
+            var input_city = document.getElementById('city'),
+                input_street = document.getElementById('street'),
+                input_house = document.getElementById('house'),
+                skip_btn = document.getElementById('skip'),
+                start_btn = document.getElementById('start');
+            input_city.onchange = geo_validate;
+            input_street.oninput = geo_validate;
+            input_house.oninput = geo_validate;
+
+            function geo_validate () {
+                if ( input_street.value.length>=1  && input_house.value.length>=1 && input_city.value !== "Город") {
+                    skip_btn.classList.add('hidden');
+                    start_btn.classList.remove('hidden');
+                }
+                else {
+                    skip_btn.classList.remove('hidden');
+                    start_btn.classList.add('hidden');
+                }
+            }
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+@import "../../news-block";
+
+.pr-news {
+  padding: 30px 0 30px 0;
+}
+.pr-news__heading {
+  margin: 0 0 30px 0;
+  font-size: 24px;
+  line-height: 1;
+}
+
+@media (max-width: 767px) {
+  .pr-news {
+    padding: 30px 0 15px 0;
+  }
+}
+@media (max-width: 575px) {
+  .pr-news__heading {
+    font-size: 18px;
+  }
+}

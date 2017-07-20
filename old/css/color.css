@@ -1,0 +1,219 @@
+/** @NAVBAR_COLOR */
+/** navbar color */
+div.breadcrumbs,
+.search-map-address,
+.search-map-address-style,
+.shops_sort_popup li:hover,
+.hamburger span,
+.mobile-geo,
+.preland-apply,
+.custom-color-link:hover {
+	background-color:#e861aa;
+}
+.mobile-filter-button-color a,
+.mobile-cart-icon,
+.back-button,
+.back-button:hover,
+.back-button:focus
+ {
+	color:#e861aa;
+}
+.preland-icon {
+	fill:#e861aa;
+}
+
+
+/** @NAVBAR_HOVER_COLOR */
+div.breadcrumbs li.link:hover,
+.search-map-address-style:hover,
+.preland-apply:hover,
+.preland-apply:focus,
+.btn--header:hover
+ {
+	background-color:rgb(222,81,148) !important;
+}
+
+
+
+
+
+/** @NAVBAR_TEXT_COLOR */
+/** navbar text-color  и текст на кнопках */
+.cartAnim,
+.btn-login,
+
+.btn-login:hover,
+.btn-login:active,
+.btn-login:focus,
+.color-bg,
+.color-bg:hover,
+.color-bg:active,
+.color-bg:focus,
+
+.sc-cart button,
+.btn-store,
+.btn-store:hover,
+.btn-store:active,
+.btn-store:focus,
+.cart-add,
+.cart-add:hover,
+.cart-add:active,
+.cart-add:focus,
+.slides-pagination a.current,
+.carousel-indicators li.active ,
+.hover-mask2,
+.color-fg,
+.dropdown-menu-color>li>a:hover,.dropdown-menu-color>li>a:focus,
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus,
+.social-profiles li a:hover,
+.btn-store.outline:hover,
+.btn-store.outline:focus,
+.btn-store.outline:active,
+.sc-cart button:active,
+.sc-cart button:focus,
+.sc-cart button:hover,
+.btn-store:hover,
+.btn-store:focus,
+.btn-store:active,
+.navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:active, .navbar-inverse .navbar-brand, li.span span, .fc-right-menu li a, .fc-right-menu li a:hover {
+	color: #ebe4cc !important;
+}
+
+
+/** @SELECTION_COLOR */
+
+/* цвет выделения, ссылок и фон кнопок*/
+
+input[type="checkbox"]:checked + label {
+	color: #1dc418!important; /* 337ab7 */
+}
+a, a.left-menu-active-link div.subtitle, .color-control, .fa-star-o,.fa-star, .shop-cat-item::after, .shop-cat-item::before {
+	color:#1dc418;
+}
+.shop-item:hover,
+/* link-color **/
+#sdbr-title ,
+#project-modal .close:hover,
+.dark-bg a,
+.navbar-inverse .navbar-nav>li>a:hover, 
+.navbar-inverse .navbar-nav>li>a:focus,
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus, 
+.navbar-inverse .navbar-nav>li>a.active,
+.navbar-inverse .navbar-nav>.active>a:hover,
+.navbar-inverse .navbar-nav>.active>a:focus,
+.navbar-header,
+.add-to-favorite-top-shop,
+.sort-modal-block input[type="radio"]:not(checked) + label,
+#style-switcher h2,
+.shop-item a,
+#style-switcher h2 a,
+#1dc418vorites .relative a,
+.style-switcher-clone h2, 
+.style-switcher-clone h2 a {
+	color: #1dc418;
+}
+.sort-modal-block input[type="radio"]:not(checked) + label {
+	border-color:#1dc418;
+}
+.sort-modal-block input[type="radio"]:checked + label {
+	background-color:#1dc418;
+}
+.add-to-favorite-top-shop,
+.sort_section label,
+.shop-categories-child li .subtitle::after
+{
+	color: #1dc418;
+}
+.choose-shipping-active {
+	background-color: #1dc418!important;
+}
+
+@media (max-width: 768px) {
+	.mobile-favorite-star-color, .mobile-favorite-star-color::before, .mobile-favorite-star-color::after {
+		color: #1dc418;
+	}
+}
+
+.mobile-button-entry,
+.mobile-button-reg,
+.sidebar-link:hover,
+.filters-button,
+a.cart-add {
+	background-color:#1dc418;
+}
+.c-menu__close,a,
+.sidebar-link:hover,
+.sidebar-link:active,
+.left-menu-active-link,
+.sidebar-link:focus, {
+	color:#1dc418;
+}
+.left-menu-active-link {
+	color:#1dc418 !important;
+}
+
+/** Left column widgets heading color / Заголовки виджетов в левой колонке */
+.fc-news-date , #search-bar h2, .search-bar-clone h2, #orderform h2, #search-bar h2 a, .search-bar-clone h2 a, #1dc418uisine-widget h2, .cuisine-widget-clone h2, #style-switcher h2, .style-switcher-clone h2 {
+	color:#1dc418;
+}
+.sc-cart button,
+.color-control,
+.btn-login,
+.btn-store,
+.slides-pagination a.current,
+.carousel-indicators li.active ,
+.hover-mask2,
+.color-bg,
+.news-more-btn,
+.cartAnim, .cartAnimHandle,
+.geo-butttons button,
+.dropdown-menu-color>li>a:hover,.dropdown-menu-color>li>a:focus,
+.dropdown-menu-color>li>a>span:hover,.dropdown-menu-color>li>a>span:focus,
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus,
+.social-profiles li a:hover,
+.btn-store.outline:hover,
+.btn-store.outline:focus,
+.btn-store.outline:active  {
+	background-color: #1dc418; /* 3B6FA8 */
+}
+
+/** !! прибавить разность  между цветами в комментариях (2B, 2D, 2E) **/ 
+
+/** @SELECTION_HOVER */
+.sc-cart button:active,
+a.cart-add:hover,
+.news-more-btn:hover,
+.sc-cart button:hover,
+.btn-store:hover,
+.btn-store:focus,
+.color-bg:active,
+.color-bg:hover,
+.filters-button:hover,
+.filters-button:focus,
+.mobile-button-entry:hover,
+.color-control:hover,
+.mobile-button-reg:hover,
+.geo-butttons button:hover,
+.geo-butttons button:focus,
+.btn-store:active {
+	background-color: rgb(72,241,70); /* 669cd6 */
+}
+
+.shop-item a:hover,
+.sort_section label:hover,
+.add-to-favorite-top-shop:hover,
+.c-menu__close, a:hover, a:focus  {
+	color: rgb(72,241,70);
+}
+@media (max-width: 768px) {
+	.mobile-favorite-star-color:hover,
+	.mobile-favorite-star-color:focus {
+		color: rgb(72,241,70);
+	}
+	.sidebar-link:hover {
+		background-color:auto !important;
+	}
+}
+
+

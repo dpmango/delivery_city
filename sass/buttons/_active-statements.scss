@@ -1,0 +1,153 @@
+//здесь у нас будут активные состояния кнопок для устройств без тач экрана
+.no-touchevents {
+
+  a[class*="button"],
+  button[class*="button"] {
+    &:visited {
+      background-color: $theme-color;
+      color: #fff;
+      text-decoration: none;
+    }
+    &:hover {
+      color: #fff;
+      background-color: darken($button-color, 25%);
+      text-decoration: none;
+    }
+    &:active {
+      color: #fff;
+      background-color: darken($button-color, 25%);
+      text-decoration: none;
+    }
+  }
+
+  a.pr-header__geolocation-skip-button {
+    &:visited {
+      background: rgba(0,0,0,0.5);
+      color: #fff;
+      text-decoration: none;
+    }
+    &:hover {
+      background: rgba(42,151,19,0.5);
+    }
+    &:active {
+      background: rgba(42,151,19,0.5);
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  .pr-promo__appstore {
+    &:visited {
+      opacity: 1;
+    }
+    &:hover,
+    &:active {
+      opacity: 0.7;
+    }
+  }
+
+  .footer__appstore {
+    &:visited {
+      opacity: 1;
+    }
+    &:hover,
+    &:active {
+      opacity: 0.7;
+    }
+  }
+
+  .footer__social-network-button {
+    &:visited {
+      opacity: 1;
+    }
+    &:hover,
+    &:active {
+      opacity: 0.7;
+    }
+  }
+}
+
+
+//здесь у нас будут активные состояния кнопок для устройством с тач экраном
+.touchevents {
+
+  a {
+    &:visited {
+      color: inherit;
+    }
+    &:hover {
+      color: inherit;
+    }
+  }
+
+  a[class*="button"],
+  button[class*="button"] {
+    &:visited {
+      background-color: $theme-color;
+      color: #fff;
+      text-decoration: none;
+    }
+    &:hover {
+      background-color: $theme-color;
+      color: #fff;
+      text-decoration: none;
+    }
+    &:active {
+      background-color: darken($button-color, 25%);
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  a.pr-header__geolocation-skip-button {
+    &:hover,
+    &:visited {
+      background: rgba(0,0,0,0.5);
+    }
+    &:active {
+      background: rgba(42,151,19,0.5);
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  .pr-promo__appstore {
+    &:hover {
+      opacity: 1;
+    }
+    &:active {
+      &:before {
+        background: rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+
+  .footer__appstore {
+    &:hover {
+      opacity: 1;
+    }
+    &:active {
+      &:before {
+        background: rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+
+  .footer__social-network-button {
+    &:hover {
+      opacity: 1;
+    }
+    &:active {
+      &:before {
+        background: rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+
+}
+
+
+
+
+
+

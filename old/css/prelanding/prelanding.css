@@ -1,0 +1,445 @@
+@font-face {
+    font-family:"GothamPro-Medium";
+    src: url("fonts/GothamProMedium.eot");
+    src: url("fonts/GothamProMedium.eot?#iefix")format("embedded-opentype"),
+    url("fonts/GothamProMedium.woff") format("woff"),
+    url("fonts/GothamProMedium.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "GothamProLight";
+    src: url("fonts/GothamProLight.eot");
+    src: url("fonts/GothamProLight.eot?#iefix")format("embedded-opentype"),
+    url("fonts/GothamProLight.woff") format("woff"),
+    url("fonts/GothamProLight.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+* {box-sizing: border-box; padding: 0; margin: 0;}
+.prelanding p, span, h1, h2, h3, h4, h5, h6, input[type="text"], .preland-dropdown-wrapper a {
+	font-family: "GothamProLight";
+}
+.preland-apply {
+	font-family:"GothamPro-Medium";
+}
+html, body {
+	min-height: 100%;
+	height: 100%;
+	width: 100%;
+}
+/*стили больших/основных блоков*/
+/*-----------------------------*/
+.preland-first-section {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-content: space-between;
+}
+.preland-second-section {
+	background: url(../../img/prelanding/preland-section-2-bg-orig.png); /*фоновая картинка для второго блока*/
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+/*-----------------------------*/
+/*-----------------------------*/
+
+/*стили вложенных/маленьких блоков*/
+/*--------------------------------*/
+		/*---1й блок---*/
+.preland-first-section-header {      	/*основные стили верхней шапки в первом блоке*/
+	background: rgba(0, 0, 0, .7);
+}
+.preland-first-section-header>div {   	/*подложка верхней шапки, которая задает ограниченный размер и выравнивает все элементы */
+	width: 100%;
+	max-width: 1170px;
+	padding: 0 15px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.preland-logo-layout {
+	padding: 15px 0 0 0;
+}
+.preland-logo-layout img {				/*стили логотипа */
+	height: auto;
+	max-width: 120px;
+	display: inline-block;
+}
+.preland-logo-layout p {				/*текст под логотипом */
+	margin: 10px 0 5px 0;
+	color: #fff;
+	font-size: 14px;
+	text-align: center;
+}
+.preland-phone-number {					/*стили телефонного номера */
+	color: #fff!important;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	position: relative;
+}
+.preland-phone-number:hover {
+	text-decoration: none;
+	opacity: 0.8;
+}
+.preland-phone-number:before {			/*иконка телефонного номера */
+	font-family: FontAwesome;
+	content: "\f095";
+	position: absolute;
+	left: -30px;
+	top: 0;
+	font-size: 22px;
+}
+.preland-first-section-content {		/*стиль блока который создает нам контентную область в первом блоке (для геоформы)*/
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0  15px;
+}
+.preland-geoform-layout {				/*стили блока-обертки нашей формы геолокации */
+	background: rgba(0, 0, 0, .7);
+	display: inline-block;
+	margin: 0 auto;
+	padding: 30px 80px;
+}
+.preland-geoform-layout form {			/*стили формы геолокации*/
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: nowrap;
+}
+.preland-dropdown-wrapper {
+	position: relative;
+}
+.preland-unactive-input {
+	cursor: not-allowed;
+}
+.preland-dropdown {						/*стили ссылки открывающей выпадающий список городов*/
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background: #fff;
+	padding: 11px 10px;
+	width: 200px;
+	border-radius: 4px;
+	font-size: 16px;
+	line-height: 1;
+	color: #0c0c0c;
+	margin-right: 15px;
+	
+}
+.preland-dropdown span:first-child {
+	width: 98%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.preland-dropdown:hover, 
+.preland-dropdown:focus, 
+.preland-dropdown:active {				/*стили  открывающей выпадающий список городов при остальных состояниях*/
+	text-decoration: none;
+	color: #686868;
+}
+.open>.preland-dropdown {				/*убираем скргуленные углы у нашей открывающей сслыки когда она открыта о_О*/
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+.preland-dropdown-wrapper .dropdown-menu {		/*очищаем от стандартных осттупов наш выпадающий список*/
+	border: none;
+	padding: 0;
+	margin: 0;
+	width: 200px;
+}
+.preland-dropdown-wrapper .dropdown-menu li a{		/*придаем внутренним ссылкам вид который нужен нам*/
+	display: inline-block;
+	background: #fff;
+	padding: 10px 10px;
+	width: 100%;
+	white-space: normal;
+	word-wrap: break-word;
+	font-size: 16px;
+	line-height: 1;
+	color: #0c0c0c;
+	border-top: 1px #b9b9b9 solid 
+}
+.preland-dropdown-wrapper .dropdown-menu li a:hover {		/*добавим внутренним ссылкам эффект при наведении*/
+	text-decoration: none;
+	color: #686868;
+}
+
+.preland-dropdown-wrapper .dropdown-menu li a:last-child {		/*последней ссылке добавляем скругленные углы*/
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+.preland-geoform-layout form input {		/*стили полей ввода*/
+	outline: none;
+	border: none;
+	border-radius: 4px;
+	padding: 10px;
+	font-size: 16px;
+	line-height: 1;
+}
+.preland-geoform-layout form input::-webkit-input-placeholder {color: #0c0c0c;} 
+.preland-geoform-layout form input::-moz-placeholder {color: #0c0c0c;} 
+.preland-geoform-layout form input:-ms-input-placeholder {color: #0c0c0c;} 
+.preland-geoform-layout form input:-moz-placeholder {color: #0c0c0c;} 
+.city-input {
+	margin-right: 15px;
+}
+.preland-geoform-layout form .street-input {		/*стили первого поля ввода (рамка, прямые углы, z-index)*/
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	border-right: 1px #b9b9b9 solid;
+	position: relative;
+	z-index: 10;
+	padding-right: 0;
+}
+.preland-geoform-layout form .home-input {		/*стили второго/маленького поля ввода (отступы, размер)*/
+	position: relative;
+	z-index: 9;
+	margin-left: -5px;
+	padding-left: 20px;
+	width: 70px;
+	margin-right: 15px;
+}
+.preland-geoform-layout .preland-apply {		/*стили кнопки отправки формы */
+	padding: 9px 35px 13px 35px;
+	border: none;
+	outline: none;
+	border-radius: 4px;
+	color: #fff;
+	font-size: 16px;
+	line-height: 1;
+}	
+.preland-apply:hover, 
+.preland-apply:active,
+.preland-apply:focus  {		/*стили кнопки отправки формы при наведении */
+	text-decoration: none;	
+	opacity: 0.8;
+}
+.preland-first-section-footer {			/*стили нижней части первого блока (панель с иконками)*/
+	background: #f2f2f2;
+	padding: 15px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-content: center;
+	box-shadow: 0px 2px 7px 5px #9f9f9f;
+}
+.preland-icon {
+	fill: yellow;
+}
+.preland-first-section-footer div:nth-child(odd) {		/*стили блоков которые помимо иконок содержат текст */
+	width: 120px;
+	text-align: center;
+}
+.preland-first-section-footer div:nth-child(even) {		/*стрелки в нашей схеме (отступ сверху, чтобы располжить их согласно макета)*/
+	padding-top: 20px;
+}
+		/*---2й блок---*/
+.preland-second-section-layout:after {		/*стили для очистки обтекания блока, неохота создавать отдельный класс и тянуть таблицу стилей основную, разово пропишем это для одного блока */
+	content: "";
+	display: table;
+	clear: both;
+}
+.preland-second-section-layout { 		/*стили подложки второго блока которая задет максимальный размер и отступы */
+	width: 100%;
+	max-width: 1170px;
+	margin: 0 auto;
+	padding: 60px 15px;
+}
+.second-section-leftside {				/*прижали левую колонку второго блока*/
+	width: 50%;
+	float: left;
+}
+.second-section-rightside {				/*прижали правую колонку второго блока*/
+	width: 50%;
+	float: right;
+}
+.second-section-leftside p {			/*стили промо-текста в левой колонке */
+	width: 90%;
+	padding: 8% 0 0 0;
+	font-size: 48px;
+	font-weight: 100;
+	line-height: 1.3;
+	margin-bottom: 90px;
+}
+.second-section-leftside a{				/*стили кнопок-ссылок в мобильные маркеты */
+	display: inline-block;
+	margin-bottom: 30px;
+}
+.second-section-leftside a:hover {		/*стили кнопок-ссылок в мобильные маркеты при наведении*/
+	opacity: 0.8;	
+}
+.second-section-rightside img {			/*стили нашей большой промо-картинки в правой колонке*/			
+	display: block;
+	height: auto;
+	max-width: 100%;
+}
+.prelanding footer .market_link {		/*так как мы подключили футер из основного сайта то надо бы скрыть ненужные тут кнопки мобильных маркетов в подвале.*/
+	display: none;
+}
+
+/*теперь легким движением руки/ноги мы добавим чутка правил для братьев наших меньших (телефонов мобильных, конечно же)*/
+
+@media screen and (max-width: 760px) {
+	.preland-first-section {				/*фиксим высоту блока, 100% нам тут не нужно, пусть занимает столько сколько в нем занимают вложенные блоки.*/
+		height: auto;
+	}
+	.preland-first-section-content {		/*зададим наши любимые 15 пикселей отступа для контентого блока, где будет наша форма геолокации*/
+		display: block;		
+		padding: 0 15px;
+	}
+	.preland-first-section-footer {			/*нижнюю часть первого блока тоже отображаем блоком, тафтология О_О*/
+		display: block;
+	}
+	.preland-logo-layout img {				/*стили логотипа */
+		max-width: 100px;
+	}
+	.preland-phone-number {					/*стили телефонного номера */
+		font-size: 18px;
+	}
+	.preland-phone-number:before {			/*иконка телефонного номера */
+		top: 0px;
+		left: -25px;
+	}
+	.preland-geoform-layout {				/*растянем подложку формы на ширину дисплея, заменим внешние и внутренние отступы*/
+		width: 100%;
+		margin: 30px 0;
+		padding: 10% 15%;
+	}
+	.preland-geoform-layout form {			/*форму превращаем в обычный блок*/
+		display: block;
+		width: 240px;
+		margin: 0 auto;
+	}
+	.preland-dropdown {						/*активатор выпадающего списка, вытягиваем на всю форму*/
+		width: 240px;
+		margin-bottom: 15px;
+	}
+	.preland-dropdown-wrapper .dropdown-menu {				/*выпадающий список на всю длину формы*/
+		width: 240px;
+	}
+	.preland-geoform-layout form .city-input {
+		width: 240px;
+		margin-right: 0;
+		margin-bottom: 15px;
+	}
+	.preland-geoform-layout form .street-input {		/*стили первого поля ввода, изменяем размеры*/
+		display: block;
+		float: left;
+		width: 160px;
+		margin-left: 0;
+	}
+	.preland-geoform-layout form .home-input {		/*стили второго/маленького поля ввода, изменяем размеры*/
+		display: block;
+		float: left;
+		margin-left: -4px;
+		width: calc(80px + 4px);
+		margin-right: 0;
+	}
+	.preland-geoform-layout .preland-apply {		/*наша кнопка теперь на всю длину формы */
+		display: inline-block;
+		width: 240px;
+		margin-left: 0;
+		margin-top: 15px;
+		text-align: center;
+	}
+	.preland-first-section-footer div:nth-child(odd) {		/*иконки с текстом растягиваем, даем отступы снизу и центруем */
+		width: 100%;
+		text-align: center;
+		display: inline-block;
+		margin-bottom: 15px;
+	}
+	.preland-first-section-footer div:nth-child(even) {		/*стрелки скрываем*/
+		display: none;
+	}
+	.preland-first-section-footer div:last-child {			/*убираем последнему элементу нижний отступ чтобы сверху и снизу было одинаковое расстояние*/
+		margin-bottom: 0;
+	}
+	.second-section-leftside {				/*убираем обтекание и вытягиваем на всю ширину*/
+		width: 100%;
+		float: none;
+		text-align: center;
+	}
+	.second-section-rightside {				/*убираем обтекание и вытягиваем на всю ширину*/
+		width: 100%;
+		float: none;
+	}
+	.second-section-leftside p {			/*сбавляем шрифт у промо текста */
+		width: 100%;
+		padding: 0;
+		font-size: 28px;
+		margin-bottom: 15px;
+	}
+	.preland-market-buttons-layout {		/*тут мы заставим нашу обертку прижать кнопки маркетов к краям контента, для симметрии с картинкой под этим блоком */
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: nowrap;
+	}
+	.second-section-leftside a{				/*уменьшаем размеры наших ссылок-кнопок в маркеты, чтобы влезли на одну строку */
+		display: inline-block;
+		width: 48%;
+		margin-right: 15px;
+		margin-bottom: 15px;
+	}
+	.second-section-leftside a:last-child {	/*последней ссылке ни к чему отступ справа*/
+		margin-right: 0;
+	}
+	.second-section-leftside a img {		/*наши картинки не должны выползать за пределы наших кнопок, можно конечно в верстку добавить класс бутстрапа, но мне лень переделывать */
+		display: block;
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+@media screen and (max-width: 320px) {		/*стили для совсем уж маленьких трубок*/
+	.preland-phone-number {					
+		font-size: 12px;
+	}
+	.preland-phone-number:before {
+		top: 2px;			
+		left: -20px;
+		font-size: 12px;
+	}
+	.preland-geoform-layout form {
+		width: 200px;
+		margin: 0 auto;
+	}
+	.preland-dropdown {						
+		width: 200px;
+	}
+	.preland-dropdown-wrapper .dropdown-menu {				
+		width: 200px;
+	}
+	.preland-geoform-layout form .city-input {
+		width: 200px;
+	}
+	.preland-geoform-layout form .street-input {		
+		width: 140px;
+	}
+	.preland-geoform-layout form .home-input {		
+		width: calc(60px + 4px);
+	}
+	.preland-geoform-layout .preland-apply {		
+		width: 200px;
+	}
+
+}
+.hide {
+	display: none;
+}

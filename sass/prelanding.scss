@@ -1,0 +1,27 @@
+@import "fonts"; //шрифты
+@import "variables"; // переменные
+@import "mixins"; //миксины
+
+@import "bootstrap/mixins/_border-radius.scss";
+@import "bootstrap/mixins/_visibility.scss";
+@import "bootstrap/bootstrap-reboot"; //normalize bootstrap
+@import "bootstrap/bootstrap-grid";//сетка bootstrap
+@import "bootstrap/flex"; //вспомогательные классы для сетки bootstrap
+@import "bootstrap/text";//позиционирование текста bootstrap
+@import "bootstrap/images";//картинки bootstrap
+@import "bootstrap/_transitions.scss";
+@import "bootstrap/_modal.scss";
+@import "bootstrap/utilities/_visibility.scss";
+
+
+
+@import "buttons/buttons"; //стили кнопок
+@import "_modals.scss"; /*модальные окна*/
+@import "footer/footer"; //футер с агрегатора
+
+@import "prelanding/pr_header/pr_header"; //хедер прелендинга
+@import "prelanding/pr_sections/pr_steps"; //секция с пошаговым описанием действий
+@import "prelanding/pr_sections/pr_news"; //секция новостей
+@import "prelanding/pr_sections/pr_vk-vidget"; //виджет вк или любой другой соц.сети
+@import "prelanding/pr_sections/pr_promo"; //секция промо с картинкой и ссылками на моб. маркеты
+@import "helpers"; //вспомогательные классы

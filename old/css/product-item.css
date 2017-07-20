@@ -1,0 +1,136 @@
+.fc-product-item {
+	height: auto;
+	margin-bottom: 30px;
+}
+.fc-product-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 15px;
+}
+.fc-product-title h4{
+    font-weight: bold;
+}
+.mltbx-prcbx-layout {
+	min-height: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.desk-pricebox {
+	flex:1;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+.product-item-footer {
+	display: flex;
+	flex-direction: row; 
+	flex-wrap: nowrap; 
+	justify-content: space-between; 
+	align-items: center; 
+	padding: 15px;
+}
+.multiproduct-options {
+    padding: 15px 15px 0 15px;
+}
+.multiproduct-option {
+	padding-bottom: 10px;
+}
+.multiproduct-option:last-child {
+	padding-bottom: 0;
+}
+.multiproduct-option-title  {
+	font-size: 11px;
+	line-height: 20px;
+	vertical-align: middle;
+}
+.multiproduct-option-select {
+	position: relative;
+}
+.multiproduct-option-select select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance:none;
+	background-color: #f9f9f9;
+	background-image: url('../img/shop-item-select-bg.png');
+	background-repeat: no-repeat;
+	background-position: 95% 60%;
+	border-radius: 2.6px;
+	border: solid 1px #b6b6b6;
+	font-size: 11px;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+	padding-left: 10.9px;
+	cursor: pointer;
+	height: 20px;
+}
+
+.multiproduct-option-select select:focus {
+	outline: none;
+}
+.multiproduct-option-select select:hover {
+	background-color: #ececec;
+}
+.shop-products {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	margin: 0 -15px;
+}
+.shop-products .product {
+	float: none;
+}
+@media screen and (max-width: 1200px) {
+	.shop-products .product {
+		width: 50%;
+	}
+
+}
+@media (max-width: 767px) {
+	.fc-product-item {
+		height: auto;
+		margin-bottom: 15px;
+	}
+	.mltbx-prcbx-layout {
+		min-height: 0;
+	}
+	.shop-products .sc-item {
+		width: 100%;
+	}
+	.fc-product-item {
+		min-height:0;
+	}
+	.fc-product-item .fc-product img {
+		width: 100%;
+		min-width: 100%;
+		max-width: 100%;
+		max-height: 100%;
+	}
+	.fc-product {
+		float: left; 
+		width: 40%; 
+		background: #fff; 
+		padding: 10px 5px; 
+		min-height: 0;
+	}
+	.fc-product-title { 
+		float: left; 
+		width: 58%; 
+		background: #fff; 
+		padding: 10px; 
+	}
+	.fc-product-title h4 {
+		font-size: 16px;
+		text-align: left;
+		line-height: 1.5;
+		margin: 0;
+	}
+	.shop-products .product {
+		width: 100%;
+	}
+}
+

@@ -1,0 +1,26 @@
+/* FFA500 * ff8000 */
+
+
+
+.slides-navigation a.next:hover,
+.slides-navigation a.prev:hover,
+.social-links li a:hover {
+  background-color: #669cd6;
+  border-color: #669cd6;
+}
+
+.btn-store.outline  {
+	color:#669cd6;
+	border-color: #669cd6;
+}
+
+#contact-form .form-control:focus, 
+#order-form .form-control:focus,
+.input-group .form-control:focus {
+	border:2px solid #669cd6;
+}
+
+.social-profiles li a {
+	border:2px solid #669cd6;
+	color:#669cd6;
+}

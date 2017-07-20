@@ -1,0 +1,38 @@
+.geolocation-switcher__form {
+  @include display-flex-row;
+  border: 1px solid #efefef;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  &:hover {
+    border-color: #c9c9c9;
+  }
+  div {
+    width: 50%;
+  }
+  label {
+    display: block;
+    width: 100%;
+    background: #fff;
+    color: $int-el-txt-color;
+    padding: 10px 0;
+    text-align: center;
+    margin: 0;
+    cursor: pointer;
+    font-size: 14px;
+    &:hover {
+      background: darken(#fff, 1%);
+    }
+  }
+  input[type="radio"] {
+    display: none;
+    &:checked + label {
+      background: $theme-color;
+      color: #fff;
+      &:hover {
+        background: $theme-color;
+        cursor: default;
+      }
+    }
+  }
+}

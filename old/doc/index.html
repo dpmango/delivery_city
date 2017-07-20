@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)http://www.flipcat.ru/docs/api/#linkjstpl-todo -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Описание проекта</title>
+
+    <link href="./index_files/screen.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="./index_files/print.css" rel="stylesheet" type="text/css" media="print">
+    <script src="./index_files/jquery.min.js"></script>
+    <script src="./index_files/0.js" type="text/javascript"></script>
+
+  </head>
+
+  <body class="index">
+    <a href="http://www.flipcat.ru/docs/api/#" id="nav-button">
+      <span>
+        NAV
+        <img src="./index_files/navbar.png">
+      </span>
+    </a>
+    
+    <div class="tocify-wrapper">
+		
+		<img src="./index_files/logo.png"><!-- VERSION -->
+		<div style="color:#FFF;margin-left:32px;">Версия документации 1.1</div><br>
+        
+		<div id="toc" class="tocify">
+			<div class="search">
+			  <input type="text" placeholder="Фильтр" id="input-search" class="search">
+			</div>
+			<ul id="tocify-header0" class="tocify-header">
+				<li class="tocify-item" style="cursor: pointer;">
+					<a href="#about_t_h">Об этой справке</a>
+				</li>
+				<li class="tocify-item" style="cursor: pointer;">
+					<a href="#faq">Часто задаваемые вопросы</a>
+				</li>
+				<li class="tocify-item" style="cursor: pointer;">
+					<a href="#beg">Руководство верстальщика веб-приложения Веб-агрегатор магазинов</a>
+				</li>
+				<li class="tocify-item" style="cursor: pointer;margin-left:10px">
+					<a href="#description">Общее описание веб-приложения Веб-агрегатор магазинов</a>
+				</li>
+				<li class="tocify-item" style="cursor: pointer;margin-left:15px">
+					<a href="#catAg">Категории агрегатора</a>
+				</li>
+				<li class="tocify-item" style="cursor: pointer;margin-left:15px">
+					<a href="#catShop">Категории магазинов</a>
+				</li>
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:15px">
+					<a href="#useTech">Используемые технологии</a>
+				</li>
+				<li class="tocify-item" style="cursor: pointer;margin-left:10px">
+					<a href="#structroot">Структура предоставляемого вам каталога приложения</a>
+				</li>
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:15px">
+					<a href="#Catalogs">Каталоги</a>
+				</li>
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#Views">Каталог views</a>
+				</li>
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#all_shops.blade.php">Файл all_shops.blade.php</a>
+				</li>
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#card_payment_fail.blade.php">Файл card_payment_fail.blade.php</a>
+				</li>
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#card_payment_success.blade.php">Файл card_payment_success.blade.php</a>
+				</li>
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#cart.blade.php">Файл cart.blade.php</a>
+				</li>
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#facebook_login_redirect.blade.php">Файл facebook_login_redirect.blade.php</a>
+				</li>
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#favorites_shops.blade.php">Файл favorites_shops.blade.php</a>
+				</li>
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#index.blade.php">Файл index.blade.php</a>
+				</li>
+				
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#mru_login_redirect.blade.php">Файл mru_login_redirect.blade.php</a>
+				</li>
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#recovery_password_message.blade.php">Файл recovery_password_message.blade.php</a>
+				</li>
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#singlecompany.blade.php">Файл singlecompany.blade.php</a>
+				</li>
+				
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#shop.blade.php">Файл shop.blade.php</a>
+				</li>
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#shopcategories.blade.php">Файл shopcategories.blade.php</a>
+				</li>
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#shops.blade.php">Файл shops.blade.php</a>
+				</li>
+				
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#shop_search.blade.php">Файл shop_search.blade.php</a>
+				</li>
+				
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#vk_login_redirect.blade.php">Файл vk_login_redirect.blade.php</a>
+				</li>
+				
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#history_shop.blade.php">Файл history_shop.blade.php</a>
+				</li>
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#welcome.blade.php">Файл welcome.blade.php</a>
+				</li>
+				<li class="tocify-item" style="cursor: pointer;margin-left:15px">
+					<a href="#каталога-layout">Файл каталога layout</a>
+				</li>
+				<li class="tocify-item" style="cursor: pointer;margin-left:15px">
+					<a href="#Partials">Файлы и каталоги каталога partials</a>
+				</li>
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#bread_crumbs.blade.php">bread_crumbs.blade.php</a>
+				</li>
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#categories.blade.php">categories.blade.php</a>
+				</li>
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#favorite_main_page.blade.php ">favorite_main_page.blade.php </a>
+				</li>
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#javascript.blade.php">javascript.blade.php </a>
+				</li>
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#error_info.blade.php">error_info.blade.php</a>
+				</li>
+								
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#news.blade.php">news.blade.php</a>
+				</li>
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#one_company_categories.blade.php">one_company_categories.blade.php</a>
+				</li>
+				
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#pagination.blade.php">pagination.blade.php</a>
+				</li>
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#product_item.blade.php">product_item.blade.php</a>
+				</li>
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#set_address_dialog.blade.php">set_address_dialog.blade.php</a>
+				</li>
+				
+				
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#products.blade.php">products.blade.php</a>
+				</li>
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#part-shopcategories.blade.php">shopcategories.blade.php</a>
+				</li>
+				
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#shopcategorieschild.blade.php">shopcategorieschild.blade.php</a>
+				</li>
+				
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#shopcategorieschildleft.blade.php">shopcategorieschildleft.blade.php</a>
+				</li>
+				
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#shopfeatures.blade.php">shopfeatures.blade.php</a>
+				</li>
+				
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#shop_info.blade.php">shop_info.blade.php</a>
+				</li>
+				
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#shoplistfeatures.blade">shoplistfeatures.blade</a>
+				</li>
+				
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#shopoption.blade.php">shopoption.blade.php</a>
+				</li>
+				
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#top_block_shop_info.blade.php">top_block_shop_info.blade.php</a>
+				</li>
+				
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#order-shop-item-image.blade.php">order-shop-item-image.blade.php</a>
+				</li>
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#order_item.blade.php">order_item.blade.php</a>
+				</li>
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#order_shop_item.blade.php">order_shop_item.blade.php</a>
+				</li>
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#order_shop_mobile_item.blade.php">order_shop_mobile_item.blade.php</a>
+				</li>
+				
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#top_menu.blade.php">top_menu.blade.php</a>
+				</li>
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#partials_js">Каталог partials/js</a>
+				</li>
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:30px">
+					<a href="#js_favorite_main_page.blade.php">Файл js/favorite_main_page.blade.php </a>
+				</li>
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:30px">
+					<a href="#javascript_init_javascript_variables.php">Файл js/javascript_init_javascript_variables.blade.php </a>
+				</li>
+				
+								
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:15px">
+					<a href="#Widgets">Каталог и файлы каталога widgets</a>
+				</li>
+				
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#cuisine.blade.php">cuisine.blade.php</a>
+				</li>
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#geo_location_form_custom_city">geo_location_form_custom_city</a>
+				</li>
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#mobile_menu.blade.php">mobile_menu.blade.php</a>
+				</li>
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#order_form.blade.php">order_form.blade.php</a>
+				</li>
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#order_form.blade.php">order_form.blade.php</a>
+				</li>
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#popup_auth.blade.php">popup_auth.blade.php</a>
+				</li>
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#popup_city_select.blade.php">popup_city_select.blade.php</a>
+				</li>
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#popup_passw_recovery.blade.php">popup_passw_recovery.blade.php</a>
+				</li>
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#popup_register.blade.php">popup_register.blade.php</a>
+				</li>
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#rfi_card_payment.blade.php">rfi_card_payment.blade.php</a>
+				</li>
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#search_in_shop.blade.php">search_in_shop.blade.php</a>
+				</li>
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#set_location_form.blade.php">set_location_form.blade.php</a>
+				</li>
+				
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#shop_categories.blade.php">shop_categories.blade.php Категории магазина в левой колонке</a>
+				</li>
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#widgets-partials">Каталог widgets/partials</a>
+				</li>
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#favorite.blade.php">Файл favorite.blade.php Элемент списка избранных магазинов.</a>
+				</li>
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:15px">
+					<a href="#assets">Каталог assets</a>
+				</li>
+				
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#css">css</a>
+				</li>
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#js">js</a>
+				</li>
+				<li class="tocify-item" style="cursor: pointer;margin-left:25px">
+					<a href="#imgFonts">Каталоги img  и fonts</a>
+				</li>
+				
+				
+				<li class="tocify-item" style="cursor: pointer;">
+					<a href="#setttile">Установка тайтла на страницах</a>
+				</li>
+				<li class="tocify-item" style="cursor: pointer;">
+					<a href="#article_create">Создание инфо страниц</a>
+				</li>
+				
+			</ul>
+		</div>
+    </div>
+    
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+		  
+
+<h1 id="about_t_h">Об этой справке</h1>
+<p>Актуальную версию справки вы можете прочесть введя адрес /doc на вашем сайте магазина.</p>
+
+<h1 id="faq">Часто задаваемые вопросы</h1>
+<h3>Изменения верстки и изображений не применяются на сервере</h3>
+<h3>Я залил мои css файлы и изображения на сервер, но они не доступны через браузер</h3>
+<p>Причина одна: после изменения старых и добавления новых файлов надо пройти по url <a href="/updateassets" target="_blank">/updateassets</a></p>
+
+
+<div name="Руководство-верстальщика-веб-приложения-&quot;ud&quot;" data-unique="Руководство-верстальщика-веб-приложения-&quot;ud&quot;"></div>
+<h1 id="beg">Руководство верстальщика веб-приложения Веб-агрегатор магазинов</h1>
+
+<div name="Общее-описание-веб-приложения-&quot;ud&quot;" data-unique="Общее-описание-веб-приложения-&quot;ud&quot;"></div>
+<h2 id="description">Общее описание веб-приложения Веб-агрегатор магазинов</h2>
+
+<h3 id="catAg">Категории агрегатора</h3>
+
+<p>Приложение представляет собой агрегатор нескольких магазинов.
+Магазины объеденены в группы по категориям агрегатора.
+Категория агрегатора может не содержать магазинов, но может содержать вложенные категории.</p>
+
+<h3 id="catShop">Категории магазинов</h3>
+
+<p>Магазин в свою очередь может содержать категории товаров, при входе на страницу магазина отображаются товары
+первой непустой категории (то есть содержащей товары).</p>
+
+<p>Добавив товары в корзину пользователь может перейти на страницу корзины (Для каждого магазина она своя)
+и оформить заказ.</p>
+
+<div name="Используемые-технологии" data-unique="Используемые-технологии"></div>
+<h2 id="useTech">Используемые технологии</h2>
+
+<p>Веб приложение использует на бекенде фреймверк laravel 5.2, чтобы успешно работать 
+с ним вам надо ознакомиться с <a href="https://laravel.com/docs/5.2/blade" target="_blank">частью руководства фреймверка, касающейся blade шаблонизатора</a></p>
+
+<p>Веб приложение на фронтенде включает в себя и использует некоторые возможности фреймверка Bootstrap v3.3.1.</p>
+
+<p>Вы можете при верстке страниц использовать все возможности, предоставляемые этим фреймверком.</p>
+
+<div name="Структура-предоставляемого-вам-каталога-приложения" data-unique="Структура-предоставляемого-вам-каталога-приложения"></div>
+<h2 id="structroot">Структура предоставляемого вам каталога приложения</h2>
+
+<p>При работе вам будет предоставлен FTP доступ к файлам приложения, отвечающим за внешний вид приложения.
+Это файлы css, файлы изображений, шрифтов, вам также доступны для редактирования blade шаблоны.</p>
+
+<h3 id="Catalogs">Каталоги</h3>
+
+<p>На верхнем уровне три каталога: <br>
+assets<br>
+lang<br>
+views</p>
+
+<p>Верстальщику придется работать в основном с assets и views. 
+В папке lang содержатся файлы локализации приложения, если вы добавляете в верстку какой-то элемент, 
+содержащий текст, которого нет в приложении, этот текст следует добавить в файл lang/ru/messages.php</p>
+
+<pre class="highlight php"><code>
+//Например
+'Order_Form'   =&gt; 'Оформление покупки',
+'Remove_from_cart'   =&gt; 'Удалить',
+</code></pre>
+
+<p>а в шаблоне вывести его с помощью конструкции 
+<pre class="highlight php"><code>
+	{{ trans('messages.Order_form’) }}
+</code></pre>
+</p>
+
+<p>Каталог views содержит файлы шаблонов, его структура и файлы шаблонов будут рассмотрены ниже.
+Здесь же отмечены несколько общих моментов, <strong>прочитайте их внимательно</strong>.</p>
+
+<ol>
+<li><p>Основной “скелет” html страницы содержится в папке layouts/master.blade.php. Подключаемые в нем части можно спокойно перемещать при необходимости, это не должно привести к нарушению работы приложения.</p></li>
+<li><p>В файлах шаблонов, размещенных непосредственно в папке views вы можете перемещать при необходимости блоки в тегах section  и article, это не должно привести к нарушению работы приложения.</p></li>
+<li><p>Во всех прочих файлах шаблонах вы можете редактировать отображение с помощью css:
+ширину, высоту, цвет, шрифты, фоновые изображения, смещения влево или вправо, отступы но при этом <strong> изменять или
+удалять css селекторы в значении аттрибутов class и id, имена html тегов, data-аттрибуты, структуру html верстки шаблонов в
+папках widgets  и partials  нельзя - это приведет к потере работоспособности javascript части приложения.
+</strong> Некоторые части приложения уже сейчас работают как SPA приложение, в конце концов все приложение будет работать как одностраничное.
+<strong>Можно спокойно удалять следующие селекторы, но только их:
+pull-left, pull-right, clearfix, text-center, text-right, text-left.</strong></p></li>
+<li><p>При правке шаблона рекомендуем сохранять оригинальную копию шаблона - так вы всегда сможете посмотреть, какие переменные доступны в шаблоне и как их правильно вывести на страницу.</p></li>
+<li><p>При редактировании верстки следует иметь ввиду, что <strong> цветовая схема 
+сайта отчасти настраиваается из личного кабинета</strong>. Изучите файл 
+color.css, прочтите комментарии в нем. Перечисленные в нем селекторы должны отвечать за те же элементы сайта что и сейчас.
+Если вы конечно хотите сохранить возможность настройки цветов сайта из личного кабинета. 
+Имейте ввиду, что редактировать файл color.css не имеет смысла, он пересоздастся автоматически 
+при сохранении настроек в личном кабинете.</p></li>
+</ol>
+
+<p>Каталог assets содержит файлы css, изображения, шрифты.
+Также вы можете добавлять туда свои пользовательские javascript файлы, но их имена не должны 
+совпадать с перечислленными ниже в соответствующем разделе.</p>
+
+<h3 id="Views">Каталог views</h3>
+
+<p>Ниже даны описания файлов и каталогов в каталоге views.</p>
+
+<p>Каталог errors - в этом каталоге вы можете создавать оформленные сообщения об ошибках на сервере приложения, имя файла должно совпадать с кодом http статуса ошибки, например
+404.blade.php, 503.blade.php.</p>
+
+<p>Каталог layouts - здесь вы можете изменить или создать свой файл мастер - шаблона приложения. Описание переменных, доступных в файле не будет дано, так как все они передаются в подключаемый в этом мастер шаблоне шаблоны.
+Изучив оригинальные шаблоны вы можете понять, какие переменные что содержат, сохранив оригинальные шаблоны вы всегда можете видеть доступные в шаблоне переменные.</p>
+
+<p>Каталог partials - здесь содержатся файлы, в которых содержится верстка частей 
+той или иной страницы приложения. Часто, но необязательно файл в partials может содержать многократно повторяющийся элемент верстки, 
+например блок описания продукта магазина в файле product_item.blade.php, блок верстки особенности магазина в 
+shopoption.blade.php и т. п.</p>
+
+<p>Каталог vendor - стандартный каталог фреймверка laravel на него можно не обращать внимания, удалять не рекомендуется.</p>
+
+<p>Каталог widgets - почти то же что и partials, но используется в основном для небольших,
+логически законченных блоков, например форма фильтрации ресторанов по кухням, форма оформления заказа, форма поиска.</p>
+
+<h3 id="all_shops.blade.php">Файл all_shops.blade.php</h3>
+<p>Это шаблон вывода всех магазинов агрегатора. Переменные, используемые в файле аналогичны используемым в <a href="#shops.blade.php" >shops.blade.php</a></p>
+
+<h3 id="card_payment_fail.blade.php">Файл card_payment_fail.blade.php</h3>
+<p>Этот шаблон показывается при неуспешной оплате картами. Содержит javascript перенаправляющий пользователя обратно в корзину компании, заказ которой не удалось оплатить. Если данных для перенаправления недостаточно выводит сообщение об этом и перенаправляет на главную.</p>
+
+<h3 id="card_payment_success.blade.php">Файл card_payment_success.blade.php</h3>
+<p>Этот шаблон показывается при успешной оплате картами. Содержит javascript запускающий другой javascript (добавленный Компанией в Личном кабинете (это обычно учет статистики) ), 
+очищающий корзину пользователя,
+перенаправляющий пользователя на страницу истории заказов. 
+</p>
+
+<h3 id="cart.blade.php">Файл cart.blade.php</h3>
+
+<p>Это представление данных об отложенных пользователем товарах. В шаблоне доступна коллекция $products, каждый элемент коллекции имеет в своем составе поля:</p>
+
+<p>photos - набор изображений продукта, описание элемента набора ниже</p>
+
+<p>name - имя продукта</p>
+
+<p>id - идентификатор продукта.</p>
+
+<p>price - стоимость продукта</p>
+
+<p>currency валюта, в которой указана стоимость продукта. Обратите внимание, для корректной работы приложения надо выводить как
+<pre class="highlight php"><code>
+ {{ $currencies[$item-&gt;currency] }}
+</code></pre>
+  </p>
+
+<p>Описание $photos
+Каждый элемент массива $photos имеет поле:</p>
+
+<p>thumbnail_url, big_url, preview_url, это ссылки на одно и тоже изображение в разных масштабах.</p>
+
+<p>Обратите внимание, как сделана проверка на существование поля в оригинальном шаблоне</p>
+<pre class="highlight html"><code>
+@if (isset($item-&gt;photos[0]-&gt;thumbnail_url))
+    <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"img-responsive project-image"</span> <span class="na">src=</span><span class="s">"{{ $item-&gt;photos[0]-&gt;thumbnail_url }}"</span><span class="nt">&gt;</span>
+@else
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/img/productListNoImage.png"</span> <span class="na">class=</span><span class="s">"img-responsive project-image"</span><span class="nt">&gt;</span>
+@endif
+</code></pre>
+
+<p>Делать такую проверку обязательно, так как никто не может вам гарантировать, что менеджер магазина не забыл загрузить все данные.</p>
+
+<h3 id="facebook_login_redirect.blade.php">Файл facebook_login_redirect.blade.php</h3>
+<p>Этот view используется, когда пользователь авторизуется через facebook. В него можно добавить сообщение, например "Подождите, сейчас вы будете перемещены".</p>
+
+<h3 id="favorites_shops.blade.php">Файл favorites_shops.blade.php</h3>
+<p>Этот view используется, когда пользователь в мобильной версии нажимает на ссылку "Избранное". Это список избранных магазинов или ресторанов пользователя.</p>
+
+
+<h3 id="index.blade.php">Файл index.blade.php</h3>
+
+<p>Представление данных на стартовой странице магазина. В оригинальном шаблоне включает в себя только представление данных категорий агрегатора.</p>
+<p>Если в настройках приложения включена галочка "Показывать на главной странице категории первой компании (имеет смысл при наличии только одной компании)", то вместо этого файла включается singlecompany.blade.php</p>
+
+
+<h3 id="mru_login_redirect.blade.php">Файл mru_login_redirect.blade.php</h3>
+<p>Этот view используется, когда пользователь авторизуется через MailRu. В него можно добавить сообщение, например "Подождите, сейчас вы будете перемещены". Удалять существующий код</p>
+<pre class="highlight html"><code>
+@extends('layouts.master')
+@if((isset($successMruLogin) && $successMruLogin) || !$errorMessage)
+&lt;script type="text/javascript"&gt;window.mruLoginSuccess=true;&lt;/script&gt;
+@endif
+</code></pre>
+<p>не надо</p>
+
+
+<h3 id="recovery_password_message.blade.php">Файл recovery_password_message.blade.php</h3>
+<p>Файл recovery_password_message.blade.php используется при восстановлении пароля, в случае неудачи. Сообщение об ошибке выводится в мастер шаблоне, однако наличие этого view 
+обеспечивает более широкий простор для творчества.</p>
+
+<h3 id="singlecompany.blade.php">Файл singlecompany.blade.php</h3>
+<p> Если в настройках приложения установлена включена опция "Показывать на главной странице категории первой компании (имеет смысл при наличии только одной компании)", этот файл подключается вместо index.blade.php</p>
+
+<h3 id="vk_login_redirect.blade.php">Файл vk_login_redirect.blade.php</h3>
+<p>Этот view используется, когда пользователь авторизуется через vkontakte. В него можно добавить сообщение, например "Подождите, сейчас вы будете перемещены". Удалять существующий код</p>
+<pre class="highlight html"><code>
+@extends('layouts.master')
+@if((isset($successVkLogin) && $successVkLogin) || !$errorMessage)
+&lt;script type="text/javascript"&gt;window.vkLoginSuccess=true;&lt;/script&gt;
+@endif
+
+</code></pre>
+<p>не надо</p>
+
+
+<h3 id="shop.blade.php">Файл shop.blade.php</h3>
+
+<p>Представление данных на странице определенной категории магазина. 
+Подключает в себя из partials блоки списка продуктов, новостей, информации.</p>
+
+<p>Доступные переменные большого значения не имеют: в этом файле вы можете при необходимости изменить порядок включаемых блоков, возможно добавить какие-то новые.
+Смысл этого файла - избежание нагромождения в одном шаблоне верстки списка товаров, новостей и информации магазина, файл просто разбивает их по частям для более удобной работы с ними.</p>
+
+<h3 id="favorite_main_page.blade.php">Файл favorite_main_page.blade.php</h3>
+<p>Файл предназначен для вывода избранного магазина или ресторана на главной странице сайта в разделе "Избранные магазины".<a href="#"></a></p>
+<p>Доступна переменная shop с полями:</p>
+
+<p>cat_id - идентификатор категории агрегатора магазинов, служит для формирования ссылки на страницу магазина или ресторана</p>
+<p>id - идентификатор категории, служит для формирования ссылки на страницу магазина или ресторана</p>
+<p>logotype_thumbnail - лого магазина или ресторана</p>
+<p>company_name - Наименование магазина или ресторана</p>
+
+<h3 id="javascript.blade.php">Файл partials/javascript.blade.php</h3>
+<p>Файл содержит секцию подключаемых скриптов</p>
+<pre class="highlight php"><code>
+&lt;script src="foo.js"&gt;&lt;/script&gt;
+&lt;script src="bar.js"&gt;&lt;/script&gt;
+</code></pre>
+<p>
+	Секция подключаемых javascript файлов вынесена в отдельный файл с целью удобно подключать её в различных layout файлах (мастер-шаблонах).
+</p>
+<p>
+	Для подключения специфичных для страницы скриптов во всех шаблонах кроме тех, которые лежат в папке layout
+	надо использовать
+</p>
+<pre class="highlight php"><code>
+@section('js')
+@parent
+&lt;script src="your_required_script.js"&gt;&lt;/script&gt;
+@stop
+</code></pre>
+<p>Если добавить такой код напримерв файле views/index.blade.php, то на главной странице сайта будут подключены
+все скрипты подключенные в файле partials/javascript.blade.php и файл your_required_script.js. </p>
+
+<h3 id="shopcategories.blade.php">Файл shopcategories.blade.php</h3>
+
+<p>Почти то же самое, что и предыдущий файл, но это страница магазина без указания какой-либо конкретной категории магазина, то есть этот шаблон работает когда посетитель заходит на страницу магазина.
+По сравнению с шаблоном категории в нем также присутствует подключение файла partials.shopcategories.php
+В существубщем сейчас по умолчанию фронтенде приложения этот блок показывается только на устройствах с размером экрана не более 767 пикселей по горизонтали. 
+Для более широких форматов этот список категорий магазина не показывается, его аналог доступен в левой колонке.
+<i> Примечание: мобильная версия веб-приложения в настоящее время дорабатывается. </i>
+<strong> Важно при редактировании: не потерять элемент 
+<pre class="highlight php"><code>
+&lt;input type=“hidden” id=“shopAllCategories” value=“1”&gt;
+</code></pre>
+<p>, он важен для скриптов фронтенда. </strong></p>
+
+<h3 id="shops.blade.php">Файл shops.blade.php</h3>
+
+<p>Представление данных в категории агрегатора, не содержащей вложенных категорий агрегатора, но
+содержащей магазины. 
+Другими словами, это шаблон страницы, выводящей список магазинов.
+Эта страница может в некоторых (в перспективе во всех) случаях работать как одностраничное приложение, поэтому здесь есть некоторые нююансы.</p>
+
+<p>После подключения шаблона partials.categories для вывода вложенных категорий агрегатора следует блок section id=“shops”.</p>
+
+<p>При редактировании важно не потерять элемент 
+<pre class="highlight">
+<code>
+&lt;div class="hidden"&gt;{{ $data }}&lt;/div&gt;&lt;input type="hidden" id="perPage" value="{{ $perPage }}"&gt;
+</code></pre>
+<p>
+В нем содержатся json данные, которые использует javascript страницы, без него работать не будет.</p>
+
+<p>Данные о магазинах содержатся в коллекции $shops, описание элемента коллекции будет ниже.</p>
+
+<p>Сейчас обратитие внимание вот на что: Шаблон блока магазина дублирован дважды.
+Один перед строчкой 
+<pre class="highlight php"><code>
+@foreach ($shops as $shop), второй после нее. 
+</code></pre>
+<p>
+Это необходимо для javascript страницы. Прочтите внимательно этот раздел, я буду на него ссылаться при описании других шаблонов, используемых javascript частью приложения.</p>
+
+<p><i> Конечно, очень неудобно редактировать по сути один и тот же элемент дважды, но альтернативы этому пока в разработке веб страниц нет.</i></p>
+
+<p>Перед строчкой @foreach ($shops as $shop) в теге article находится шаблон блока магазина для javascript.</p>
+
+<p>После строчки @foreach ($shops as $shop) в теге article находится шаблон блока магазина, обрабатываемый на сервере.</p>
+
+<p>Те переменные, которые в blade шаблоне доступны как поля $shop (например {{ $shop-&gt;company_name }}) 
+в javaScript шаблоне задаются как макрос [ИМЯ_ПОЛЯ].</p>
+
+<p>То есть, если в шаблоне blade у нас {{ $shop-&gt;company_name }}, в javascript шаблоне как правило <strong> (но не обязательно!) </strong> будет
+[companyName].
+Особый случай составляет атрибут src тега img. Для него используется макрос в виде data-атрибута data-src=“src”.
+Javascript заменит этот атрибут на src=“ПУТЬ<em>К</em>ИЗОБРАЖЕНИЮ”. Подобный атрибут может и вероятно будет использоваться в других шаблонах для атрибута href тега a, но пока таких нет.</p>
+
+<p><strong> Также важно запомнить: При редактировании css файлов стилей css селектор .tpl в ПРИЛОЖЕНИЕ ДОЛЖЕН иметь свойство display:none. </strong></p>
+
+<p>Здесь вероятно будет описание полей элемента коллекции $shops, но пока я считаю его излишним, просто сохраните копию оригинального файла и смотрите как выводятся
+ те или иные свойства магазина в нем.</p>
+
+<h3 id="shop_search.blade.php">Файл shop_search.blade.php</h3>
+
+<p>Результаты текстового поиска в магазине. В целом аналогично шаблонам shopcategories.blade.php и shop.blade.php
+Пока отсутствуют блоки Новостей и Информации, дорабатывается.</p>
+
+
+
+
+<h3 id="history_shop.blade.php">Файл history_shop.blade.php</h3>
+
+<p>Это шаблон истории заказов. Как и во всех остальных шаблонах при правке важно сохранить структуру тегов, не потерять атрибуты id, значения атрибутов class  и data-attributes. </p>
+
+
+
+
+
+<h3 id="welcome.blade.php">Файл welcome.blade.php</h3>
+
+<p>Просто пример blade шаблона от laravel.</p>
+
+
+
+<h3 id="каталога-layout">Файл каталога layout</h3>
+
+<p>Там сейчас один файл, вы можете исползовать его или создать свой мастер шаблон (“скелет” html страницы)  и использовать его в шаблонах используя инструкцию @extends('layouts.ВАШ_МАСТЕР_ШАБЛОН’)
+Вы можете располагать подключаемые с помощью @include или реализуемые с помощью @section части страницы как вам надо, но надо помнить одно:
+Все передаваемые в @include переменные нужны, терять их нельзя. Описывать их (переменные) здесь нет смысла, так как они будут при необходимости описаны в описаниях подключаемых шаблонов.</p>
+<p>Также хочется обратить внимание на секции подключения css и javascript файлов. <strong>Не надо отключать файлы потому что их нет в предоставленной вам папке js, они есть в другой папке, в которую копируются ваши файлы из каталога assets.
+Что касается css, там все проще, не надо отключать лишь файл dev.css и возможно timepicker.css </strong> про timepicker подробнее написано в секции <a href="#order_form.blade.php">order_form.blade.php</a></p>.
+
+<h3 id="Partials">Файлы и каталоги каталога partials</h3>
+
+<h4 id="bread_crumbs.blade.php">bread_crumbs.blade.php</h4>
+
+<p>Представление данных навигационной панели. Это шаблон хлебных крошек, кнопки “Вход”, иконки корзины (которая может отображаться), тоглер разворачивающий хлебные крошки
+для мобильной версии. Помимо хлебных крошек писать особенно не о чем, но помните что <strong> нельзя изменять значения аттрибутов id  и class и удалять data атрибуты. </strong></p>
+
+<p>ul id=“breadcrumbs” содержит шаблоны для хлебных крошек, для серверного и javascript кода приложения.</p>
+
+<p>Если вы не читали описание <a href="#shops.blade.php">шаблона shops.blade.php</a> прочтите его, 
+он содержит наиболее подробное описание работы с javascript шаблонами в этом приложении.</p>
+
+<p>В отличии от него, в выводе хлебных крошек для javascript шаблона используется несколько тегов с селектором tpl.
+Один для хлебной крошки - ссылки, один для разделителя крошек и один для заключительной хлебной крошки
+В остальном все аналогично выводу в shops.blade.php: в шаблоне, обрабатываемом на сервере используются
+переменные вида {{ $breadCrumbs[$i]['title’] }}, в шаблоне обрабатываемом javascript переменные вида [TITLE] </p>
+
+<h4 id="categories.blade.php">categories.blade.php</h4>
+
+<p>Представление данных категорий агрегатора. Подключается на главной странице и на странице списка магазинов агрегатора.
+Важно не потерять при редактировании.
+<pre class="highlight php">
+<code>&lt;div id="scopesData" class="hide"&gt;{{$categoriesTree}}&lt;/div&gt;
+&lt;div id="firstBreadCrumbTitle" class="hide"&gt;{{ trans('messages.Main_bread_crumb') }}&lt;/div&gt;
+</code></pre><p>
+Данные категорий агрегатора доступны в коллекции $categories. 
+Верстка шаблона блока представления категории дублируется, для javascript и для серверной части до и после строки
+@foreach ($categories as $category)</p>
+
+<p>При редактировании надо править оба фрагмента, немного подробнее см. <a href="#shops.blade.php">описание шаблона shops.blade.php</a></p>
+
+<p>Для серверного шаблона переменные задаются в {{ $category-&gt;var_name }} для javascript шаблона [varName].</p>
+
+<p>Сохраните оригинальный шаблон, чтобы иметь список доступных переменных перед глазами.</p>
+
+<h4 id="error_info.blade.php">error_info.blade.php</h4>
+
+<p>Представление сообщения об ошибке. Доступна переменная $errorMessage содержащая текст ошибки.
+В оригинальном шаблоне используется также переменная $remoteErrorInfo, 
+но она не будет определена в product версии приложения, на нее можно не обращать внимания.</p>
+
+<h3 id="news.blade.php">news.blade.php</h3>
+<p>Представление списка новостей магазина. Доступные переменные смотрите в оригинальном шаблоне.</p>
+
+<h3 id="one_company_categories.blade.php">one_company_categories.blade.php</h3>
+<p>Представление категорий магазина на главной странице вместо категорий агрегатора. Файл используется, если в личном кабинете установлена опция "Показывать на главной странице категории первой компании (имеет смысл при наличии только одной компании)". Доступные переменные смотрите в оригинальном шаблоне.</p>
+
+<h3 id="pagination.blade.php">pagination.blade.php</h3>
+
+<p>Представление постраничной навигации.
+Перед строкой @foreach ($pagination as $i) находятся javascript шаблон для активного и неактивного элемента списка страниц.
+При редактировании важно сохранять структуру и имена классов.
+Подробнее про javascript шаблоны  <a href="#shops.blade.php">shops.blade.php</a></p>
+
+<h3 id="product_item.blade.php">product_item.blade.php</h3>
+
+<p>Представление элемента списка товаров магазина. Доступные переменные можно видеть в оригинальном шаблоне.
+Данный шаблон дублируется в папке js, при изменении верстки надо редактировать оба шаблона.
+Для сохранения работоспособности важно сохранить структуру верстки, значения атрибутов class и id, data-аттрибуты.</p>
+
+<h3 id="products.blade.php">products.blade.php</h3>
+
+<p>Представление списка товаров магазина. Выводит сообщение $message, если оно определено, подключает 
+javascript шаблон элемента списка товаров магазина @include('partials.js.product_item’)
+,
+подключает в цикле шаблон элемента списка товаров магазина @include('partials.product_item’)
+,
+подключает шаблон постраничной навигации.</p>
+
+<h3 id="set_address_dialog.blade.php">set_address_dialog.blade.php</h3>
+<p>Всплывающее окно для выбора местоположения пользователя на гугл картах.</p>
+
+<h3 id="">product_item.blade.php</h3>
+
+<p>Представление элемента списка товаров магазина. Доступные переменные можно видеть в оригинальном шаблоне.
+Данный шаблон дублируется в папке js, при изменении верстки надо редактировать оба шаблона.
+Для сохранения работоспособности важно сохранить структуру верстки, значения атрибутов class и id, data-аттрибуты.</p>
+
+
+
+<h3 id="shopcategorieschild.blade.php">shopcategorieschild.blade.php</h3>
+
+<p>Это категории магазина вложенные в категорию магазина в правой колонке. Этот файл используется описаным выше shopcategories.blade.php</p>
+
+<h3 id="shopcategorieschildleft.blade.php">shopcategorieschildleft.blade.php</h3>
+
+<p>Это категории магазина вложенные в категорию магазина в левой колонке. 
+Файл этого шаблона подключается шаблоном widgets/shop_categories.blade.php, который показывается на устройствах с горизонталью экрана  выше 767 пикселей.</p>
+
+<h3 id="shopfeatures.blade.php">shopfeatures.blade.php</h3>
+
+<p>Шаблон списка “особенностей” магазина. Например, бесплатная доставка или стоимость доставки или минимальная величина заказа.
+Помимо видимых в оригинальном шаблоне переменных доступна также $feature['icon’] 
+которая может принимать значения 
+<p>'sprite-ico-stack’, (принимает это значение при особенности “Минимальная величина заказа”).</p>
+
+<p>'sprite-ico-rocket-w’, (принимает это значение при особенности “Стоимость доставки”)</p>
+
+<p>'sprite sprite-ico-timer-2’ (принимает это значение при особенностях “Время работы”, “Время доставки”)</p>
+
+<p>Вы можете использовать эти значения, чтобы добавить фоновое изображение 
+(создав его и определив соответствующий css класс.) или еще как-то выделить соответствующую особенность.</p>
+
+<h3 id="shop_info.blade.php">shop_info.blade.php</h3>
+
+<p>Шаблон вывода информации о магазине.
+Используемые переменные смотрите в оригинальном щаблоне. 
+При редактировании важно не потерять
+<pre class="highlight php"><code>&lt;div id="ymdata" class="hide"&gt;{{ json_encode($addresses) }}&lt;/div&gt;
+&lt;div id="yamap" style="width: 600px; height: 400px"&gt;&lt;/div&gt;
+</code></pre>
+
+</p>
+
+<h3 id="shoplistfeatures.blade">shoplistfeatures.blade</h3>
+
+<p>Технический шаблон, его существование вызвано оптимизацией призводителности приложения. Не удалять и не редактировать.
+Он подключается в shops.blade.php и подключает в свою очередь  shopfeatures.blade.php.</p>
+
+<h3 id="shopoption.blade.php">shopoption.blade.php</h3>
+
+<p>Почти то же самое, что и shoplistfeatures.blade но подключается в top_block_shop_info.blade.php Элементы верстки редактировать можно, подключение
+partials.shopfeatures необходимо оставить (Допускается заменить на @section … @stop но зачем вам это?).</p>
+
+<h3 id="top_block_shop_info.blade.php">top_block_shop_info.blade.php</h3>
+
+<p>Шапка магазина на странице просмотра магазина и страницах его категорий.</p>
+
+
+
+<h3 id="order-shop-item-image.blade.php">Файл partials/order-shop-item-image.blade.php</h3>
+
+<p>Это шаблон изображения товара в истории заказа. Как и во всех остальных шаблонах при правке важно сохранить структуру тегов, не потерять атрибуты id, значения атрибутов class и data-attributes.</p>
+
+<h3 id="order_item.blade.php">Файл partials/order_item.blade.php</h3>
+
+<p>Это шаблон списка товаров  в истории заказа. Как и во всех остальных шаблонах при правке важно сохранить структуру тегов, не потерять атрибуты id, значения атрибутов class  и data-attributes. Для javascript шаблон дублируется в папке js, править надо оба шаблона.</p>
+
+<h3 id="order_shop_item.blade.php">Файл partials/order_shop_item.blade.php</h3>
+
+<p>Это шаблон товара в истории заказа. Как и во всех остальных шаблонах при правке важно сохранить структуру тегов, не потерять атрибуты id, значения атрибутов class  и data-attributes. Для javascript шаблон дублируется в папке js, править надо оба шаблона.</p>
+
+
+<h3 id="order_shop_mobile_item.blade.php">Файл partials/order_shop_mobile_item.blade.php</h3>
+
+<p>Это шаблон товара в истории заказа версии сайта для мобильных устройств. Как и во всех остальных шаблонах при правке важно
+сохранить структуру тегов, не потерять атрибуты id, значения атрибутов class  и data-attributes.</p>
+
+
+<h3 id="top_menu.blade.php">top_menu.blade.php</h3>
+
+<p>Шапка сайта. Логотип агрегатора, слоган, телефон.</p>
+
+<h3 id="partials_js">Каталог partials/js</h3>
+<p>
+В этом каталоге лежат дубли верстки из partials, но переменные blade {{ $varname->field }} в них заменены на [field]. 
+Работать с ними надо внимательно, так как не всегда структура верстки блока для js повторяет структуру блока для php
+(некоторые повторяющиеся части блока могут быть вынесены в отдельные шаблоны).
+</p><p>
+То же касается и иимен пременных.</p>
+
+<h3 id="js_favorite_main_page.blade.php">Файл js/favorite_main_page.blade.php</h3>
+<p>Не содержит переменных.</p><p>
+Этим блоком дополняется пустое место в блоке &laquo;Избранные магазины&raquo; на главной странице.</p>
+
+<h3 id="javascript_init_javascript_variables.php">Файл js/javascript_init_javascript_variables.blade.php</h3>
+<p>В файле происходит инициализация полей объекта javascript Flipcat. Таким образом происходит передача данных о настройках копии приложения.</p>
+<p>Файл не рекомендуется править. По умолчанию подключается в javascript.blade.php</p>
+
+
+<h3 id="Widgets">Каталог и файлы каталога widgets</h3>
+
+<p>Виджеты в отличии от partials содержат всегда верстку логически законченных элементов, таких как формы.
+Все виджеты обычно очень сильно завязаны на javascript поэтому <strong> крайне важно не нарушать структуру верстки,
+не удалять и не менять значения атрибутов class и id, не удалять и не менять значения data-атрибутов </strong></p>
+
+<h3 id="cuisine.blade.php">cuisine.blade.php</h3>
+
+<p>Представление формы фильтра ресторанов по кухням этих ресторанов.
+Когда пользователь заходит в категорию агрегатора, содержащую только рестораны, в левой колонке отображается этот виджет.
+Фильтрация происходит в браузере посредством javascript поэтому <strong> крайне важно не нарушать структуру верстки,
+не удалять и не менять значения атрибутов class и id, не удалять и не менять значения data-атрибутов </strong></p>
+
+<h3 id="favorites.blade.php">favorites.blade.php</h3>
+<p>Представление списка избранных магазинов пользователя. </p>
+
+
+<h3 id="geo_location_form_custom_city.blade.php">geo_location_form_custom_city.blade.php</h3>
+<p>Форма выбора местоположения пользователя - посетителя сайта при отсутствии выбора категорий-городов из списка (Владелец группы магазинов (агрегатора магазинов) может задавать в настройках показ первой категории дерева категорий агрегаторов как список городов). </p>
+
+<h3 id="mobile_menu.blade.php">Файл mobile_menu.blade.php</h3>
+
+<p>ВЫдвигающееся слева меню в мобильной версии сайта. </p>
+
+
+
+<h3 id="order_form.blade.php">order_form.blade.php</h3>
+
+<p>Представление формы заказа магазина.
+Так как магазинов в агрегаторе несколько и у каждого из них свои правила оформления заказа
+в этом шаблоне сравнительно сложная логика.
+Рассмотрим его построчно.
+Данные полей ввода доступны в переменной $orderTemplate.
+В цикле @foreach($orderTemplate as $field) эти поля выводятся.</p>
+
+<p>В строке 
+@if (isset($field-&gt;required) &amp;&amp; $field-&gt;required == true)
+проверяется, обязательно ли покупатель должен заполнять это поле, если да, выводится 
+метка обязательного заполнения 
+&lt;span class=“red”&gt;*&lt;/span&gt;</p>
+
+<p>Далее в строке 
+<pre class="highlight php"><code>
+@if ($field-&gt;type == 'text’  || $field-&gt;type == 'date’|| $field-&gt;type == 'time’ || $field-&gt;type == 'email’)
+</code></pre> <p>
+проверяется, тип поля это текст, дата, время или адрес электронной почты.</p>
+
+<p>Если это один из них, выводится строка
+<pre class="highlight php"><code>
+
+&lt;input @if($field-&gt;type == 'time’) maxlength=“5” @endif class=“form-control @if($field-&gt;type == 'time’) timepicker @endif @if (!isset($field-&gt;required) || $field-&gt;required != true) order-no-req @endif” @if($field-&gt;type != 'time’) type=“{{ $field-&gt;type }}” @else type=“text” @endif name=“{{ $field-&gt;id }}” id=“ofi{{ $field-&gt;id }}” placeholder=“{{ $field-&gt;title }}”&gt;</p>
+</code></pre> <p>
+<p>В ней как можно заметить также происходит рад проверок.
+@if($field-&gt;type == 'time’) maxlength=“5” @endif
+добавляет атрибут maxlength=“5” если тип поля ввода  time, то есть оно предназначено для ввода времени.</p>
+
+<p>@if($field-&gt;type == 'time’) timepicker @endif</p>
+
+<p>добавляет в значение атрибута class селектор timepicker.</p>
+
+<p>Этот атрибут подключает к полю ввода виджет ввода времени, показаный на рисунке
+
+<p>
+	<img src="./index_files/img/timepicker.png">
+</p>
+<p>
+Для успешной работы timepicker в мастер шаблоне должны быть подключены одноименные css и js файлы.
+В оригинальном оформлении сайта они естественно подключены.</p>
+
+<p>@if (!isset($field-&gt;required) || $field-&gt;required != true) order-no-req @endif</p>
+
+<p>добавляет в значение атрибута class селектор order-no-req.
+Это может быть полезно при стилизации полей ввода, так как блок содержащий поле с меткой обязательного заполнения 
+может отличаться по размеру от блока содержащего поле без метки обязательного заполнения.</p>
+
+<p>Фрагмент </p>
+<pre class="highlight php"><code>
+ @if($field-&gt;type != 'time’) type=“{{ $field-&gt;type }}” @else type=“text” @endif
+ </code></pre> <p>
+устанавливает тип поля ввода в text если требуется time так как поддержка значения атрибута 
+type=“time” не кроссбраузерна, 
+да и стандартная реализация в браузерах, поддерживающих time показалась нам не самой удачной.
+Если вы не хотите использовать timepicker, можете удалить этот фрагмент.</p>
+
+<p>Будьте внимательны с атрибутами id и name, они болжны быть такими же как в оригинальном шаблоне для 
+нормальной работы формы.</p>
+
+<p>В строке @elseif (($field-&gt;type == 'list’ || $field-&gt;type == 'price’) &amp;&amp; isset($field-&gt;params) )
+проверяется, не нужено ли вывести данные в виде выпадающего списка.
+Цикл
+<pre class="highlight php">
+<code >@foreach ($field-&gt;params as $param)
+    &lt;option @if($field-&gt;type == 'price') data-price="{{ $param-&gt;value }}" @endif &gt;{{ $param-&gt;name }}&lt;/option&gt;
+@endforeach
+</code></pre><p>
+выводит элементы выпадающего списка.</p>
+
+<p>Фрагмент @if($field-&gt;type == 'price’) data-price=“{{ $param-&gt;value }}” @endif
+<strong> обязательный </strong> Он добавляет  атрибут data-price.
+Он необходим в том случае, если выбранная опция должна влиять на конечную стоимость товара.</p>
+
+<p>Строка @elseif ($field-&gt;type == 'delimiter’)
+служит для определения горизонтального разделителя полей. В оригинальном шаблоне в качестве разделителся используется тег hr.</p>
+
+<p>Блок
+
+<pre class="highlight php"><code>@else
+    &lt;input class="form-control @if (!isset($field-&gt;required) || $field-&gt;required != true) order-no-req @endif" type="text" name="{{ $field-&gt;id }}" id="ofi{{ $field-&gt;id }}" placeholder="{{ $field-&gt;title }}"&gt;
+@endif
+</code></pre><p>
+
+<p>служит для вывода поля ввода, для которого в html нет предусмотренных типов. 
+Фрагмент логики 
+@if (!isset($field-&gt;required) || $field-&gt;required != true) order-no-req @endif
+аналогичен описаному выше при описании фрагмента, в котором проверяется, тип поля это текст, дата, время или адрес электронной почты.</p>
+
+<p>Фрагмент верстки </p>
+<pre class="highlight html"><code><span class="nt">&lt;div&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"field-error"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+
+<p>важен, так как в нем выводятся ошибки при заполнении полей. </p>
+
+<p>При редактировании шаблона формы важно не потерять
+<pre class="highlight php"><code>
+&lt;input type="hidden" name="_token" id="_token" value="&lt;?php echo csrf_token(); ?&gt;"&gt;
+</code></pre><p>
+
+<h3 id="popup_auth.blade.php">popup_auth.blade.php</h3>
+
+<p>Шаблон формы авторизации (всплывающее окно)</p>
+
+
+<h3 id="popup_city_select.blade.php">popup_city_select.blade.php</h3>
+
+<p>всплывающий виджет выбора города для мобильной версии</p>
+
+
+<h3 id="popup_passw_recovery.blade.php">popup_passw_recovery.blade.php</h3>
+
+<p>Шаблон формы восстановления пароля (всплывающее окно)</p>
+
+<h3 id="popup_register.blade.php">popup_register.blade.php</h3>
+
+<p>Шаблон формы регистрации (всплывающее окно)</p>
+
+
+<h3 id="rfi_card_payment.blade.php">rfi_card_payment.blade.php</h3>
+<p>Форма оплаты картами (всплывающее окно)</p>
+<p class="bred">Этот код сгенерирован РФИ банком. Удалять css селекторы нельзя КАТЕГОРИЧЕСКИ.</p>
+
+<h3 id="search_in_shop.blade.php">search_in_shop.blade.php</h3>
+
+<p>Шаблон формы поиска в магазине</p>
+
+<h3 id="set_location_form.blade.php">set_location_form.blade.php</h3>
+<p>Форма, часть формы выбора локации. Может использоваться совместно со списком категорий-городов или с текстовым инпутом указания города.</p>
+
+<h3 id="shop_categories.blade.php">shop_categories.blade.php Категории магазина в левой колонке</h3>
+
+<p>Шаблон категорий магазина в левой колонке. </p>
+
+<h3 id="widgets-partials">Каталог widgets/partials</h3>
+
+<h3 id="favorite.blade.php">Файл favorite.blade.php Элемент списка избранных магазинов.</h3>
+
+<p>Данный шаблон дублируется в папке js для работы javascript сайта.
+Редактировать надо оба шаблона. Подробнее о javascript шаблонах читайте в <a href="#shops.blade.php">шаблона shops.blade.php</a></p>
+
+<div name="Каталог-assets" data-unique="Каталог-assets"></div>
+<h2 id="assets">Каталог assets</h2>
+
+<p>После редактирования файлов в этом каталоге (и вложенных каталогах) перейдите по ссылке /updateassets</p>
+
+<h3 id="css">css</h3>
+
+<p>Вы можете как угодно редактировать <i> определения </i> css селекторов в файлах этого каталога,
+удалять и создавать новые файлы.
+<strong> Удалять существующие селекторы как из css файлов так и из файлов шаблонов нельзя. </strong></p>
+
+<p>Добавлять новые селекторы и файлы можно. Ограничение на имя файла только одно:
+он не должен называться <strong>color.css </strong> или <strong>dev.css</strong>.
+Если вы создадите или отредактируете файл с таким называнием, он будет применен лишь до тех пор, пока в Личном кабинете не будут сохранены настройки внешнего вида.</p>
+
+<p>При изменении верстки шаблонов всегда стоит иметь ввиду содержимое файла color.css -
+определенные в нем селекторы должны отвечать за те же элементы, 
+что и в оригинальном шаблоне иначе настройка внешнего вида сайта из личного кабинета станет невозможной.</p>
+
+<p>Редактировать файл color.css не имеет смысла, он автоматически перезапишется.</p>
+
+<p>Редактировать файл dev.css не имеет смысла, он не будет опубликован.</p>
+
+<h3 id="js">js</h3>
+
+<p>Сайт использует несколько javascript файлов, подключенных в файле шаблона views/layouts/master.blade.php
+Вы не можете их редактировать.
+Но при необходимости вы можете создать дополнительные файлы, подключить их в шаблоне.
+Имена файлов при этом не должны быть 
+<strong>app.js, bootstrap.min.js, breadcrumbs.js, custom.js, desktop.js, favorites.js, jquery.cookie.js, jquery-1.11.0.min.js, lib.js, marker.js, php.js, productsspa.js, shopcategoriesfilter.js, shopfilter.js, shoplist.js, sidebar.js, sidebar.js, slider.js, timepicker.js, wow.min.js, yamap.js, bootstrap-slider.min.js, googlemapdialogadapter.js, address.js, user.js</strong></p>
+
+<h3 id="imgFonts">Каталоги img  и fonts</h3>
+
+<p>Тут полный простор для творчества, редактируйте, создавайте, удаляйте.</p>
+
+
+<h3 id="setttile">Установка тайтла на страницах</h3>
+<p>
+	По умолчанию в качестве тайтла страницы используется крайняя правая хлебная крошка. Если крошка не установлена (например, на главной странице), по умолчанию выводится имя агрегатора. (Имя агрегатора сейчас устанавливается в конфиге, позже будет вынесено в настройки в личном кабинете.).
+	</p>
+	<pre class="highlight php"><code>&lt;title&lt;@section('title') 
+	@if(isset($breadCrumbs) && is_array($breadCrumbs) && isset($breadCrumbs[count($breadCrumbs) - 1]))
+		{{ $breadCrumbs[count($breadCrumbs) - 1]['title'] }}
+	@else
+		{{ Config::get('app.shop_name', '') }}
+	@endif
+ @show&lt;/title&gt;
+	</code></pre>
+	<p>В этом коде в ветке @else вы можете указать другой текст на случай, если хлебная крошка не задана. Также, вы можете добавить какой-то текст, который будет выводиться рядом с хлебной крошкой. Например:</p>
+	<pre class="highlight php"><code>&lt;title&lt;@section('title') 
+	@if(isset($breadCrumbs) && is_array($breadCrumbs) && isset($breadCrumbs[count($breadCrumbs) - 1]))
+		Холодильники, морозильники, стиральные машины - MyShop - {{ $breadCrumbs[count($breadCrumbs) - 1]['title'] }}
+	@else
+		Тайтл, если нет хлебной крошки.
+	@endif
+ @show&lt;/title&gt;
+	</code></pre>
+	<p>	Также можно задать отдельный вывод хлебной крошки для каждого раздела сайта. </p>
+	<p>	Делается это в файлах, которые лежат на первом уровне каталога views.</p>
+	<p>	Какому разделу какой файл соответствует, можно найти в этой справке.</p>
+	<p>	Например, если мы хотим задать тайтл для главной страницы сайта, пишем в index.blade.php</p>
+	<pre class="highlight php"><code>@section('title') 
+		Тайтл для главной страницы сайта
+ @stop
+	</code></pre>
+	<p>	Например, если мы хотим задать тайтл длястраницы корзины, пишем в cart.blade.php</p>
+	<pre class="highlight php"><code>@section('title') 
+		Тайтл для корзины
+ @stop
+	</code></pre>
+	
+	
+	<h3 id="article_create">Создание инфо страниц</h3>
+	<p>Для добавления информационной страницы вы можете пройти по ссылке в личном кабинете "Информационные страницы" и добавить контент новой страницы. </p>
+	<p>Обратите внимание на поле ЧПУ в форме создания / редактирования страниц: контент страницы станет доступен на сайте приложения по ссылке /info/СОДЕРЖИМОЕ_ПОЛЯ_ЧПУ. </p>
+	<p>Если необходимо изменить верстку, шаблон страницы доступен в файле views/infopage/page.blade.php </p>
+	<p>Если необходимо изменить верстку, шаблон страницы доступен в файле views/infopage/page.blade.php </p>
+	
+	<pre class="highlight php"><code>@extends('layouts.master')@extends('layouts.master')
+
+@section('title'){{ $title }}@stop
+
+@section('list')
+&lt;section class=" padding-top-bottom"&gt;
+	&lt;div class="container desk-pad-top"&gt;
+		&lt;h2 class="-item_title"&gt;{{ $heading }}&lt;/h2&gt;
+		&lt;article&gt;{!! $body !!}&lt;/article&gt;
+	&lt;/div&gt;
+&lt;/section&gt;
+@stop</pre>
+<p>Если шаблон layouts.master покажется неподходящим для ваших целей, вы можете заменить его любым другим по своему усмотрению, определив в нем какую-то секцию, которую вы потом можете использовать в файле статьи. Подробнее смотрите документацию <a href="https://laravel.com/docs/5.2/blade" target="_blank" >laravel</a> </p>
+
+<p style="color:#00aa00;font-weight:bold">Также существует возможность создавать информационные страницы описаным ниже способом, эта возможность оставлена для людей, которым удобнее работать непосредственно с файлами разметки.</p>
+<p>	Для добавления своей страницы с тектом вам надо разместить её шаблон в каталоге views/articles. Например, если страница должна открываться по ссылке /articles/koni_i_ludi вам надо создать файл articles/koni_i_ludi.blade.php и записать в него содержимое: </p>
+<pre class="highlight php"><code>@extends('layouts.master')
+
+@section('title')Тайтл для страницы@stop
+@section('list')
+&lt;section class=" padding-top-bottom"&gt;
+	&lt;div class="container desk-pad-top"&gt;
+		&lt;h2 class="-item_title"&gt;О конях&lt;/h2&gt;
+		&lt;article&gt;
+			&lt;p&gt;	
+
+    У кого какие есть? Можно и народное творчество, но лучше бы с автором. Вот у меня парочка:&lt;/p&gt;&lt;p&gt;
+
+    "Терпеть не могу лошадей: посередине они неудобны, а по краям опасны." (с) Уинстон Черчилль&lt;/p&gt;&lt;p&gt;
+
+    "Я… машин не люблю. Понимаешь, мне неинтересно. Лучше бы я себе завёл лошадь, чёрт побери. В лошадях хоть есть что-то человеческое. С лошадью хоть поговорить можно…" (с) Д.Д. Сэлинджер, "Над пропастью во ржи"&lt;/p&gt;&lt;p&gt;
+     
+
+&lt;/p&gt;
+
+&lt;p&gt;
+	"Когда умрет последний конь - мир рухнет,&lt;/p&gt;&lt;p&gt;
+потому что самые лучшие люди - это кони".&lt;/p&gt;&lt;p&gt;
+В.Шукшин. &lt;/p&gt;&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;
+	
+&lt;/p&gt;
+		&lt;/article&gt;
+	&lt;/div&gt;
+&lt;/section&gt;
+@stop</code></pre>
+<p>Если шаблон layouts.master покажется неподходящим для ваших целей, вы можете заменить его любым другим по своему усмотрению, определив в нем какую-то секцию, которую вы потом можете использовать в файле статьи. Подробнее смотроите документацию <a href="https://laravel.com/docs/5.2/blade" target="_blank" >laravel</a> </p>
+<p>Если вы хотите, чтобы заголовок вашей статьи отображался в хлебных крошках, вам нужно добавить в свою статью этот заголовок в теге h2.</p>
+</div>
+      <div class="dark-box">
+          
+      </div>
+    </div>
+ 
+</body></html>

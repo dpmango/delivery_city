@@ -1,0 +1,29 @@
+.header__navbar-items_breadcrumbs {
+  margin-left: -5px;
+  font-size: 14px;
+  .header__navbar-item {
+    padding: 0 5px 0 5px;
+    position: relative;
+    &:after {
+      content: "/";
+      position: absolute;
+      right: -3px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  .header__navbar-item_unactive {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 5px 0 5px;
+  }
+}
+@media (max-width: 992px) {
+  .header__navbar-items_breadcrumbs {
+    font-size: 12px;
+  }
+}

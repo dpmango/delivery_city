@@ -1,0 +1,12 @@
+.orders-items-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: nowrap;
+	margin-top: 20px;
+}
+.orders-items-header>div {
+	padding: 7px 25px 7px 0;
+	border-right: 2px solid black;
+}

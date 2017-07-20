@@ -1,0 +1,324 @@
+/*модальные окна входа/регистрации*/
+.entry-modal {
+  max-width: 600px;
+  padding: 0 15px;
+}
+.entry-modal__left-col {
+  background: #fff;
+  padding: 45px 15px;
+}
+.entry-modal__right-col {
+  background: #efefef;
+  padding: 45px 15px;
+}
+.entry-modal__heading {
+  display: block;
+  font-size: 1.85rem;
+  margin-bottom: 25px;
+  text-align: center;
+}
+.entry-modal__footer {
+  padding-top: 15px;
+  @include display-flex-row;
+}
+.entry-modal__service-links {
+  a {
+    @include reset-a;
+    font-size: 16px;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+}
+.entry-modal__submit-button {
+  @include reset-button;
+  @include m-button;
+  font-size: 16px;
+  padding: 12px;
+}
+.entry-modal__notice {
+  display: block;
+  font-weight: 300;
+  text-align: center;
+  line-height: 1.4;
+  font-size: 14px;
+}
+.modal__close {
+  position: absolute;
+  z-index: 1000;
+  right: -5px;
+  top: 5px;
+}
+.modal__close-button {
+  @include reset-button;
+  display: block;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: black;
+    transform: rotate(45deg);
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: black;
+    transform: rotate(135deg);
+  }
+  &:hover {
+    background-color: transparent!important;
+    &:before,
+    &:after {
+      background: lighten(black, 40%);
+    }
+  }
+}
+
+.entry-modal__accept-agreement {
+  label {
+    font-size: 14px;
+    margin: 0;
+  }
+  a {
+    display: inline-block;
+    font-size: 14px;
+    color: inherit;
+    text-decoration: underline;
+    transform: translate(30px, 0);
+    margin-bottom: 20px;
+    &:hover {
+      color: $theme-color;
+    }
+  }
+}
+
+.entry-modal__reg-form {
+  text-align: center;
+}
+
+.entry-modal__fb {
+  position: relative;
+  display: block;
+  width: 150px;
+  padding: 0 15px 0 55px;
+  margin: 30px auto 15px auto;
+  border-radius: 4px;
+  background: #4c68b3;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 40px;
+  vertical-align: middle;
+  text-align: left;
+  &:hover {
+    text-decoration: none;
+    color: #fff;
+    background: darken(#4c68b3, 10%);
+  }
+  &:visited {
+    text-decoration: none;
+    color: #fff!important;
+  }
+  &:before {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background:  url(../img/fb_ico_button.png) center center no-repeat;
+    background-size: contain;
+  }
+}
+.entry-modal__vk {
+  @extend .entry-modal__fb;
+  background: #426b9a;
+  margin: 0 auto 15px auto;
+  &:hover {
+    background: darken(#426b9a, 10%);
+  }
+  &:before {
+    background:  url(../img/vk_ico_button.png) center center no-repeat;
+    background-size: contain;
+  }
+}
+.entry-modal__mail {
+  @extend .entry-modal__fb;
+  background: #3688c9;
+  margin: 0 auto 15px auto;
+  &:hover {
+    background: darken(#3688c9, 10%);
+  }
+  &:before {
+    background:  url(../img/mail_ico_button.png) center center no-repeat;
+    background-size: contain;
+  }
+}
+
+.filters-modal {
+  padding: 15px;
+  max-height: calc(100vh - 20px);
+  overflow-y: scroll;
+
+  .modal__close {
+    position: fixed;
+    right: 10px;
+  }
+  .filters-modal__heading {
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  .filters__content {
+    display: block;
+    padding: 0;
+  }
+}
+.filters-modal__submit-button {
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  vertical-align: middle;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  text-decoration: none;
+  background: $theme-color;
+  border-radius: 4px;
+  margin-top: 15px;
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.geolocation-mobile-modal {
+  padding: 15px;
+  .modal__close {
+    right: 10px;
+  }
+}
+.geolocation-mobile-modal__footer {
+  @include display-flex-row;
+}
+.geolocation-mobile-modal__button {
+  @include reset-button;
+  @include m-button;
+  font-size: 14px;
+  padding: 15px;
+  &-map {
+    width: 15%;
+    margin-right: 5%;
+    background-image: url(../img/map_pin-icon.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 65%;
+    padding: 0;
+    height: 44px;
+  }
+  &-submit {
+    width: 80%;
+  }
+}
+
+
+.geolocation-form__modal {
+  height: 500px;
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: 100%;
+    padding: 15px;
+    iframe {
+      display: block;
+      width: 100%;
+      height: auto;
+      flex: 1;
+    }
+  }
+}
+
+.geolocation-form__modal_header {
+  margin-bottom: 10px;
+}
+.geolocation-form__modal_footer {
+  margin-top: 10px;
+}
+.geolocation-form__modal-input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #e9e9e9;
+  box-shadow: none;
+  outline: 0;
+  font-size: 16px;
+  padding: 10px;
+}
+.geolocation-form__modal-button {
+  @include reset-button;
+  @include m-button;
+  height: 40px;
+  font-size: 14px;
+}
+.geolocation-form__modal-button_find {
+  width: 100%;
+}
+.geolocation-form__modal-button_submit {
+  display: inline-block;
+}
+.geolocation-form__modal-button_close {
+  display: inline-block;
+  background: #bababa;
+  &:hover {
+    background: darken(#bababa, 15%)!important;
+  }
+}
+@media (max-width: 575px) {
+  .geolocation-form__modal {
+    height: calc(100vh - 100px);
+  }
+}
+
+.success-modal {
+  background: rgb(163, 217, 169);
+  padding: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: darken(rgb(137, 217, 143), 45%);
+  min-height: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.fail-modal {
+  background: rgb(217, 148, 145);
+  padding: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: darken(rgb(217, 148, 145), 45%);
+  min-height: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}

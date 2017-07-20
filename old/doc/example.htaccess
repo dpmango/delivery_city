@@ -1,0 +1,4 @@
+AuthType Basic
+AuthUserFile /var/www/personalcab/data/www/.htpasswd
+AuthName layoutdoc
+require valid-user

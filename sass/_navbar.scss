@@ -1,0 +1,104 @@
+.header__navbar {
+  width: 100%;
+  background: $navbar-color;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  max-height: 50px;
+}
+
+.header__navbar_fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.header__navbar-items {
+  font-size: 14px;
+  font-weight: 300;
+  @include reset-ul;
+  @include display-flex-row;
+  justify-content: flex-start;
+  color: #fff;
+  li {
+    height: 50px;
+    -webkit-font-smoothing: subpixel-antialiased;
+  }
+  a {
+    @include reset-a;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-decoration: none;
+    &:focus {
+      outline: 0;
+    }
+    &:hover {
+      color: darken(#fff, 15%);
+    }
+  }
+}
+
+.header__navbar-items_buttons {
+  justify-content: flex-end;
+  li {
+    margin-left: 10px;
+  }
+}
+.header__navbar-item_cart {
+  position: relative;
+  .header__navbar-item_cart-counter {
+    @extend .header__cart-counter;
+    top: 5px!important;
+  }
+}
+.header__navbar_fixed {
+  .header__navbar-items_buttons {
+    li {
+      margin-left: 45px;
+    }
+    a {
+      display: block;
+      width: 40px;
+      &:hover {
+        opacity: 0.8;
+      }
+      span {
+        display: none;
+      }
+    }
+  }
+  .header__navbar-item_personal-account {
+    background: url(../img/account-icon.svg) no-repeat center center;
+    flex:1;
+  }
+  .header__navbar-item_cart {
+    background: url(../img/cart-icon.svg) no-repeat center center;
+    flex:1;
+    .header__navbar-item_cart-counter {
+      display: flex;
+    }
+  }
+  .header__navbar-item_logout {
+    background: url(../img/log_out-icon.svg) no-repeat center center;
+    flex:1;
+  }
+  .header__navbar-item_orders-history {
+    background: url(../img/orders_history-icon.svg) no-repeat center center;
+    flex:1;
+  }
+}
+
+.header__breadcrumbs-item_unactive {
+  padding-left: 5px;
+}
+
+@media (max-width: 992px) {
+  .header__navbar-items {
+    font-size: 12px;
+  }
+}

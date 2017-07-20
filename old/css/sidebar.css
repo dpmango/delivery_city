@@ -1,0 +1,50 @@
+#search-bar, .search-bar-clone {
+	z-index: 0;
+	position: relative;
+	margin: 15px 0;
+	width: 100%;
+}
+
+.sidebar-menu-list {
+	padding: 0;
+}
+.shop-categories-child {
+	padding: 0 0 0 15px;
+	margin-top: 15px;
+}
+.search:focus {
+	outline: 0;
+}
+.sidebar-link {
+	display: block;
+	padding: 15px 0 15px 10px;
+	font-size: 14px;
+	width: 100%;
+	font-weight: bold;
+}
+.sidebar-link:hover {
+	text-decoration: none;
+}
+.parent-shop-category{position: relative;}
+@media (min-width: 767px) {
+	.parent-shop-category::after{font-family:'FontAwesome';content:"\f054";position:absolute;right:10px;}
+	.parent-shop-category.shop-category-is-open::after{font-family:'FontAwesome';content:"\f054";position:absolute;right:10px;}
+}
+#favorite-section span{font-weight: bold;}
+@media (max-width: 767px) {
+	#favorite-section{margin-top:10px;}
+	#favorite-section .sidebar-link{padding:0;padding-left:48px;font-weight:normal;font-size:13px;line-height:50px;vertical-align:middle;display:inline-block;width:100%;position:relative;}
+	#favorite-section .sidebar-link::before{font-family:'FontAwesome';content:"\f005";font-size:40px;position:absolute;top:5px;left:2px;bottom:5px;}
+	#favorite-section .sidebar-link::after{font-family:'FontAwesome';content:"\f054";position:absolute;right:10px;}
+	#favorite-section .sidebar-link:hover{background:transparent;}
+	.favorite_shop_item_layout{width:100%;float:none;}
+	#favorite-section span{font-weight: 500;}
+	.parent-shop-category::after{font-family:'FontAwesome';position:absolute;right:10px;}
+	.parent-shop-category.shop-category-is-open::after{font-family:'FontAwesome';position:absolute;right:10px;}
+}
+.left-menu-active-link:hover {
+	color:#FFF !important;
+}
+.sidebar-link:hover {
+	color:#FFF !important;
+}

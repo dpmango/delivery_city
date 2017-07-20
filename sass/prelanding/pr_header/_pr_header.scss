@@ -1,0 +1,117 @@
+@import "../../geolocation-form";
+
+.pr-header { /*стили хедера прелендинга*/
+  position: relative;
+  height: auto;
+  color: #fff;
+  background: #48574f;
+  padding-bottom: 6%;
+  line-height: 1;
+}
+.pr-header__video-wrapper { /*обертка видео-бэкграунда*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+.media { /*стили видео-бэкграунда*/
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.pr-header__layout { /*подложка затемняющая видео-бэкграунд*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+}
+.pr-header__phone { /*номер телефона*/
+  display: inline-block;
+  margin: 1.6785rem 0 3.1875rem 0;
+  font-size: 24px;
+  position: relative;
+  &:before {
+    content: "";
+    background: url(../img/phone-icon.png) center center no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: -30px;
+    top: 1px;
+    width: 24px;
+    height: 24px;
+  }
+}
+.pr-header__slogan { /*стили слогана прелендинга*/
+  font-size: 48px;
+  display: block;
+  margin: 1.625rem 0 0.875rem 0;
+}
+.pr-header__geolocation-wrapper { /*размер текста в форме геолокации*/
+  font-size: 18px;
+  font-weight: 300;
+}
+
+@media (max-width: 992px) {
+  .pr-header {
+    background: url(../img/prelanding/header-picture_background.jpg) center center no-repeat;
+    background-size: cover;
+  }
+  .pr-header__video {
+    display: none;
+  }
+  .pr-header__slogan {
+    font-size: 32px;
+  }
+}
+@media (max-width: 767px) {
+  .pr-header__logo {
+    margin: 70px 0 36px 0;
+  }
+  .pr-header__phone {
+    font-size: 20px;
+    &:before {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .pr-header__geolocation-wrapper {
+    font-size: 14px;
+  }
+  .header__compositional-input {
+    flex-wrap: wrap;
+  }
+  .header__input_city {
+    width: calc(100% - 5px);
+    margin-bottom: 15px;
+    border-right: 0;
+    select {
+      border-radius: 4px;
+    }
+  }
+  .header__input_street {
+    width: 60%;
+    border-radius: 4px 0 0 4px;
+    border-right: 1px solid #9c9c9c;
+    left: 0;
+  }
+  .header__input_house {
+    width: 40%;
+    border-radius: 0 4px 4px 0;
+    left: -5px;
+  }
+  .pr-header__geolocation-skip-button {
+    width: calc(100% - 5px);
+  }
+}
+@media (max-width: 575px) {
+  .pr-header__logo {
+    margin: 30px 0 26px 0;
+  }
+  .pr-header__slogan {
+    font-size: 28px;
+  }
+}

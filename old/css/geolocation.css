@@ -1,0 +1,67 @@
+/*geo*/
+.input-append{margin-bottom:15px;}
+.span9 .form-control{width:100%;}
+.shipping-buttons{border: 1px solid #e4e4e4;background-color:#fff;display:flex;flex-wrap: nowrap;flex-direction:row;justify-content:center;margin:0 0 15px 0;transition: border 0.4s}
+.shipping-buttons:hover{border-color: #c7c7c7;}
+.shipping-buttons-mobile{border: 1px solid #e4e4e4;background-color:#fff;display:flex;flex-wrap: nowrap;flex-direction:row;justify-content:center;margin-bottom:15px;width:100%;}
+.mobile-geo{text-align:center;padding:10px 15px;width:100%;margin-bottom: 15px;}
+.mobile-geo button{display:inline-block;padding:7px 15px;border-radius:20px;background:#fff;border:0;outline:0;width:100%;font-size:14px;position:relative;}
+.mobile-geo button::before{font-family:'FontAwesome';content:'\f041';position:absolute;left:15px;}
+.geo-form-wrapper .custom_input{padding:24px 10px 4px 10px;}
+.geo-form-popup .absolute-pos-close{top:0;right:15px;}
+.geo-butttons{display:flex;flex-direction:row;flex-wrap:nowrap;justify-content:space-between;}
+.geo-butttons button{border:0;outline:0;border-radius:4px;color:#fff;padding:7px 0;display: inline-block;}
+.geo-butttons button:first-child{width:15%;}
+.geo-butttons button:last-child{width:82%;}
+.header-geo-form-layout{display:flex;flex-direction:row;justify-content:center;}
+.header-geo-form-layout .city_select {margin:0;padding:0;}
+.location_formblock .form-group{margin-bottom:0;}
+.geo-form-wrapper input, .geo-form-wrapper select{width:100%;}
+
+.location_search_by_string, .location_search_on_map {
+	margin-left:5px;
+}
+#map-canvas {
+    height: 400px;
+}
+.location-home {
+	width:80px;
+}
+#iStreet {
+	width: 171px;
+	margin-right: 5px;
+}
+.first-category-level {
+	font-family:Arial;
+}
+.freecity-wrapper {
+	width:166px;
+	margin-top:11px;
+}
+.notifications-switcher-item {
+	margin-bottom:10px;
+	margin-left:10px;
+}
+@media (max-width: 992px){
+	.freecity-wrapper {
+		width: 120px;	
+	}
+	#iStreet {
+	width: 101px;
+	margin-right: 5px;
+	}
+}
+@media (max-width: 320px){
+	#map-canvas {
+    	height: 250px;
+}
+}
+.no-before-image button::before{
+	font-family: 'FontAwesome';
+	content: '';
+	position: absolute;
+	left: 15px;
+}
+.choose-shipping-active {
+	color: #fff!important;
+}

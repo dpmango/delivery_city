@@ -1,0 +1,108 @@
+/*кнопки начать/пропустить в форме геолокации прелендинга
+ создаем сначала кнопку пропустить,
+затем делаем extend всех ее свойств в кнопку начать.*/
+.pr-header__geolocation-skip-button {
+  display: block;
+  width: calc(100% - 10px);
+  max-width: 100%;
+  padding: 23px 0;
+  border-radius: 4px;
+  background: rgba(0,0,0,0.5);
+  border: 0;
+  outline: 0;
+  color: #fff!important;
+  text-decoration: none!important;
+  cursor: pointer;
+  font-size: 18px;
+}
+.pr-header__geolocation-start-button {
+  @extend .pr-header__geolocation-skip-button;
+}
+/*-----------------------------------------------------------*/
+
+
+/*кнопки мобильных маркетов в прелендинге, создаем сначала кнопку appstore
+и затем делаем extend всех ее свойств в кнопку google play*/
+.pr-promo__appstore {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+  &:before {
+    @include button-layout;
+    border-radius: 10px;
+  }
+}
+.pr-promo__google-play {
+  @extend .pr-promo__appstore;
+}
+
+/*кнопки социальных сетей футера*/
+.footer__social-network-button {
+  position: relative;
+  display: block;
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  margin-left: 15px;
+  &:first-child {
+    margin-left: 0;
+  }
+  &:before {
+    @include button-layout;
+    border-radius: 10px;
+  }
+}
+.footer__social-network-button_vk{
+  background: url(../img/vk_icon.png) no-repeat;
+  background-size: cover;
+}
+.footer__social-network-button_fb{
+  background: url(../img/fb_icon.png) no-repeat;
+  background-size: cover;
+}
+.footer__social-network-button_inst{
+  background: url(../img/inst_icon.png) no-repeat;
+  background-size: cover;
+}
+.footer__social-network-button_yout{
+  background: url(../img/youtube.png) no-repeat;
+  background-size: cover;
+}
+/*-----------------------------------------------------------*/
+
+/*основные кнопки которые задаются миксином и при наведении/нажатии становятся темнее*/
+
+
+
+/*кнопки мобильных маркетов в футере, создаем сначала кнопку appstore,
+задаем background-image спрайт из двух кнопок и
+затем делаем extend всех ее свойств в кнопку google play,
+за исключением того что двигаем cпрайт.*/
+.footer__appstore {
+  display: block;
+  width: 128px;
+  height: 40px;
+  position: relative;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  background-image: url(../img/app_icons.png);
+  margin-bottom: 10px;
+  &:before {
+    @include button-layout;
+  }
+}
+
+.footer__google-play {
+  @extend .footer__appstore;
+  background-position: 128px 0;
+  margin-left: 15px;
+}
+/*-----------------------------------------------------------*/
+
+.test-button {
+  display: block;
+  padding: 30px;
+  background-color: $theme-color;
+}
+@import "_active-statements";

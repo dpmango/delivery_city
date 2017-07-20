@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<yml_catalog date="2017-03-23 06:37">
+	<shop>
+		<?<name>market.do4a.com</name>
+		<company>market.do4a.com</company>
+		<url>https://market.do4a.com/</url>
+		<currencies>
+			<currency id="RUB" rate="1"/>
+		</currencies>?>
+		<categories>
+			<category id="1">Протеин</category>
+		</categories>
+		<offers>
+
+		<offer id="1296" available="true">
+			<url>
+			https://market.do4a.com/catalog/product/on_enteric_coated_fish_oil_100_zhel/
+			</url>
+			<price>910</price>
+			<currencyId>RUB</currencyId>
+			<categoryId>1</categoryId>
+			<picture>
+			https://market.do4a.com/upload/iblock/cb6/ON_Fish_oil_100_caps_large.jpg
+			</picture>
+			<name>ON Enteric Coated Fish Oil 100 жел</name>
+			<?<vendor>Optimum Nutrition</vendor>?>
+			<description>
+			ON Enteric Coated Fish Oil - продукт, содержащий в своем составе ДГК и ЭПК жирные кислоты. Они не вырабатываются организмом, поэтому их необходимо получать с пищей или добавками. ДГК и ЭПК жирные кислоты защищают сердце и сосуды, положительно влияют на липидный профиль крови. Все это делает ON Enteric Coated Fish Oil незаменимым продуктом в рационе человека, следящего за своим здоровьем.
+			</description>
+		</offer>
+
+		</offers>
+	</shop>
+</yml_catalog>

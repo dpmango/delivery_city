@@ -1,0 +1,148 @@
+/*-----all inputs style here-----*/
+
+/*-----main input styles-----*/
+.input-block {
+	margin-bottom: 15px;
+	text-align: left;
+	position: relative;
+}
+.input-block hr + div {
+	display: none;
+}
+
+.custom-input {
+	-webkit-appearance: none;
+	-ms-appearance: none;
+	-moz-appearance: none;
+	 appearance: none;
+	border-radius: 0;
+	display: inline-block;
+	width: 100%;
+	padding: 24px 15px 4px 10px;
+	margin-bottom: 0;
+	border: 1px solid #eee;
+	font: normal 16px/20px arial; 
+	transition: 1s border;
+}
+.custom-input:focus {
+	outline: 0;
+	border: 1px solid #0c0c0c;
+}
+
+/*-----our floating fictive placeholder styles-----*/	
+.layout-label {
+	display: block;
+	margin-bottom: 0;
+	height: 50px;
+}
+.floating-placeholder-text {
+	display: inline-block;
+	padding-left: 11px;
+	font: normal 15px/20px arial;
+	text-align: left;
+	color: #9b9b9b;
+	-moz-transform: translateY(-34px);
+	-ms-transform: translateY(-34px);
+	-webkit-transform: translateY(-34px);
+	transform: translateY(-34px);
+	transition: all 0.3s;
+	cursor: text;	
+}
+
+/*-----push up our placeholders when input is focused-----*/	
+.layout-label input:focus + .floating-placeholder-text {
+	-moz-transform: translateY(-46px);
+	-ms-transform: translateY(-46px);
+	-webkit-transform: translateY(-46px);
+	transform: translateY(-46px);
+}
+
+/*-----keep it up when some value exist in input-----*/
+.layout-label input.value-exists + .floating-placeholder-text {
+	-moz-transform: translateY(-46px);
+	-ms-transform: translateY(-46px);
+	-webkit-transform: translateY(-46px);
+	transform: translateY(-46px);
+}
+
+/*------in order form we have different inputs and placeholders styles to our basic styles -----*/
+.input-and-button-wrapper {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-content: flex-start;
+}
+.input-and-button-wrapper label {
+	width: 80%; 
+	display: inline-block;
+}
+.timedate-input {
+	height: 50px;
+	background: #fff;
+}
+.timedate-input.time-padding {
+	line-height: 20px;
+}
+
+/*-----and select's styles will be here too-----*/
+.custom-select {
+	-webkit-appearance: none;
+	-ms-appearance: none;
+	-moz-appearance: none;
+	 appearance: none;
+	 display: inline-block;
+	width: 100%;
+	padding: 24px 15px 4px 10px;
+	margin-bottom: 0;
+	border: 1px solid #eee;
+	border-radius: 0;
+	font: normal 16px/20px arial;
+	transition: 1s border;
+	background: #fff;
+}
+.custom-select:focus {
+	outline: 0;
+	border: 1px solid #0c0c0c;
+}
+.select-label {
+	position: relative;	
+}
+.select-label::after {
+	font-family: 'FontAwesome';
+	content: "\f0d7";
+	font-size: 20px;
+	position: absolute;
+	right: 15px;
+	top: 12px;
+}
+.order-form-select-wrap {
+	margin-bottom: 10px;
+}
+.custom-select+.floating-placeholder-text {
+	-moz-transform: translateY(-46px);
+	-ms-transform: translateY(-46px);
+	-webkit-transform: translateY(-46px);
+	transform: translateY(-46px);
+}
+
+/*-----required icon styles-----*/
+#orderForm .red {
+	position: absolute;
+	left: -10px;
+	top: 19px;
+}
+.hidden-input{
+	position: absolute;
+	opacity: 0;
+	left: -9999px;
+}
+
+@media (max-width: 320px) {
+	.timedate-input + .floating-placeholder-text {
+		max-width: 200px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}

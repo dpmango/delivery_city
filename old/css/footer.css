@@ -1,0 +1,44 @@
+footer{background:#323A42;padding:30px 15px;}
+.sitemap a{color:#ccc;text-decoration:none;font-size:18px;}
+.sitemap a:hover{color:#fff;}
+.copyright{color:#ccc;margin-top:40px;}
+.footer_slogan{color:#fff;font-size:16px;}
+.floated_right{float:right;margin-bottom:20px;}
+.floated_right:after{content:"";display:block;clear: both;}
+.footer_sn_icons{float:right;color:#fff;}
+.market_link{width:128px;height:40px;display:inline-block;border:1px solid #fff;border-radius:5px;text-align:right;}
+.market_link:first-child{background:url('../img/app_icons.png');background-position:0px -1px;}
+.market_link:first-child:hover{background-position:0px -41px;border:1px solid #ccc;}
+.market_link:first-child:visited{background-position:0px -1px;}
+.market_link:first-child:active{background-position:0px -1px;}
+.market_link:first-child:focus{background-position:0px -1px;}
+.market_link:nth-child(2){background:url('../img/app_icons.png');background-position:-130px -1px;}
+.market_link:nth-child(2):hover{background-position:-130px -41px;border:1px solid #ccc;}
+.market_link:nth-child(2):visited{background-position:-130px -41px;}
+.market_link:nth-child(2):active{background-position:-130px -41px;}
+.market_link:nth-child(2):focus{background-position:-130px -41px;}
+.footer_sn_icons p{text-align: center; font-size: 18px;}
+.footer_sn_icons_layout {display: flex; flex-direction: row; justify-content: center; align-items: center;}
+.footer_sn_icons a{display:inline-block;width:40px;height:40px;border-radius:10px;background:#fff;margin-left:15px;}
+.footer_sn_icons a:hover{opacity:0.7;}
+.footer_sn_icons a:nth-child(1){background:url('../img/vk_icon.png');background-repeat:no-repeat;background-size:cover;background-position:center center;margin-left: 0;}
+.footer_sn_icons a:nth-child(2){background:url('../img/fb_icon.png');background-repeat:no-repeat;background-size:cover;background-position:center center;}
+.footer_sn_icons a:nth-child(3){background:url('../img/inst_icon.png');background-repeat:no-repeat;background-size:cover;background-position:center center;}
+
+@media screen and (max-width: 1024px){
+	.footer_sn_icons{text-align:center}
+	.footer_sn_icons a{display:inline-block;}
+	.floated_right{text-align:center;margin:0;}
+	.floated_right a{display:inline-block;margin-bottom:10px;}
+}
+@media screen and (max-width: 767px) {
+	.footer_slogan{text-align:right;}
+	.advantages{padding:60px 0 20px 0;}
+	.footer_column_text{margin-bottom:60px;}
+	.footer_slogan{text-align:center;}
+	footer{text-align:center;}
+	.footer_sn_icons{float:none;}
+	.floated_right{float:none;margin-bottom:30px;}
+	.market_link:first-child{float:left;}
+	.market_link:nth-child(2){float:right;}
+}
