@@ -20,7 +20,7 @@ function build(callback) {
     'sass',
     //'javascript',
     //'images',
-    'sprite:png',
+    // 'sprite:png',
     callback
   );
 }

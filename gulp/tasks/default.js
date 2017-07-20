@@ -20,5 +20,5 @@ gulp.task('watch',
   ['sass:watch',
   // 'images:watch',
   // 'javascript:watch',
-  'sprite:png:watch',
+  // 'sprite:png:watch',
 ]);
