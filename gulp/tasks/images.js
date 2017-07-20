@@ -7,13 +7,12 @@ var config   = require('../config.js');
 gulp.task('images', function(){
   return gulp
     .src([
-      config.src.img + '**/*.{jpg,png,jpeg,svg,gif}',
-      '!' + config.src.img + '/svgo/**/*.*'
+      config.src.img + '**/*.{jpg,png,jpeg,svg,gif}'
     ])
     .pipe(cache(imagemin({
         interlaced: true
       })))
-    .pipe(gulp.dest(config.dest.img))
+    .pipe(gulp.dest(config.dest.img + '/min'))
 });
 
 gulp.task('images:watch', function() {

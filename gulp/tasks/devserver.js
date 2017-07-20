@@ -16,7 +16,7 @@ gulp.task('server', function() {
       }
     },
     files: [
-      config.dest.html + '/*.html',
+      config.dest.root + '/*.html',
       config.dest.css + '/*.css',
       config.dest.img + '/**/*'
     ],

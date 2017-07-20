@@ -18,8 +18,8 @@ gulp.task('build:development', function(callback) {
 function build(callback) {
   runSequence(
     'sass',
-    'javascript',
-    'images',
+    //'javascript',
+    //'images',
     'sprite:png',
     callback
   );
