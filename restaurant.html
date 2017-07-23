@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Страница ресторана</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/modernizr-custom.js"></script>
+	<script>
+		function imgLoaded(img) {
+			var imgWrapper = img.parentNode;
+			imgWrapper.className += imgWrapper.className ? ' loaded' : 'loaded';
+		}
+		window.onload = function() {
+			var hide_loading_el = document.querySelectorAll('.hide-before-load');
+			for (var i = 0; i < hide_loading_el.length; i++) {
+				hide_loading_el[i].classList.remove('hide-before-load');
+			}
+		};
+	</script>
+</head>
+
+<body ontouchstart>
+	<div class="wrapper">
+		<header class="header">
+			<div class="container" id="header-height">
+				<div class="row align-items-center justify-content-between flex-nowrap">
+					<div class="header__mobile-menu-burger-wrapper hidden-md-up">
+						<button class="header__mobile-menu-burger"><span></span></button>
+					</div>
+					<div class="header__back-wrapper hidden-md-up">
+						<button class="header__back"><span></span></button>
+					</div>
+					<div class="header__logo">
+						<img class="header__logo-image" src="img/youtube.png" alt="agregator-logo" height="50">
+					</div>
+
+					<!--<div class="hidden-sm-down">
+                <div class="header__city-picker">
+
+                </div>
+            </div>-->
+					<div class="hidden-sm-down">
+						<form class="header__geolocation-form hide-before-load">
+							<div class="header__compositional-input">
+								<div class="header__input_city">
+									<select id="city" title="выберите город" tabindex="1">
+                                <option>Город</option>
+                                <option>Москва</option>
+                                <option>Санкт-Петербург</option>
+                                <option>Архангельск</option>
+                                <option>Тюмень</option>
+                            </select>
+								</div>
+								<input class="header__input header__input_street" type="text" id="street" placeholder="Улица">
+								<input class="header__input header__input_house" type="text" id="house" placeholder="Дом">
+							</div>
+							<a href="#" class="header__geolocation-form-map-button" data-toggle="modal" data-target="#map-modal"></a>
+							<button class="header__geolocation-form-submit-button">Найти</button>
+						</form>
+					</div>
+					<div class="hidden-sm-down text-right">
+						<span class="header__phone-number">+7 982 917 22 36</span>
+					</div>
+					<div class="header__search hidden-md-up"></div>
+					<div class="header__mobile-cart-wrapper hidden-md-up">
+						<a class="header__mobile-cart" href="#"><span class="header__cart-counter">99</span></a>
+					</div>
+
+				</div>
+				<!--row-->
+			</div>
+			<!--container-->
+			<nav class="header__navbar hidden-sm-down">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 col-lg-7 col-xl-7">
+							<ul class="header__navbar-items header__navbar-items_breadcrumbs">
+								<li class="header__navbar-item"><a href="#">Главная</a></li>
+								<li class="header__navbar-item"><a href="#">Категория</a></li>
+								<li class="header__navbar-item"><a href="#">Расторан</a></li>
+								<li class="header__navbar-item_unactive"><span>еще что-то</span></li>
+							</ul>
+						</div>
+						<div class="col-md-6 col-lg-5 col-xl-5">
+							<ul class="header__navbar-items header__navbar-items_buttons">
+								<!--
+								<li><a class="header__navbar-item_cart" href="#" data-toggle="modal" data-target="#reg-modal"><span>Корзина</span>
+                            <span class="header__navbar-item_cart-counter">99</span>
+                        </a></li>
+-->
+								<li><a class="header__navbar-item_login" href="#" data-toggle="modal" data-target="#login-modal"><span>Вход</span></a></li>
+							</ul>
+						</div>
+					</div>
+					<!--row-->
+				</div>
+				<!--container-->
+			</nav>
+		</header>
+		<main class="content restaurant-page">
+
+
+
+			<div class="container">
+
+				<!--слайдер новостей-->
+				<div class="row">
+					<aside class="col-sm-12 col-md-4 col-lg-3 col-xl-3">
+						<div class="restaurant-logo"><img src="img/shop.png" alt=""></div>
+
+						<form action="#" class="search-field"><input type="text" class="search-field__input" placeholder="Поиск"><button type="submit" class="search-field__btn"></button></form>
+
+						<a class="geolocation-mobile hidden-md-up" href="javascript:void(0)" data-toggle="modal" data-target="#geolocation-mobile-modal">
+							<span class="geolocation-mobile__button">Введите адрес</span>
+						</a>
+						<!--кнопка активации попапа формы геолокации на мобильных устройствах-->
+
+
+						<!--переключатель типа доставки-->
+
+						<div class="filters-mobile hidden-md-up">
+							<a class="filters-mobile__button" href="javascript:void(0)" data-toggle="modal" data-target="#filters-modal">Сортировка</a>
+						</div>
+						<!--кнопка вызывающая попап мобильных фильтров.сортировок-->
+
+						<div class="filters hidden-sm-down">
+							<a class="filters__toggler expanded" href="javascript:void(0)">
+								<span>Сортировка</span>
+							</a>
+							<div class="filters__content">
+								<div class="filters__sort-block">
+									<form>
+										<div class="filters__radio-buttons">
+											<input type="radio" id="11111" name="test" checked>
+											<label for="11111">По стоимости</label>
+										</div>
+										<div class="filters__radio-buttons">
+											<input type="radio" id="22222" name="test">
+											<label for="22222">По имени</label>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+						<!--фильтр сортировки (радиокнопки)-->
+
+						<div class="goods-filter">
+							<a href="#" class="goods-filter__item">Максимальное количество сим (96)</a>
+							<a href="#" class="goods-filter__item goods-filter__item--more"><span>Максимальное количество символов (96)</span></a>
+							<a href="#" class="goods-filter__item goods-filter__item--more active"><span>Максимальное количество символов</span></a>
+							<a href="#" class="goods-filter__item goods-filter__item--more"><span>Максимальное количество символов</span></a>
+							<a href="#" class="goods-filter__item"><span>Максимальное количество символов</span></a>
+						</div>
+					</aside>
+
+					<div class="col-sm-12 col-md-8 col-lg-9 col-xl-9">
+						<div class="restaurant-block">
+							<div class="restaurant-block__title-wrap">
+								<h2 class="restaurant-block__title">Название ресторана максимальное количество символов</h2>
+								<div class="restaurant-block__raiting company-block__review-rating">
+									<div class="company-block__stars">
+										<div class="company-block__star"></div>
+										<div class="company-block__star"></div>
+										<div class="company-block__star"></div>
+										<div class="company-block__star"></div>
+										<div class="company-block__star"></div>
+									</div>
+									<div class="company-block__progress" style="width: 92%">
+										<div class="company-block__stars-masks">
+											<div class="company-block__star-mask"></div>
+											<div class="company-block__star-mask"></div>
+											<div class="company-block__star-mask"></div>
+											<div class="company-block__star-mask"></div>
+											<div class="company-block__star-mask"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="restaurant-block__info company-block__footer">
+								<div class="company-block__options">
+									<span class="company-block__option-name">Мин. заказ</span>
+									<span class="company-block__option-value">500 <span class="ruble">₽</span></span>
+								</div>
+								<div class="company-block__options">
+									<span class="company-block__option-name">Доставка</span>
+									<span class="company-block__option-value">0 <span class="ruble">₽</span></span>
+								</div>
+								<div class="company-block__options">
+									<span class="company-block__option-name">Время доставки</span>
+									<span class="company-block__option-value">1.5 час</span>
+								</div>
+								<div class="company-block__options company-block__options_spacer"></div>
+							</div>
+							<p class="restaurant-block__descr">Описание ресторана или магазина блаблабла блалаблаблалабаблаблабалблбабалбалаблбалаббл бла бла блаблабла блв аб фыбв а ф ы ва л ыли вроафи ор ыщовр аор фрщи щрви ащищр щрыва щ фщр ищвр афрщв а вамаксимальное количество символов воооооооооооооооооооооооооооооооот такооооооооое такоооооооо такоооооооо</p>
+							<div class="restaurant-block__panel">
+								<div class="restaurant-block__tabs">
+									<a href="#" class="restaurant-block__tab-link active" data-id="goods-catalog">Каталог</a>
+									<a href="#" class="restaurant-block__tab-link" data-id="goods-news">Новости</a>
+									<a href="#" class="restaurant-block__tab-link" data-id="goods-info">Информация</a>
+									<a href="#" class="restaurant-block__tab-link">Отзывы</a>
+								</div>
+								<form action="#" class="restaurant-block__favorites">
+									<input type="checkbox" id="fav1">
+									<label for="fav1"></label>
+								</form>
+							</div>
+						</div>
+						<div class="goods-block tab-item active" id="goods-catalog">
+							<div class="goods-block__item">
+								<div class="goods-block__item-img"><img src="img/goods.png" alt=""></div>
+								<h3 class="goods-block__item-title">Название максимальное количество символов</h3>
+								<div class="goods-block__item-panel">
+									<div class="goods-block__price">12 345 <span>₽</span></div>
+									<form action="" class="goods-block__favorites restaurant-block__favorites"><input type="checkbox" id="good-item1"><label for="good-item1"></label></form>
+									<button class="goods-block__to-cart">В корзину</button>
+								</div>
+								<div class="goods-tooltip goods-tooltip--first">
+									<img src="img/goods.png" alt="" class="goods-tooltip__img">
+									<p class="goods-tooltip__descr">580 гр. Состав: бла бла бала аблабабалл бваллбыа лыбалылаылаблаыаб - 999шт., что- то еще какой нибудь ролл - 89 шт., калифорния в пицце - 66 шт., бла нпс характеристики тут пишутся короче. Элемент растягивается в высоту в зависимости от текста. Строчка 8 блалблаллалалалалалалаллас Строчка 9 балоыагршрщшуркщшагпука Строчка 10 баловрадгыгшукраршгрфдгв Строчка11 лдыоволрдло ыдлрдлрла ам Строчка 12 вдоаром рдылорвадыыыа
+									</p>
+								</div>
+							</div>
+							<div class="goods-block__item">
+								<div class="goods-block__item-img"><img src="img/goods.png" alt=""></div>
+								<h3 class="goods-block__item-title">Название максимальное количество символов</h3>
+								<div class="goods-block__item-panel">
+									<div class="goods-block__price">12 345 <span>₽</span></div>
+									<form action="" class="goods-block__favorites restaurant-block__favorites"><input type="checkbox" id="good-item2"><label for="good-item2"></label></form>
+									<button class="goods-block__to-cart">В корзину</button>
+								</div>
+								<div class="goods-tooltip">
+									<img src="img/goods.png" alt="" class="goods-tooltip__img">
+									<p class="goods-tooltip__descr">580 гр. Состав: бла бла бала аблабабалл бваллбыа лыбалылаылаблаыаб - 999шт., что- то еще какой нибудь ролл - 89 шт., калифорния в пицце - 66 шт., бла нпс характеристики тут пишутся короче. Элемент растягивается в высоту в зависимости от текста. Строчка 8 блалблаллалалалалалалаллас Строчка 9 балоыагршрщшуркщшагпука Строчка 10 баловрадгыгшукраршгрфдгв Строчка11 лдыоволрдло ыдлрдлрла ам Строчка 12 вдоаром рдылорвадыыыа
+									</p>
+								</div>
+							</div>
+							<div class="goods-block__item">
+								<div class="goods-block__item-img"><img src="img/goods.png" alt=""></div>
+								<h3 class="goods-block__item-title">Название максимальное количество символов</h3>
+								<div class="goods-block__item-panel">
+									<div class="goods-block__price">От 12 345 <span>₽</span></div>
+									<form action="" class="goods-block__favorites restaurant-block__favorites"><input type="checkbox" id="good-item3"><label for="good-item3"></label></form>
+									<button class="goods-block__to-cart">Выбрать</button>
+								</div>
+								<div class="goods-tooltip">
+									<img src="img/goods.png" alt="" class="goods-tooltip__img">
+									<p class="goods-tooltip__descr">580 гр. Состав: бла бла бала аблабабалл бваллбыа лыбалылаылаблаыаб - 999шт., что- то еще какой нибудь ролл - 89 шт., калифорния в пицце - 66 шт., бла нпс характеристики тут пишутся короче. Элемент растягивается в высоту в зависимости от текста. Строчка 8 блалблаллалалалалалалаллас Строчка 9 балоыагршрщшуркщшагпука Строчка 10 баловрадгыгшукраршгрфдгв Строчка11 лдыоволрдло ыдлрдлрла ам Строчка 12 вдоаром рдылорвадыыыа
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="goods-news tab-item" id="goods-news">
+							<div class="goods-news__item">
+								<div class="goods-news__img"><img src="img/news-photo.jpg" alt=""></div>
+								<div class="goods-news__info">
+									<h3 class="goods-news__title">Шестая пицца бесплатно! Название акции бла бла бла блабаблаблалаолаоблfsdfsdfsfsdf</h3>
+									<p class="goods-news__descr">Сам текст акции ларгрфзруар грф згцруз га з гйрцзшга зг йзгрцзг руагшр зф зцр угша згрф зр цгзур а г х ф гврыхагр хфггры гврахр хрфр хщуха эфшоэ уэаоэо эфоэ ышоэ шво аэ эфшоэышвоэшашофооашш шфов аэшофэуа мгцругм ржгргр жгр жгарм</p>
+									<div class="goods-news__btn-wrap"><a href="#" class="goods-news__more">Подробнее</a></div>
+								</div>
+							</div>
+							<div class="goods-news__item">
+								<div class="goods-news__img"><img src="img/news-photo.jpg" alt=""></div>
+								<div class="goods-news__info">
+									<h3 class="goods-news__title">Шестая пицца бесплатно! Название акции бла бла бла блабаблаблалаолаоблfsdfsdfsdfsd</h3>
+									<p class="goods-news__descr">Сам текст акции ларгрфзруар грф згцруз га з гйрцзшга зг йзгрцзг руагшр зф зцр угша згрф зр цгзур а г х ф гврыхагр хфггры гврахр хрфр хщуха эфшоэ уэаоэо эфоэ ышоэ шво аэ эфшоэышвоэшашофооашш шфов аэшофэуа мгцругм ржгргр жгр жгарм жгар жмгражргм гам аг ашгмргмр гарм гшаржмграг гвfsfsfsd</p>
+									<div class="goods-news__btn-wrap"><a href="#" class="goods-news__more">Подробнее</a></div>
+								</div>
+							</div>
+						</div>
+						<div class="goods-info tab-item" id="goods-info"></div>
+					</div>
+				</div>
+				<!--row-->
+			</div>
+			<!--container-->
+
+		</main>
+
+
+		<footer class="footer">
+			<div class="container">
+				<div class="row align-content-start">
+					<div class="col-sm-12 col-md-4 col-lg-4">
+						<ul class="footer__menu">
+							<li><a href="#" ontouchstart>Партнерам</a></li>
+							<li><a href="#" ontouchstart>Обратная связь</a></li>
+							<li><a href="#" ontouchstart>О нас</a></li>
+						</ul>
+						<span class="footer__copyrights">2017 &copy; Сделано в DC</span>
+					</div>
+					<div class="col-sm-12 col-md-4 col-lg-4">
+						<span class="footer__description">Сервис заказов "ЗакаЖика" - ресторанам и магазинам предоставляем новый источник заказов без абонентской платы и расходов на рекламу! Пользователям предоставляем доступ к меню всех популярных ресторанов и магазинов в одном месте с возможностью сделать заказ с доставкой на дом. Заказывайте легко, быстро и в удовольствие! </span>
+						<div class="text-center">
+							<img class="footer__payment-types img-fluid" src="img/vm.png" alt="payment-types">
+						</div>
+					</div>
+					<div class="col-sm-12 col-md-4 col-lg-4">
+						<div class="footer__mobile-markets">
+							<a class="footer__appstore" href="#" target="_blank"></a>
+							<a class="footer__google-play" href="#" target="_blank"></a>
+						</div>
+						<div class="footer__social-networks">
+							<span class="footer__social-networks-heading">Мы в социальных сетях:</span>
+							<div class="footer__social-network-links-wrapper">
+								<a class="footer__social-network-button footer__social-network-button_vk" href="#" target="_blank"></a>
+								<a class="footer__social-network-button footer__social-network-button_fb" href="#" target="_blank"></a>
+								<a class="footer__social-network-button footer__social-network-button_inst" href="#" target="_blank"></a>
+								<a class="footer__social-network-button footer__social-network-button_yout" href="#" target="_blank"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+
+	<div class="mobile-menu">
+		<button class="mobile-menu__close"></button>
+		<div class="mobile-menu__buttons-wrapper">
+			<button class="mobile-menu__button" data-toggle="modal" data-target="#login-modal">Вход</button>
+			<button class="mobile-menu__button" data-toggle="modal" data-target="#reg-modal">Регистрация</button>
+		</div>
+		<div class="mobile-menu__select">
+			<select title="Выберите город">
+            <option>Тюмень</option>
+            <option>Тюлень</option>
+            <option>Олень</option>
+        </select>
+		</div>
+		<a class="mobile-menu__item" href="#">Главная</a>
+		<a class="mobile-menu__item" href="#">Личный кабинет</a>
+		<a class="mobile-menu__item" href="#">Избранное</a>
+		<a class="mobile-menu__item" href="#">Мои заказы</a>
+		<a class="mobile-menu__item" href="#">Загрузить приложение</a>
+		<a class="mobile-menu__item" href="#">Загрузить приложение</a>
+		<a class="mobile-menu__item" href="#">Загрузить приложение</a>
+		<a class="mobile-menu__item" href="#">Загрузить приложение</a>
+		<a class="mobile-menu__item" href="#">Загрузить приложение</a>
+		<a class="mobile-menu__item" href="#">Загрузить приложение</a>
+		<a class="mobile-menu__item" href="#">Загрузить приложение</a>
+		<a class="mobile-menu__item" href="#">Загрузить приложение</a>
+		<a class="mobile-menu__item" href="#">Загрузить приложение</a>
+		<p class="mobile-menu__text">
+			<span class="mobile-menu__note">Наш телефон</span> 88005553535
+		</p>
+		<a class="mobile-menu__item" href="#">Выход</a>
+	</div>
+
+	<!--Модальные окна-->
+
+	<div class="modal fade" id="map-modal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog " role="document">
+			<div class="modal-content geolocation-form__modal">
+
+				<form>
+					<div class="row geolocation-form__modal_header">
+						<div class="col-7">
+							<input class="geolocation-form__modal-input" type="text">
+						</div>
+						<div class="col-5">
+							<button class="geolocation-form__modal-button geolocation-form__modal-button_find">Найти на карте</button>
+						</div>
+					</div>
+
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d287426.52507238754!2d37.352319149637616!3d55.74947331575009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54afc73d4b0c9%3A0x3d44d6cc5757cf4c!2z0JzQvtGB0LrQstCw!5e0!3m2!1sru!2sru!4v1497415263484" width="600" height="450" style="border:0" allowfullscreen></iframe>
+
+					<div class="row geolocation-form__modal_footer">
+						<div class="col-12 text-right">
+							<button class="geolocation-form__modal-button geolocation-form__modal-button_submit">Подтвердить</button>
+							<button class="geolocation-form__modal-button geolocation-form__modal-button_close" data-dismiss="modal" aria-label="Close">Закрыть</button>
+						</div>
+					</div>
+				</form>
+
+
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog entry-modal" role="document">
+			<div class="modal-content">
+				<div class="row">
+					<div class="modal__close">
+						<button class="modal__close-button" data-dismiss="modal" aria-label="Close">
+                    </button>
+					</div>
+					<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 entry-modal__left-col">
+						<span class="entry-modal__heading">Вход</span>
+						<form>
+							<div class="dc-input-block">
+								<label class="dc-input-block__label">
+                                <input class="dc-input-block__input value-check" type="email">
+                                <span class="dc-input-block__placeholder">E-mail</span>
+                                <span class="dc-input-block__error-message">
+                                    Введен некорректный e-mail адрес
+                                </span>
+                            </label>
+							</div>
+							<div class="dc-input-block">
+								<label class="dc-input-block__label">
+                                <input class="dc-input-block__input value-check" type="password">
+                                <span class="dc-input-block__placeholder">Пароль</span>
+                                <span class="dc-input-block__error-message">
+                                    Вашим паролем ничего не защитить
+                                </span>
+                            </label>
+							</div>
+							<div class="entry-modal__footer">
+								<div class="entry-modal__service-links">
+									<a href="#">Восстановить пароль</a>
+									<a class="entry-modal__from-log-to-reg" href="#" data-dismiss="modal" aria-label="Close">Зарегистрироваться</a>
+								</div>
+								<button class="entry-modal__submit-button">Войти</button>
+							</div>
+						</form>
+					</div>
+					<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 entry-modal__right-col">
+						<span class="entry-modal__notice">
+                        Используя аккаунт из <br> социальной сети
+                    </span>
+						<a href="#" class="entry-modal__fb">facebook</a>
+						<a href="#" class="entry-modal__vk">вконтакте</a>
+						<a href="#" class="entry-modal__mail">mail.ru</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--окно логина-->
+
+	<div class="modal fade" id="reg-modal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog entry-modal" role="document">
+			<div class="modal-content">
+				<div class="row">
+					<div class="modal__close">
+						<button class="modal__close-button" data-dismiss="modal" aria-label="Close">
+                    </button>
+					</div>
+					<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 entry-modal__left-col">
+						<span class="entry-modal__heading">Регистрация</span>
+						<form>
+							<div class="dc-input-block">
+								<label class="dc-input-block__label">
+                                <input class="dc-input-block__input" type="email">
+                                <span class="dc-input-block__placeholder">E-mail</span>
+                                <span class="dc-input-block__error-message">
+                                    Введен некорректный e-mail адрес
+                                </span>
+                            </label>
+							</div>
+							<div class="dc-input-block">
+								<label class="dc-input-block__label">
+                                <input class="dc-input-block__input" type="password">
+                                <span class="dc-input-block__placeholder">Пароль</span>
+                                <span class="dc-input-block__error-message">
+                                    Вашим паролем ничего не защитить
+                                </span>
+                            </label>
+							</div>
+							<div class="dc-input-block">
+								<label class="dc-input-block__label">
+                                <input class="dc-input-block__input" type="password">
+                                <span class="dc-input-block__placeholder">Пароль</span>
+                                <span class="dc-input-block__error-message">
+                                    Вашим паролем ничего не защитить
+                                </span>
+                            </label>
+							</div>
+							<div class="entry-modal__accept-agreement">
+								<div class="dc-checkbox">
+									<input class="dc-checkbox__hidden-input" type="checkbox" id="1234">
+									<label for="1234">Я прочитал и согласен с условиями <span class="dc-checkbox__pseudo-checkbox"></span></label>
+									<a href="#">Пользовательского соглашения</a>
+								</div>
+							</div>
+							<div class="text-center">
+								<button class="entry-modal__submit-button entry-modal__submit-button_reg">Зарегистрироваться</button>
+							</div>
+						</form>
+					</div>
+					<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 entry-modal__right-col">
+						<span class="entry-modal__notice">
+                        Используя аккаунт из <br> социальной сети
+                    </span>
+						<a href="#" class="entry-modal__fb">facebook</a>
+						<a href="#" class="entry-modal__vk">вконтакте</a>
+						<a href="#" class="entry-modal__mail">mail.ru</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--окно регистрации-->
+
+	<div class="modal fade" id="filters-modal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content filters-modal">
+				<div class="row">
+					<div class="modal__close">
+						<button class="modal__close-button" data-dismiss="modal" aria-label="Close">
+                    </button>
+					</div>
+					<div class="col-12">
+						<div class="filters__content">
+							<div class="filters__sort-block">
+								<span class="filters-modal__heading">Сортировка</span>
+								<form>
+									<div class="filters__radio-buttons">
+										<input type="radio" id="1" name="test">
+										<label for="1">По удаленности</label>
+									</div>
+									<div class="filters__radio-buttons">
+										<input type="radio" id="2" name="test">
+										<label for="2">По популярности</label>
+									</div>
+									<div class="filters__radio-buttons">
+										<input type="radio" id="3" name="test">
+										<label for="3">По времени доставки</label>
+									</div>
+									<div class="filters__radio-buttons">
+										<input type="radio" id="4" name="test">
+										<label for="4">По стоимости доставки</label>
+									</div>
+									<div class="filters__radio-buttons">
+										<input type="radio" id="5" name="test">
+										<label for="5">По минимальной сумме заказа</label>
+									</div>
+								</form>
+							</div>
+						</div>
+						<hr>
+						<div class="filters__content">
+							<div class="filters__kitchens">
+								<span class="filters-modal__heading">Специализация</span>
+								<form>
+									<div class="dc-checkbox">
+										<input class="dc-checkbox__hidden-input" type="checkbox" id="1111">
+										<label for="1111">Все рестораны<span
+                                            class="dc-checkbox__pseudo-checkbox"></span></label>
+									</div>
+									<div class="dc-checkbox">
+										<input class="dc-checkbox__hidden-input" type="checkbox" id="2222">
+										<label for="2222">Лапша<span class="dc-checkbox__pseudo-checkbox"></span></label>
+									</div>
+									<div class="dc-checkbox">
+										<input class="dc-checkbox__hidden-input" type="checkbox" id="3333">
+										<label for="3333">Азиатская<span class="dc-checkbox__pseudo-checkbox"></span></label>
+									</div>
+									<div class="dc-checkbox">
+										<input class="dc-checkbox__hidden-input" type="checkbox" id="444444">
+										<label for="444444">Пицца<span class="dc-checkbox__pseudo-checkbox"></span></label>
+									</div>
+									<div class="dc-checkbox">
+										<input class="dc-checkbox__hidden-input" type="checkbox" id="555555">
+										<label for="555555">Суши<span class="dc-checkbox__pseudo-checkbox"></span></label>
+									</div>
+									<div class="dc-checkbox">
+										<input class="dc-checkbox__hidden-input" type="checkbox" id="666666">
+										<label for="666666">Пироги<span class="dc-checkbox__pseudo-checkbox"></span></label>
+									</div>
+									<div class="dc-checkbox">
+										<input class="dc-checkbox__hidden-input" type="checkbox" id="4444444">
+										<label for="4444444">Пицца<span class="dc-checkbox__pseudo-checkbox"></span></label>
+									</div>
+									<div class="dc-checkbox">
+										<input class="dc-checkbox__hidden-input" type="checkbox" id="5555555">
+										<label for="5555555">Суши<span class="dc-checkbox__pseudo-checkbox"></span></label>
+									</div>
+									<div class="dc-checkbox">
+										<input class="dc-checkbox__hidden-input" type="checkbox" id="6666666">
+										<label for="6666666">Пироги<span class="dc-checkbox__pseudo-checkbox"></span></label>
+									</div>
+									<div class="dc-checkbox">
+										<input class="dc-checkbox__hidden-input" type="checkbox" id="55555555">
+										<label for="55555555">Суши<span class="dc-checkbox__pseudo-checkbox"></span></label>
+									</div>
+									<div class="dc-checkbox">
+										<input class="dc-checkbox__hidden-input" type="checkbox" id="66666666">
+										<label for="66666666">Пироги<span class="dc-checkbox__pseudo-checkbox"></span></label>
+									</div>
+									<div class="dc-checkbox">
+										<input class="dc-checkbox__hidden-input" type="checkbox" id="555555555">
+										<label for="555555555">Суши<span class="dc-checkbox__pseudo-checkbox"></span></label>
+									</div>
+									<div class="dc-checkbox">
+										<input class="dc-checkbox__hidden-input" type="checkbox" id="666666666">
+										<label for="666666666">Пироги<span class="dc-checkbox__pseudo-checkbox"></span></label>
+									</div>
+									<div class="dc-checkbox">
+										<input class="dc-checkbox__hidden-input" type="checkbox" id="5555555555">
+										<label for="5555555555">Суши<span class="dc-checkbox__pseudo-checkbox"></span></label>
+									</div>
+									<div class="dc-checkbox">
+										<input class="dc-checkbox__hidden-input" type="checkbox" id="6666666666">
+										<label for="6666666666">Пироги<span class="dc-checkbox__pseudo-checkbox"></span></label>
+									</div>
+									<div class="dc-checkbox">
+										<input class="dc-checkbox__hidden-input" type="checkbox" id="555555555555">
+										<label for="555555555555">Суши<span class="dc-checkbox__pseudo-checkbox"></span></label>
+									</div>
+									<div class="dc-checkbox">
+										<input class="dc-checkbox__hidden-input" type="checkbox" id="666666666666">
+										<label for="666666666666">Пироги<span class="dc-checkbox__pseudo-checkbox"></span></label>
+									</div>
+								</form>
+								<a class="filters-modal__submit-button" href="javascript:void(0)">Применить</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--окно фильтров-->
+
+	<div class="modal fade" id="geolocation-mobile-modal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content geolocation-mobile-modal">
+				<div class="row">
+					<div class="modal__close">
+						<button class="modal__close-button" data-dismiss="modal" aria-label="Close">
+                    </button>
+					</div>
+					<div class="col-12">
+						<span class="entry-modal__heading">Выбор адреса</span>
+						<form>
+							<div class="dc-input-block">
+								<label class="dc-input-block__label dc-input-block__label_select">
+                                <select class="dc-input-block__select value-check">
+                                    <option>город1</option>
+                                    <option>город2</option>
+                                    <option>город3</option>
+                                    <option>город4</option>
+                                </select>
+                                <span class="dc-input-block__placeholder">Город</span>
+                            </label>
+							</div>
+							<div class="dc-input-block">
+								<label class="dc-input-block__label">
+                                <input class="dc-input-block__input value-check" type="text">
+                                <span class="dc-input-block__placeholder">Улица</span>
+                            </label>
+							</div>
+							<div class="dc-input-block">
+								<label class="dc-input-block__label">
+                                <input class="dc-input-block__input value-check" type="text">
+                                <span class="dc-input-block__placeholder">Дом</span>
+                            </label>
+							</div>
+							<div class="geolocation-mobile-modal__footer">
+								<button class="geolocation-mobile-modal__button geolocation-mobile-modal__button-map" data-dismiss="modal" aria-label="Close"></button>
+								<button class="geolocation-mobile-modal__button geolocation-mobile-modal__button-submit">Найти</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<script src="js/jQuery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			var navbar = $(".header__navbar");
+			var header_height = $("#header-height").height();
+			$(window).scroll(function() {
+				if ($(window).scrollTop() > (header_height + 16)) {
+					navbar.addClass("header__navbar_fixed");
+				} else {
+					navbar.removeClass('header__navbar_fixed');
+				}
+			});
+
+
+			$('.company-news-slider').owlCarousel({
+				loop: true,
+				margin: 10,
+				autoplay: true,
+				autoplayTimeout: 5000,
+				autoplayHoverPause: false,
+				responsive: {
+					0: {
+						items: 1,
+						dots: true,
+						nav: false
+					},
+					575: {
+						items: 1,
+						dots: false,
+						nav: true
+					},
+					992: {
+						items: 2,
+						dots: false,
+						nav: true
+					}
+				}
+			});
+
+
+			var $content = $(".content"),
+				$footer = $(".footer");
+			$(".header__mobile-menu-burger").click(function() {
+				$(".mobile-menu").toggleClass("mobile-menu_open");
+
+
+			});
+			$(".mobile-menu__close").click(function() {
+				$(".mobile-menu").toggleClass("mobile-menu_open");
+
+			});
+
+			var $filter_toggle = $(".filters__toggler");
+			var $filter_more_button = $(".filters__more-toggler");
+			var $filter_more_block = $(".filters__add-content");
+			$filter_toggle.each(function() {
+				var $this = $(this);
+				$this.click(function() {
+					$this.toggleClass('expanded');
+					$this.next().slideToggle('200');
+					if ($filter_more_block.hasClass("open")) {
+						$filter_more_block.slideToggle().removeClass("open");
+						$filter_more_button.fadeIn(600);
+					}
+				});
+			});
+			$filter_more_button.each(function() {
+				var $this = $(this);
+				$this.click(function() {
+					$this.fadeOut(100);
+					$this.next().slideToggle().addClass("open");
+				});
+			});
+
+			var $delete_fav = $('.sidebar-favorites__delete');
+			$delete_fav.each(function() {
+				var $this = $(this);
+				$this.click(function() {
+					event.preventDefault();
+					$this.parent().css("display", "none");
+					$this.parent().prev("a").addClass('sidebar-favorites__item-last');
+				});
+			});
+
+			$('.value-check').blur(function() {
+				var inputVal = this.value;
+
+				if (inputVal) {
+					this.classList.add('value-exists');
+				} else {
+					this.classList.remove('value-exists');
+				}
+			});
+
+			$(".entry-modal__from-log-to-reg").click(function() {
+				setTimeout(function() {
+					$(".header__navbar-item_cart").trigger("click");
+				}, 500)
+			});
+
+			$(".geolocation-mobile-modal__button-map").click(function() {
+				setTimeout(function() {
+					$(".header__geolocation-form-map-button").trigger("click");
+				}, 500)
+			});
+		});
+	</script>
+	<script>
+		/* Табы-переключатели */
+
+		$(document).ready(function() {
+			$('.restaurant-block__tab-link').on('click', function(e) {
+				e.preventDefault();
+				$('.restaurant-block__tab-link').removeClass('active');
+				$(this).addClass('active');
+				var dataId = $(this).attr('data-id');
+				$('.tab-item').removeClass('active');
+				$('.tab-item#' + dataId).addClass('active');
+			});
+
+		});
+	</script>
+</body>
+
+</html>

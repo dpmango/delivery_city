@@ -28,6 +28,7 @@
 @import "footer/footer"; /*стили футера*/
 @import "_company-block.scss"; /*стили блока компании в списке компаний*/
 @import "_modals.scss"; /*модальные окна*/
+@import "restaurant/_restaurant.scss"; 
 
 body {
   background-color: $body-background!important;
