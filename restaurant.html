@@ -22,7 +22,7 @@
 	</script>
 </head>
 
-<body ontouchstart>
+<body ontouchstart class="restaurant-page">
 	<div class="wrapper">
 		<header class="header">
 			<div class="container" id="header-height">
@@ -100,7 +100,7 @@
 				<!--container-->
 			</nav>
 		</header>
-		<main class="content restaurant-page">
+		<main class="content">
 
 
 
@@ -200,7 +200,7 @@
 									<a href="#" class="restaurant-block__tab-link active" data-id="goods-catalog">Каталог</a>
 									<a href="#" class="restaurant-block__tab-link" data-id="goods-news">Новости</a>
 									<a href="#" class="restaurant-block__tab-link" data-id="goods-info">Информация</a>
-									<a href="#" class="restaurant-block__tab-link">Отзывы</a>
+									<a href="#" class="restaurant-block__tab-link" data-id="goods-reviews">Отзывы</a>
 								</div>
 								<form action="#" class="restaurant-block__favorites">
 									<input type="checkbox" id="fav1">
@@ -209,7 +209,7 @@
 							</div>
 						</div>
 						<div class="goods-block tab-item active" id="goods-catalog">
-							<div class="goods-block__item">
+							<a href="#" class="goods-block__item">
 								<div class="goods-block__item-img"><img src="img/goods.png" alt=""></div>
 								<h3 class="goods-block__item-title">Название максимальное количество символов</h3>
 								<div class="goods-block__item-panel">
@@ -222,8 +222,8 @@
 									<p class="goods-tooltip__descr">580 гр. Состав: бла бла бала аблабабалл бваллбыа лыбалылаылаблаыаб - 999шт., что- то еще какой нибудь ролл - 89 шт., калифорния в пицце - 66 шт., бла нпс характеристики тут пишутся короче. Элемент растягивается в высоту в зависимости от текста. Строчка 8 блалблаллалалалалалалаллас Строчка 9 балоыагршрщшуркщшагпука Строчка 10 баловрадгыгшукраршгрфдгв Строчка11 лдыоволрдло ыдлрдлрла ам Строчка 12 вдоаром рдылорвадыыыа
 									</p>
 								</div>
-							</div>
-							<div class="goods-block__item">
+							</a>
+							<a href="#" class="goods-block__item">
 								<div class="goods-block__item-img"><img src="img/goods.png" alt=""></div>
 								<h3 class="goods-block__item-title">Название максимальное количество символов</h3>
 								<div class="goods-block__item-panel">
@@ -236,8 +236,8 @@
 									<p class="goods-tooltip__descr">580 гр. Состав: бла бла бала аблабабалл бваллбыа лыбалылаылаблаыаб - 999шт., что- то еще какой нибудь ролл - 89 шт., калифорния в пицце - 66 шт., бла нпс характеристики тут пишутся короче. Элемент растягивается в высоту в зависимости от текста. Строчка 8 блалблаллалалалалалалаллас Строчка 9 балоыагршрщшуркщшагпука Строчка 10 баловрадгыгшукраршгрфдгв Строчка11 лдыоволрдло ыдлрдлрла ам Строчка 12 вдоаром рдылорвадыыыа
 									</p>
 								</div>
-							</div>
-							<div class="goods-block__item">
+							</a>
+							<a href="#" class="goods-block__item">
 								<div class="goods-block__item-img"><img src="img/goods.png" alt=""></div>
 								<h3 class="goods-block__item-title">Название максимальное количество символов</h3>
 								<div class="goods-block__item-panel">
@@ -250,7 +250,7 @@
 									<p class="goods-tooltip__descr">580 гр. Состав: бла бла бала аблабабалл бваллбыа лыбалылаылаблаыаб - 999шт., что- то еще какой нибудь ролл - 89 шт., калифорния в пицце - 66 шт., бла нпс характеристики тут пишутся короче. Элемент растягивается в высоту в зависимости от текста. Строчка 8 блалблаллалалалалалалаллас Строчка 9 балоыагршрщшуркщшагпука Строчка 10 баловрадгыгшукраршгрфдгв Строчка11 лдыоволрдло ыдлрдлрла ам Строчка 12 вдоаром рдылорвадыыыа
 									</p>
 								</div>
-							</div>
+							</a>
 						</div>
 						<div class="goods-news tab-item" id="goods-news">
 							<div class="goods-news__item">
@@ -270,7 +270,81 @@
 								</div>
 							</div>
 						</div>
-						<div class="goods-info tab-item" id="goods-info"></div>
+						<div class="goods-info tab-item" id="goods-info">
+							<div class="goods-info__info">
+								<div class="goods-info__worktime">
+									<h3 class="goods-info__worktime-title">Время работы:</h3>
+									<div class="goods-info__worktime-wrap">
+										<div class="goods-info__worktime-days">
+											<span>пн</span>
+											<span class="active">вт</span>
+											<span>ср</span>
+											<span>чт</span>
+											<span>пт</span>
+											<span>сб</span>
+											<span>вс</span>
+										</div>
+										<div class="goods-info__worktime-hours">
+											<span>10:00-22:00</span>
+											<span class="active">10:00-22:00</span>
+											<span>10:00-22:00</span>
+											<span>10:00-22:00</span>
+											<span>10:00-22:00</span>
+											<span>10:00-22:00</span>
+											<span>10:00-22:00</span>
+										</div>
+									</div>
+								</div>
+								<div class="goods-info__contacts">
+									<h3 class="goods-info__email">Почта</h3>
+									<span>email@dgjsakdisu.ru</span>
+									<h3 class="goods-info__site">Сайт</h3>
+									<a href="#">Dosty(гипперссылка)</a>
+									<h3 class="goods-info__tel">Телефон</h3>
+									<span>8 800 555 35 35 35</span>
+								</div>
+								<div class="goods-info__categories">
+									<a href="#" class="goods-info__categories-link">Партнерам</a>
+									<a href="#" class="goods-info__categories-link active">Обратная связь</a>
+									<a href="#" class="goods-info__categories-link">О нас</a>
+									<a href="#" class="goods-info__categories-link">Пользовательское соглашение</a>
+								</div>
+							</div>
+							<div class="goods-info__map">
+								<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d51553.75133033797!2d37.618012035869576!3d55.746565265308206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1500827199187" frameborder="0" style="border:0" allowfullscreen></iframe>
+							</div>
+						</div>
+						<div class="goods-reviews tab-item" id="goods-reviews">
+							<div class="goods-reviews__tabs">
+								<a href="#" class="goods-reviews__tab goods-reviews__tab--all active">Все отзывы</a>
+								<a href="#" class="goods-reviews__tab goods-reviews__tab--good">Только хорошие</a>
+								<a href="#" class="goods-reviews__tab goods-reviews__tab--bad">Только плохие</a>
+							</div>
+							<div class="goods-reviews__item goods-reviews__item--good">
+								<div class="goods-reviews__title-wrap">
+									<h3 class="goods-reviews__title">Имя Фамилия бла бла бла длинное максимальное количество символоооооооооооов оооооо</h3>
+									<div class="goods-reviews__review">Положительный отзыв</div>
+								</div>
+								<p class="goods-reviews__descr">ОТЗЫЫЫВ! фбыталоук зуыиафврцсш рщцшфгвис зшнй зцвшнс йшфн ицвзшис зшфнизвшсни зшри йгн гщ й йуисгщг щф вгс щгн щнгф щни щгрищ  снищ вщнс ищни щф цвисщ фщгищнищнвн сифщнищни вщнси фщни щв!й цнвснпщн фроцвсщпфп шпвсзшпфзшгпвзшнсп шзн шнпз зух8хй8снх8нуцх8сн х8ф гврсзг фгпв сщгнпргфнщгсеншргнвысзфш!</p>
+								<div class="goods-reviews__date-wrap"><span class="goods-reviews__date">05.09.2014 в 20:47</span></div>
+							</div>
+							<div class="goods-reviews__item goods-reviews__item--bad">
+								<div class="goods-reviews__title-wrap">
+									<h3 class="goods-reviews__title">Имя Фамилия бла бла бла длинное максимальное количество символоооооооооооов оооооо</h3>
+									<div class="goods-reviews__review">Отрицательный отзыв</div>
+								</div>
+								<p class="goods-reviews__descr">ОТЗЫЫЫВ! фбыталоук зуыиафврцсш рщцшфгвис зшнй зцвшнс йшфн ицвзшис зшфнизвшсни зшри йгн гщ й йуисгщг щф вгс щгн щнгф щни щгрищ  снищ вщнс ищни щф цвисщ фщгищнищнвн сифщнищни вщнси фщни щв!й цнвснпщн фроцвсщпфп шпвсзшпфзшгпвзшнсп шзн шнпз зух8хй8снх8нуцх8сн х8ф гврсзг фгпв сщгнпргфнщгсеншргнвысзфш!</p>
+								<div class="goods-reviews__date-wrap"><span class="goods-reviews__date">05.09.2014 в 20:47</span></div>
+							</div>
+							<div class="goods-reviews__item">
+								<div class="goods-reviews__title-wrap">
+									<h3 class="goods-reviews__title">Имя Фамилия бла бла бла длинное максимальное количество символоооооооооооов</h3>
+									<div class="goods-reviews__review"></div>
+								</div>
+								<p class="goods-reviews__descr">ОТЗЫЫЫВ! фбыталоук зуыиафврцсш рщцшфгвис зшнй зцвшнс йшфн ицвзшис зшфнизвшсни зшри йгн гщ й йуисгщг щф вгс щгн щнгф щни щгрищ  снищ вщнс ищни щф цвисщ фщгищнищнвн сифщнищни вщнси фщни щв!й цнвснпщн фроцвсщпфп шпвсзшпфзшгпвзшнсп шзн шнпз зух8хй8снх8нуцх8сн х8ф гврсзг фгпв сщгнпргфнщгсеншргнвысзфш!</p>
+								<div class="goods-reviews__date-wrap"><span class="goods-reviews__date">05.09.2014 в 20:47</span></div>
+							</div>
+						</div>
 					</div>
 				</div>
 				<!--row-->
@@ -315,6 +389,24 @@
 				</div>
 			</div>
 		</footer>
+		<div class="goods-overlay"></div>
+	</div>
+	
+	<div class="goods-popup">
+		<div class="goods-popup__half">
+			<div class="goods-popup__slider">
+				<img src="img/goods-photo.jpg" alt="slide" class="goods-popup__slide">
+			</div>
+			<div class="goods-popup__price">99999 ₽</div>
+			<div class="goods-popup__tocart">
+				<button type="button" class="goods-popup__tocart-btn">В корзину</button>
+			</div>
+		</div>
+		<div class="goods-popup__half">
+			<h2 class="goods-popup__title">Название товара в две строчки максимальное количество символов</h2>
+			<p class="goods-popup__descr">Описание товара или его состав. бал бла лб ыаб бла о мыи шрзшг   фцвпшгфп цзшпаф пнпфгщнцп афш фпцгапшфпш афгшпша пфзш шзнпц ушапзшфп унпзмсшг фзш з  фшцупашфпзш вшп шф зш цшзупа фш шнцп азф  цупазш фз зцшнупашф шз ушнап шзф шз шзц уша шфп ашп фцшзп ушгап з зф зшгц пушгап шгфп шзгцп ушзгап фшзгп цшзгупа шгф зшг пцузшагп фшзгп шзгцп уашгп фшв форв аф  щнн ща н пнпзнпнпнапщфпгцнпущгнпаг нпщнпгфщцнгпугнапнпфщунанагущфауууысрвррлрврувррувпунвпнпнвпнупнпнппппппу цвпанпф щнпщнп вщфнпщнпнгцу пвщнпщгнпфнгпунвпнпнгпувнпнпнупвнпнпвнппвнпвп в впнвупнвпну в в у вв  в щнувн вп  увп впунпв нупвщнп увуцвцвувувувувууууу Описание товара или его состав. бал бла лб ыаб бла о мыи шрзшг   фцвпшгфп цзшпаф пнпфгщнцп афш фпцгапшфпш афгшпша пфзш шзнпц ушапзшфп унпзмсшг фзш з  фшцупашфпзш вшп шф зш цшзупа фш шнцп азф  цупазш фз зцшнупашф шз ушнап шзф шз шзц уша шфп ашп фцшзп ушгап з зф зшгц пушгап шгфп шзгцп ушзгап фшзгп цшзгупа шгф зшг пцузшагп фшзгп шзгцп уашгп фшв форв аф  щнн ща н пнпзнпнпнапщфпгцнпущгнпаг нпщнпгфщцнгпугнапнпфщунанагущфауууысрвррлрврувррувпунвпнпнвпнупнпнппппппу цвпанпф щнпщнп вщфнпщнпнгцу пвщнпщгнпфнгпунвпнпнгпувнпнпнупвнпнпвнппвнпвп в впнвупнвпну в в у вв  в щнувн вп  увп впунпв нупвщнп увуцвцвувувувувууууу...</p>
+		</div>
+		<button type="button" class="goods-popup__close"></button>
 	</div>
 
 
@@ -775,9 +867,9 @@
 		});
 	</script>
 	<script>
-		/* Табы-переключатели */
-
 		$(document).ready(function() {
+			
+			/* Табы-переключатели */
 			$('.restaurant-block__tab-link').on('click', function(e) {
 				e.preventDefault();
 				$('.restaurant-block__tab-link').removeClass('active');
@@ -786,7 +878,42 @@
 				$('.tab-item').removeClass('active');
 				$('.tab-item#' + dataId).addClass('active');
 			});
-
+			
+			/* Табы в отзывах */
+			$('.goods-reviews__tab--all').on('click', function(e){
+				e.preventDefault();
+				$('.goods-reviews__tab').removeClass('active');
+				$(this).addClass('active');
+				$('.goods-reviews__item').css('display', 'block');
+			});
+			$('.goods-reviews__tab--good').on('click', function(e){
+				e.preventDefault();
+				$('.goods-reviews__tab').removeClass('active');
+				$(this).addClass('active');
+				$('.goods-reviews__item').css('display', 'none');
+				$('.goods-reviews__item--good').css('display', 'block');
+			});
+			$('.goods-reviews__tab--bad').on('click', function(e){
+				e.preventDefault();
+				$('.goods-reviews__tab').removeClass('active');
+				$(this).addClass('active');
+				$('.goods-reviews__item').css('display', 'none');
+				$('.goods-reviews__item--bad').css('display', 'block');
+			});
+			
+			
+			/* Попап товара */
+			$('.goods-block__item').on('click', function(e){
+				e.preventDefault();
+				$('.goods-overlay').fadeIn(200);
+				$('.goods-popup').fadeIn(300);
+				$('.goods-popup').css('display', 'flex');
+			});
+			$('.goods-popup__close').on('click', function(e){
+				e.preventDefault();
+				$('.goods-popup').fadeOut(300);
+				$('.goods-overlay').fadeOut(200);
+			});
 		});
 	</script>
 </body>
