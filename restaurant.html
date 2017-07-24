@@ -109,7 +109,12 @@
 				<!--слайдер новостей-->
 				<div class="row">
 					<aside class="col-sm-12 col-md-4 col-lg-3 col-xl-3">
-						<div class="restaurant-logo"><img src="img/shop.png" alt=""></div>
+					
+						<div class="restaurant-logo">
+							<div class="restaurant-logo__img">
+								<img src="img/shop.png" alt="">
+							</div>
+						</div>
 
 						<form action="#" class="search-field"><input type="text" class="search-field__input" placeholder="Поиск"><button type="submit" class="search-field__btn"></button></form>
 
@@ -234,7 +239,7 @@
 							</div>
 							<div class="goods-block__item">
 								<a href="#" data-id="second-good">
-									<div class="goods-block__item-img"><img src="img/goods.png" alt=""></div>
+									<div class="goods-block__item-img"><img src="img/goods-img1.jpg" alt=""></div>
 									<h3 class="goods-block__item-title">Название максимальное количество символов</h3>
 								</a>
 								<div class="goods-block__item-panel">
@@ -257,11 +262,11 @@
 							</div>
 							<div class="goods-block__item">
 								<a href="#" data-id="third-good">
-									<div class="goods-block__item-img"><img src="img/goods.png" alt=""></div>
+									<div class="goods-block__item-img"><img src="img/goods-img1.jpg" alt=""></div>
 									<h3 class="goods-block__item-title">Название максимальное количество символов</h3>
 								</a>
 								<div class="goods-block__item-panel">
-									<div class="goods-block__price">От 12 345 <span>₽</span></div>
+									<div class="goods-block__price">От 1235 <span>₽</span></div>
 									<form action="" class="goods-block__favorites restaurant-block__favorites"><input type="checkbox" id="good-item3"><label for="good-item3"></label></form>
 									<div class="goods-block__tocart-wrap">
 										<button class="goods-block__tocart-btn">Выбрать</button>
@@ -445,7 +450,7 @@
 		</div>
 		<button type="button" class="goods-popup__close"></button>
 	</div>
-	
+
 	<div class="goods-popup goods-popup--charac" id="second-good">
 		<div class="goods-popup__half">
 			<div class="goods-popup__slider">
@@ -478,7 +483,7 @@
 		</div>
 		<button type="button" class="goods-popup__close"></button>
 	</div>
-	
+
 	<div class="goods-popup goods-popup--charac" id="third-good">
 		<div class="goods-popup__half">
 			<div class="goods-popup__slider">
@@ -1028,7 +1033,7 @@
 			/* Кнопка "В корзину/Выбрать" и количество товара */
 			$('.goods-block__tocart-btn').on('click', function() {
 				$(this).hide();
-				$(this).next('.goods-block__amount').show();
+				$(this).next('.goods-block__amount').css('display', 'flex');
 			})
 
 			$('.goods-block__amount--plus').on('click', function() {
@@ -1043,7 +1048,7 @@
 					$(this).prev('.goods-block__amount--value').val(finalValue);
 				}
 			});
-			
+
 			/* Слайдер в попапе товара */
 			$('.goods-popup__slider').owlCarousel({
 				loop: true,
