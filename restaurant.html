@@ -148,7 +148,7 @@
 						<!--фильтр сортировки (радиокнопки)-->
 
 						<div class="goods-filter">
-							<a href="#" class="goods-filter__item">Максимальное количество сим (96)</a>
+							<a href="#" class="goods-filter__item"><span>Максимальное количество сим (96)</span></a>
 							<a href="#" class="goods-filter__item goods-filter__item--more"><span>Максимальное количество символов (96)</span></a>
 							<a href="#" class="goods-filter__item goods-filter__item--more active"><span>Максимальное количество символов</span></a>
 							<a href="#" class="goods-filter__item goods-filter__item--more"><span>Максимальное количество символов</span></a>
@@ -209,48 +209,75 @@
 							</div>
 						</div>
 						<div class="goods-block tab-item active" id="goods-catalog">
-							<a href="#" class="goods-block__item">
-								<div class="goods-block__item-img"><img src="img/goods.png" alt=""></div>
-								<h3 class="goods-block__item-title">Название максимальное количество символов</h3>
+							<div class="goods-block__item">
+								<a href="#" data-id="first-good">
+									<div class="goods-block__item-img"><img src="img/goods.png" alt=""></div>
+									<h3 class="goods-block__item-title">Название максимальное количество символов</h3>
+								</a>
 								<div class="goods-block__item-panel">
 									<div class="goods-block__price">12 345 <span>₽</span></div>
 									<form action="" class="goods-block__favorites restaurant-block__favorites"><input type="checkbox" id="good-item1"><label for="good-item1"></label></form>
-									<button class="goods-block__to-cart">В корзину</button>
+									<div class="goods-block__tocart-wrap">
+										<button class="goods-block__tocart-btn">В корзину</button>
+										<div class="goods-block__amount">
+											<button type="button" class="goods-block__amount--plus">+</button>
+											<input type="text" class="goods-block__amount--value" value="1" readonly min="0">
+											<button type="button" class="goods-block__amount--minus">-</button>
+										</div>
+									</div>
 								</div>
 								<div class="goods-tooltip goods-tooltip--first">
 									<img src="img/goods.png" alt="" class="goods-tooltip__img">
 									<p class="goods-tooltip__descr">580 гр. Состав: бла бла бала аблабабалл бваллбыа лыбалылаылаблаыаб - 999шт., что- то еще какой нибудь ролл - 89 шт., калифорния в пицце - 66 шт., бла нпс характеристики тут пишутся короче. Элемент растягивается в высоту в зависимости от текста. Строчка 8 блалблаллалалалалалалаллас Строчка 9 балоыагршрщшуркщшагпука Строчка 10 баловрадгыгшукраршгрфдгв Строчка11 лдыоволрдло ыдлрдлрла ам Строчка 12 вдоаром рдылорвадыыыа
 									</p>
 								</div>
-							</a>
-							<a href="#" class="goods-block__item">
-								<div class="goods-block__item-img"><img src="img/goods.png" alt=""></div>
-								<h3 class="goods-block__item-title">Название максимальное количество символов</h3>
+							</div>
+							<div class="goods-block__item">
+								<a href="#" data-id="second-good">
+									<div class="goods-block__item-img"><img src="img/goods.png" alt=""></div>
+									<h3 class="goods-block__item-title">Название максимальное количество символов</h3>
+								</a>
 								<div class="goods-block__item-panel">
 									<div class="goods-block__price">12 345 <span>₽</span></div>
 									<form action="" class="goods-block__favorites restaurant-block__favorites"><input type="checkbox" id="good-item2"><label for="good-item2"></label></form>
-									<button class="goods-block__to-cart">В корзину</button>
+									<div class="goods-block__tocart-wrap">
+										<button class="goods-block__tocart-btn">В корзину</button>
+										<div class="goods-block__amount">
+											<button type="button" class="goods-block__amount--plus">+</button>
+											<input type="text" class="goods-block__amount--value" value="1" readonly min="0">
+											<button type="button" class="goods-block__amount--minus">-</button>
+										</div>
+									</div>
 								</div>
 								<div class="goods-tooltip">
 									<img src="img/goods.png" alt="" class="goods-tooltip__img">
 									<p class="goods-tooltip__descr">580 гр. Состав: бла бла бала аблабабалл бваллбыа лыбалылаылаблаыаб - 999шт., что- то еще какой нибудь ролл - 89 шт., калифорния в пицце - 66 шт., бла нпс характеристики тут пишутся короче. Элемент растягивается в высоту в зависимости от текста. Строчка 8 блалблаллалалалалалалаллас Строчка 9 балоыагршрщшуркщшагпука Строчка 10 баловрадгыгшукраршгрфдгв Строчка11 лдыоволрдло ыдлрдлрла ам Строчка 12 вдоаром рдылорвадыыыа
 									</p>
 								</div>
-							</a>
-							<a href="#" class="goods-block__item">
-								<div class="goods-block__item-img"><img src="img/goods.png" alt=""></div>
-								<h3 class="goods-block__item-title">Название максимальное количество символов</h3>
+							</div>
+							<div class="goods-block__item">
+								<a href="#" data-id="third-good">
+									<div class="goods-block__item-img"><img src="img/goods.png" alt=""></div>
+									<h3 class="goods-block__item-title">Название максимальное количество символов</h3>
+								</a>
 								<div class="goods-block__item-panel">
 									<div class="goods-block__price">От 12 345 <span>₽</span></div>
 									<form action="" class="goods-block__favorites restaurant-block__favorites"><input type="checkbox" id="good-item3"><label for="good-item3"></label></form>
-									<button class="goods-block__to-cart">Выбрать</button>
+									<div class="goods-block__tocart-wrap">
+										<button class="goods-block__tocart-btn">Выбрать</button>
+										<div class="goods-block__amount">
+											<button type="button" class="goods-block__amount--plus">+</button>
+											<input type="text" class="goods-block__amount--value" value="1" readonly min="0">
+											<button type="button" class="goods-block__amount--minus">-</button>
+										</div>
+									</div>
 								</div>
 								<div class="goods-tooltip">
 									<img src="img/goods.png" alt="" class="goods-tooltip__img">
 									<p class="goods-tooltip__descr">580 гр. Состав: бла бла бала аблабабалл бваллбыа лыбалылаылаблаыаб - 999шт., что- то еще какой нибудь ролл - 89 шт., калифорния в пицце - 66 шт., бла нпс характеристики тут пишутся короче. Элемент растягивается в высоту в зависимости от текста. Строчка 8 блалблаллалалалалалалаллас Строчка 9 балоыагршрщшуркщшагпука Строчка 10 баловрадгыгшукраршгрфдгв Строчка11 лдыоволрдло ыдлрдлрла ам Строчка 12 вдоаром рдылорвадыыыа
 									</p>
 								</div>
-							</a>
+							</div>
 						</div>
 						<div class="goods-news tab-item" id="goods-news">
 							<div class="goods-news__item">
@@ -325,7 +352,7 @@
 									<h3 class="goods-reviews__title">Имя Фамилия бла бла бла длинное максимальное количество символоооооооооооов оооооо</h3>
 									<div class="goods-reviews__review">Положительный отзыв</div>
 								</div>
-								<p class="goods-reviews__descr">ОТЗЫЫЫВ! фбыталоук зуыиафврцсш рщцшфгвис зшнй зцвшнс йшфн ицвзшис зшфнизвшсни зшри йгн гщ й йуисгщг щф вгс щгн щнгф щни щгрищ  снищ вщнс ищни щф цвисщ фщгищнищнвн сифщнищни вщнси фщни щв!й цнвснпщн фроцвсщпфп шпвсзшпфзшгпвзшнсп шзн шнпз зух8хй8снх8нуцх8сн х8ф гврсзг фгпв сщгнпргфнщгсеншргнвысзфш!</p>
+								<p class="goods-reviews__descr">ОТЗЫЫЫВ! фбыталоук зуыиафврцсш рщцшфгвис зшнй зцвшнс йшфн ицвзшис зшфнизвшсни зшри йгн гщ й йуисгщг щф вгс щгн щнгф щни щгрищ снищ вщнс ищни щф цвисщ фщгищнищнвн сифщнищни вщнси фщни щв!й цнвснпщн фроцвсщпфп шпвсзшпфзшгпвзшнсп шзн шнпз зух8хй8снх8нуцх8сн х8ф гврсзг фгпв сщгнпргфнщгсеншргнвысзфш!</p>
 								<div class="goods-reviews__date-wrap"><span class="goods-reviews__date">05.09.2014 в 20:47</span></div>
 							</div>
 							<div class="goods-reviews__item goods-reviews__item--bad">
@@ -333,7 +360,7 @@
 									<h3 class="goods-reviews__title">Имя Фамилия бла бла бла длинное максимальное количество символоооооооооооов оооооо</h3>
 									<div class="goods-reviews__review">Отрицательный отзыв</div>
 								</div>
-								<p class="goods-reviews__descr">ОТЗЫЫЫВ! фбыталоук зуыиафврцсш рщцшфгвис зшнй зцвшнс йшфн ицвзшис зшфнизвшсни зшри йгн гщ й йуисгщг щф вгс щгн щнгф щни щгрищ  снищ вщнс ищни щф цвисщ фщгищнищнвн сифщнищни вщнси фщни щв!й цнвснпщн фроцвсщпфп шпвсзшпфзшгпвзшнсп шзн шнпз зух8хй8снх8нуцх8сн х8ф гврсзг фгпв сщгнпргфнщгсеншргнвысзфш!</p>
+								<p class="goods-reviews__descr">ОТЗЫЫЫВ! фбыталоук зуыиафврцсш рщцшфгвис зшнй зцвшнс йшфн ицвзшис зшфнизвшсни зшри йгн гщ й йуисгщг щф вгс щгн щнгф щни щгрищ снищ вщнс ищни щф цвисщ фщгищнищнвн сифщнищни вщнси фщни щв!й цнвснпщн фроцвсщпфп шпвсзшпфзшгпвзшнсп шзн шнпз зух8хй8снх8нуцх8сн х8ф гврсзг фгпв сщгнпргфнщгсеншргнвысзфш!</p>
 								<div class="goods-reviews__date-wrap"><span class="goods-reviews__date">05.09.2014 в 20:47</span></div>
 							</div>
 							<div class="goods-reviews__item">
@@ -341,7 +368,7 @@
 									<h3 class="goods-reviews__title">Имя Фамилия бла бла бла длинное максимальное количество символоооооооооооов</h3>
 									<div class="goods-reviews__review"></div>
 								</div>
-								<p class="goods-reviews__descr">ОТЗЫЫЫВ! фбыталоук зуыиафврцсш рщцшфгвис зшнй зцвшнс йшфн ицвзшис зшфнизвшсни зшри йгн гщ й йуисгщг щф вгс щгн щнгф щни щгрищ  снищ вщнс ищни щф цвисщ фщгищнищнвн сифщнищни вщнси фщни щв!й цнвснпщн фроцвсщпфп шпвсзшпфзшгпвзшнсп шзн шнпз зух8хй8снх8нуцх8сн х8ф гврсзг фгпв сщгнпргфнщгсеншргнвысзфш!</p>
+								<p class="goods-reviews__descr">ОТЗЫЫЫВ! фбыталоук зуыиафврцсш рщцшфгвис зшнй зцвшнс йшфн ицвзшис зшфнизвшсни зшри йгн гщ й йуисгщг щф вгс щгн щнгф щни щгрищ снищ вщнс ищни щф цвисщ фщгищнищнвн сифщнищни вщнси фщни щв!й цнвснпщн фроцвсщпфп шпвсзшпфзшгпвзшнсп шзн шнпз зух8хй8снх8нуцх8сн х8ф гврсзг фгпв сщгнпргфнщгсеншргнвысзфш!</p>
 								<div class="goods-reviews__date-wrap"><span class="goods-reviews__date">05.09.2014 в 20:47</span></div>
 							</div>
 						</div>
@@ -391,20 +418,102 @@
 		</footer>
 		<div class="goods-overlay"></div>
 	</div>
-	
-	<div class="goods-popup">
+
+	<div class="goods-popup" id="first-good">
 		<div class="goods-popup__half">
 			<div class="goods-popup__slider">
-				<img src="img/goods-photo.jpg" alt="slide" class="goods-popup__slide">
+				<div class="goods-popup__slide"><img src="img/goods-photo.jpg" alt="slide"></div>
+				<div class="goods-popup__slide"><img src="img/goods-photo.jpg" alt="slide"></div>
+				<div class="goods-popup__slide"><img src="img/goods-photo.jpg" alt="slide"></div>
+				<div class="goods-popup__slide"><img src="img/goods-photo.jpg" alt="slide"></div>
 			</div>
 			<div class="goods-popup__price">99999 ₽</div>
 			<div class="goods-popup__tocart">
-				<button type="button" class="goods-popup__tocart-btn">В корзину</button>
+				<div class="goods-block__tocart-wrap">
+					<button class="goods-block__tocart-btn goods-popup__tocart-btn">В корзину</button>
+					<div class="goods-block__amount">
+						<button type="button" class="goods-block__amount--plus">+</button>
+						<input type="text" class="goods-block__amount--value" value="1" readonly min="0">
+						<button type="button" class="goods-block__amount--minus">-</button>
+					</div>
+				</div>
 			</div>
 		</div>
-		<div class="goods-popup__half">
+		<div class="goods-popup__half goods-popup__info">
 			<h2 class="goods-popup__title">Название товара в две строчки максимальное количество символов</h2>
-			<p class="goods-popup__descr">Описание товара или его состав. бал бла лб ыаб бла о мыи шрзшг   фцвпшгфп цзшпаф пнпфгщнцп афш фпцгапшфпш афгшпша пфзш шзнпц ушапзшфп унпзмсшг фзш з  фшцупашфпзш вшп шф зш цшзупа фш шнцп азф  цупазш фз зцшнупашф шз ушнап шзф шз шзц уша шфп ашп фцшзп ушгап з зф зшгц пушгап шгфп шзгцп ушзгап фшзгп цшзгупа шгф зшг пцузшагп фшзгп шзгцп уашгп фшв форв аф  щнн ща н пнпзнпнпнапщфпгцнпущгнпаг нпщнпгфщцнгпугнапнпфщунанагущфауууысрвррлрврувррувпунвпнпнвпнупнпнппппппу цвпанпф щнпщнп вщфнпщнпнгцу пвщнпщгнпфнгпунвпнпнгпувнпнпнупвнпнпвнппвнпвп в впнвупнвпну в в у вв  в щнувн вп  увп впунпв нупвщнп увуцвцвувувувувууууу Описание товара или его состав. бал бла лб ыаб бла о мыи шрзшг   фцвпшгфп цзшпаф пнпфгщнцп афш фпцгапшфпш афгшпша пфзш шзнпц ушапзшфп унпзмсшг фзш з  фшцупашфпзш вшп шф зш цшзупа фш шнцп азф  цупазш фз зцшнупашф шз ушнап шзф шз шзц уша шфп ашп фцшзп ушгап з зф зшгц пушгап шгфп шзгцп ушзгап фшзгп цшзгупа шгф зшг пцузшагп фшзгп шзгцп уашгп фшв форв аф  щнн ща н пнпзнпнпнапщфпгцнпущгнпаг нпщнпгфщцнгпугнапнпфщунанагущфауууысрвррлрврувррувпунвпнпнвпнупнпнппппппу цвпанпф щнпщнп вщфнпщнпнгцу пвщнпщгнпфнгпунвпнпнгпувнпнпнупвнпнпвнппвнпвп в впнвупнвпну в в у вв  в щнувн вп  увп впунпв нупвщнп увуцвцвувувувувууууу...</p>
+			<p class="goods-popup__descr">Описание товара или его состав. бал бла лб ыаб бла о мыи шрзшг фцвпшгфп цзшпаф пнпфгщнцп афш фпцгапшфпш афгшпша пфзш шзнпц ушапзшфп унпзмсшг фзш з фшцупашфпзш вшп шф зш цшзупа фш шнцп азф цупазш фз зцшнупашф шз ушнап шзф шз шзц уша шфп ашп фцшзп ушгап з зф зшгц пушгап шгфп шзгцп ушзгап фшзгп цшзгупа шгф зшг пцузшагп фшзгп шзгцп уашгп фшв форв аф щнн ща н пнпзнпнпнапщфпгцнпущгнпаг нпщнпгфщцнгпугнапнпфщунанагущфауууысрвррлрврувррувпунвпнпнвпнупнпнппппппу цвпанпф щнпщнп вщфнпщнпнгцу пвщнпщгнпфнгпунвпнпнгпувнпнпнупвнпнпвнппвнпвп в впнвупнвпну в в у вв в щнувн вп увп впунпв нупвщнп увуцвцвувувувувууууу Описание товара или его состав. бал бла лб ыаб бла о мыи шрзшг фцвпшгфп цзшпаф пнпфгщнцп афш фпцгапшфпш афгшпша пфзш шзнпц ушапзшфп унпзмсшг фзш з фшцупашфпзш вшп шф зш цшзупа фш шнцп азф цупазш фз зцшнупашф шз ушнап шзф шз шзц уша шфп ашп фцшзп ушгап з зф зшгц пушгап шгфп шзгцп ушзгап фшзгп цшзгупа шгф зшг пцузшагп фшзгп шзгцп уашгп фшв форв аф щнн ща н пнпзнпнпнапщфпгцнпущгнпаг нпщнпгфщцнгпугнапнпфщунанагущфауууысрвррлрврувррувпунвпнпнвпнупнпнппппппу цвпанпф щнпщнп вщфнпщнпнгцу пвщнпщгнпфнгпунвпнпнгпувнпнпнупвнпнпвнппвнпвп в впнвупнвпну в в у вв в щнувн вп увп впунпв нупвщнп увуцвцвувувувувууууу...</p>
+		</div>
+		<button type="button" class="goods-popup__close"></button>
+	</div>
+	
+	<div class="goods-popup goods-popup--charac" id="second-good">
+		<div class="goods-popup__half">
+			<div class="goods-popup__slider">
+				<div class="goods-popup__slide"><img src="img/goods-photo.jpg" alt="slide"></div>
+				<div class="goods-popup__slide"><img src="img/goods-photo.jpg" alt="slide"></div>
+				<div class="goods-popup__slide"><img src="img/goods-photo.jpg" alt="slide"></div>
+				<div class="goods-popup__slide"><img src="img/goods-photo.jpg" alt="slide"></div>
+			</div>
+			<div class="goods-popup__price">99999 ₽</div>
+			<div class="goods-popup__tocart">
+				<div class="goods-block__tocart-wrap">
+					<button class="goods-block__tocart-btn goods-popup__tocart-btn">В корзину</button>
+					<div class="goods-block__amount">
+						<button type="button" class="goods-block__amount--plus">+</button>
+						<input type="text" class="goods-block__amount--value" value="1" readonly min="0">
+						<button type="button" class="goods-block__amount--minus">-</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="goods-popup__half goods-popup__info">
+			<h2 class="goods-popup__title">Название товара в две строчки максимальное количество символов</h2>
+			<p class="goods-popup__descr">Описание товара или его состав. бал бла лб ыаб бла о мыи шрзшг фцвпшгфп цзшпаф пнпфгщнцп афш фпцгапшфпш афгшпша пфзш шзнпц ушапзшфп унпзмсшг фзш з фшцупашфпзш вшп шф зш цшзупа фш шнцп азф цупазш фз зцшнупашф шз ушнап шзф шз шзц уша шфп ашп фцшзп ушгап з зф зшгц пушгап шгфп шзгцп ушзгап фшзгп цшзгупа шгф зшг пцузшагп фшзгп шзгцп уашгп фшв форв аф щнн ща н пнпзнпнпнапщфпгцнпущгнпаг нпщнпгфщцнгпугнапнпфщунанагущфауууысрвррлрврувррувпунвпнпнвпнупнпнппппппу цвпанпф щнпщнп вщфнпщнпнгцу пвщнпщгнпфнгпунвпнпнгпувнпнпнупвнпнпвнппвнпвп в впнвупнвпну в в у вв в щнувн вп увп впунпв нупвщнп увуцвцвувувувувууууу Описание товара или его состав. бал бла лб ыаб бла о мыи шрзшг фцвпшгфп цзшпаф пнпфгщнцп афш фпцгапшфпш афгшпша пфзш шзнпц ушапзшфп унпзмсшг фзш з фшцупашфпзш вшп шф зш цшзупа фш шнцп азф цупазш фз зцшнупашф шз ушнап шзф шз шзц уша шфп ашп фцшзп ушгап з зф зшгц пушгап шгфп шзгцп ушзгап фшзгп цшзгупа шгф зшг пцузшагп фшзгп шзгцп уашгп фшв форв аф щнн ща н пнпзнпнпнапщфпгцнпущгнпаг нпщнпгфщцнгпугнапнпфщунанагущфауууысрвррлрврувррувпунвпнпнвпнупнпнппппппу цвпанпф щнпщнп вщфнпщнпнгцу пвщнпщгнпфнгпунвпнпнгпувнпнпнупвнпнпвнппвнпвп в впнвупнвпну в в у вв в щнувн вп увп впунпв нупвщнп увуцвцвувувувувууууу...</p>
+			<div class="goods-popup__charac-block">
+				<h3 class="goods-popup__charac-name">Вес</h3>
+				<select name="" id="" class="goods-popup__charac-select">
+					<option value="">Характеристика 1</option>
+					<option value="">Характеристика 2</option></select>
+			</div>
+		</div>
+		<button type="button" class="goods-popup__close"></button>
+	</div>
+	
+	<div class="goods-popup goods-popup--charac" id="third-good">
+		<div class="goods-popup__half">
+			<div class="goods-popup__slider">
+				<div class="goods-popup__slide"><img src="img/goods-photo.jpg" alt="slide"></div>
+				<div class="goods-popup__slide"><img src="img/goods-photo.jpg" alt="slide"></div>
+				<div class="goods-popup__slide"><img src="img/goods-photo.jpg" alt="slide"></div>
+				<div class="goods-popup__slide"><img src="img/goods-photo.jpg" alt="slide"></div>
+			</div>
+			<div class="goods-popup__price">99999 ₽</div>
+			<div class="goods-popup__tocart">
+				<div class="goods-block__tocart-wrap">
+					<button class="goods-block__tocart-btn goods-popup__tocart-btn">В корзину</button>
+					<div class="goods-block__amount">
+						<button type="button" class="goods-block__amount--plus">+</button>
+						<input type="text" class="goods-block__amount--value" value="1" readonly min="0">
+						<button type="button" class="goods-block__amount--minus">-</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="goods-popup__half goods-popup__info">
+			<h2 class="goods-popup__title">Название товара в две строчки максимальное количество символов</h2>
+			<p class="goods-popup__descr">Описание товара или его состав. бал бла лб ыаб бла о мыи шрзшг фцвпшгфп цзшпаф пнпфгщнцп афш фпцгапшфпш афгшпша пфзш шзнпц ушапзшфп унпзмсшг фзш з фшцупашфпзш вшп шф зш цшзупа фш шнцп азф цупазш фз зцшнупашф шз ушнап шзф шз шзц уша шфп ашп фцшзп ушгап з зф зшгц пушгап шгфп шзгцп ушзгап фшзгп цшзгупа шгф зшг пцузшагп фшзгп шзгцп уашгп фшв форв аф щнн ща н пнпзнпнпнапщфпгцнпущгнпаг нпщнпгфщцнгпугнапнпфщунанагущфауууысрвррлрврувррувпунвпнпнвпнупнпнппппппу цвпанпф щнпщнп вщфнпщнпнгцу пвщнпщгнпфнгпунвпнпнгпувнпнпнупвнпнпвнппвнпвп в впнвупнвпну в в у вв в щнувн вп увп впунпв нупвщнп увуцвцвувувувувууууу Описание товара или его состав. бал бла лб ыаб бла о мыи шрзшг фцвпшгфп цзшпаф пнпфгщнцп афш фпцгапшфпш афгшпша пфзш шзнпц ушапзшфп унпзмсшг фзш з фшцупашфпзш вшп шф зш цшзупа фш шнцп азф цупазш фз зцшнупашф шз ушнап шзф шз шзц уша шфп ашп фцшзп ушгап з зф зшгц пушгап шгфп шзгцп ушзгап фшзгп цшзгупа шгф зшг пцузшагп фшзгп шзгцп уашгп фшв форв аф щнн ща н пнпзнпнпнапщфпгцнпущгнпаг нпщнпгфщцнгпугнапнпфщунанагущфауууысрвррлрврувррувпунвпнпнвпнупнпнппппппу цвпанпф щнпщнп вщфнпщнпнгцу пвщнпщгнпфнгпунвпнпнгпувнпнпнупвнпнпвнппвнпвп в впнвупнвпну в в у вв в щнувн вп увп впунпв нупвщнп увуцвцвувувувувууууу...</p>
+			<div class="goods-popup__charac-block">
+				<h3 class="goods-popup__charac-name">Вес</h3>
+				<select name="" id="" class="goods-popup__charac-select">
+					<option value="">Характеристика 1</option>
+					<option value="">Характеристика 2</option></select>
+			</div>
+			<div class="goods-popup__charac-block">
+				<h3 class="goods-popup__charac-name">Вес балабаавававааывавыбаыва</h3>
+				<select name="" id="" class="goods-popup__charac-select">
+					<option value="">Характеристика 1</option>
+					<option value="">Характеристика 2</option></select>
+			</div>
 		</div>
 		<button type="button" class="goods-popup__close"></button>
 	</div>
@@ -868,7 +977,7 @@
 	</script>
 	<script>
 		$(document).ready(function() {
-			
+
 			/* Табы-переключатели */
 			$('.restaurant-block__tab-link').on('click', function(e) {
 				e.preventDefault();
@@ -878,41 +987,71 @@
 				$('.tab-item').removeClass('active');
 				$('.tab-item#' + dataId).addClass('active');
 			});
-			
+
 			/* Табы в отзывах */
-			$('.goods-reviews__tab--all').on('click', function(e){
+			$('.goods-reviews__tab--all').on('click', function(e) {
 				e.preventDefault();
 				$('.goods-reviews__tab').removeClass('active');
 				$(this).addClass('active');
 				$('.goods-reviews__item').css('display', 'block');
 			});
-			$('.goods-reviews__tab--good').on('click', function(e){
+			$('.goods-reviews__tab--good').on('click', function(e) {
 				e.preventDefault();
 				$('.goods-reviews__tab').removeClass('active');
 				$(this).addClass('active');
 				$('.goods-reviews__item').css('display', 'none');
 				$('.goods-reviews__item--good').css('display', 'block');
 			});
-			$('.goods-reviews__tab--bad').on('click', function(e){
+			$('.goods-reviews__tab--bad').on('click', function(e) {
 				e.preventDefault();
 				$('.goods-reviews__tab').removeClass('active');
 				$(this).addClass('active');
 				$('.goods-reviews__item').css('display', 'none');
 				$('.goods-reviews__item--bad').css('display', 'block');
 			});
-			
-			
+
+
 			/* Попап товара */
-			$('.goods-block__item').on('click', function(e){
+			$('.goods-block__item a').on('click', function(e) {
 				e.preventDefault();
+				var dataId = $(this).attr('data-id');
 				$('.goods-overlay').fadeIn(200);
-				$('.goods-popup').fadeIn(300);
-				$('.goods-popup').css('display', 'flex');
+				$('.goods-popup#' + dataId).fadeIn(200);
+				$('.goods-popup#' + dataId).css('display', 'flex');
 			});
-			$('.goods-popup__close').on('click', function(e){
+			$('.goods-popup__close').on('click', function(e) {
 				e.preventDefault();
-				$('.goods-popup').fadeOut(300);
+				$('.goods-popup').fadeOut(200);
 				$('.goods-overlay').fadeOut(200);
+			});
+
+			/* Кнопка "В корзину/Выбрать" и количество товара */
+			$('.goods-block__tocart-btn').on('click', function() {
+				$(this).hide();
+				$(this).next('.goods-block__amount').show();
+			})
+
+			$('.goods-block__amount--plus').on('click', function() {
+				var currentValue = $(this).next('.goods-block__amount--value').val();
+				var finalValue = parseInt(currentValue) + parseInt(1);
+				$(this).next('.goods-block__amount--value').val(finalValue);
+			});
+			$('.goods-block__amount--minus').on('click', function() {
+				var currentValue = $(this).prev('.goods-block__amount--value').val();
+				if (currentValue > 0) {
+					var finalValue = parseInt(currentValue) - parseInt(1);
+					$(this).prev('.goods-block__amount--value').val(finalValue);
+				}
+			});
+			
+			/* Слайдер в попапе товара */
+			$('.goods-popup__slider').owlCarousel({
+				loop: true,
+				autoplay: true,
+				autoplayTimeout: 6000,
+				items: 1,
+				dots: true,
+				nav: false
 			});
 		});
 	</script>
