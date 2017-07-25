@@ -11,7 +11,7 @@
 	}
 	aside {
 		padding-right: 0;
-		+ div {
+		+div {
 			padding-left: 30px;
 		}
 	}
@@ -29,6 +29,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		overflow: hidden;
 		img {
 			display: inline-block;
 			vertical-align: middle;
@@ -239,6 +240,24 @@
 	}
 }
 
+@keyframes move-tabs {
+	0% {
+		transform: translateY(100px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.tab-item {
+	transform: translateY(100px);
+	&.active {
+		animation: move-tabs 0.4s linear forwards;
+	}
+}
+
 .goods-block {
 	display: none;
 	flex-direction: row;
@@ -285,7 +304,8 @@
 			color: #000;
 			text-decoration: none;
 			.goods-tooltip {
-				display: block;
+				visibility: visible;
+				opacity: 1;
 			}
 		}
 	}
@@ -367,7 +387,9 @@
 }
 
 .goods-tooltip {
-	display: none;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.3s;
 	position: absolute;
 	background-color: #fff;
 	border: 1px solid $border-color;
@@ -651,6 +673,7 @@
 		border-radius: 4px;
 		margin-bottom: 10px;
 		text-align: center;
+		font-size: 0;
 	}
 	&__tab {
 		display: inline-block;
@@ -766,6 +789,7 @@
 	max-width: 975px;
 	&__half {
 		width: 49%;
+		position: relative;
 	}
 	&__slider {
 		display: block;
@@ -780,6 +804,17 @@
 			bottom: 15px;
 		}
 	}
+	&__fav {
+		position: absolute;
+		top: 13px;
+		right: 10px;
+		z-index: 50;
+		label {
+			background-size: 40px 40px;
+			width: 40px;
+			height: 40px;
+		}
+	}
 	&__slide {
 		width: 100%;
 		min-width: 448px;
@@ -791,20 +826,27 @@
 	}
 	&__price {
 		font-size: 30px;
+		line-height: 30px;
 		text-align: center;
-		margin-top: 10px;
-		margin-bottom: 15px;
+		margin-top: 15px;
+		margin-bottom: 20px;
 	}
 	&__tocart {
 		.goods-block__tocart-wrap {
 			text-align: center;
 		}
+		.goods-block__amount {
+			max-width: 225px;
+			height: 50px;
+			margin-left: auto;
+			margin-right: auto;
+		}
 		.goods-block__amount--plus,
 		.goods-block__amount--minus {
 			font-size: 36px;
 			line-height: 36px;
-			width: 48px;
-			height: 48px;
+			width: 50px;
+			height: 50px;
 			position: relative;
 		}
 		.goods-block__amount--minus:before {
@@ -812,16 +854,17 @@
 			font-size: 30px;
 			position: absolute;
 			top: 50%;
-			right: 60px;
+			right: 70px;
 			color: #000;
 			transform: translate(0, -50%);
 		}
 		.goods-block__amount--value {
 			font-size: 30px;
 			font-weight: 400;
-			max-width: 115px;
+			max-width: 120px;
 			padding-left: 22px;
 			text-align: left;
+			height: 50px;
 		}
 	}
 	&__tocart-btn {
@@ -832,7 +875,7 @@
 		color: #fff;
 		background-color: $button-color;
 		font-size: 24px;
-		padding: 8px 10px;
+		padding: 13px 10px;
 		&:hover {
 			background-color: #d04040;
 		}
@@ -851,12 +894,14 @@
 		max-height: 50px;
 	}
 	&__descr {
-		max-height: 535px;
+		max-height: 503px;
 		overflow-y: scroll;
 		font-size: 18px;
 		line-height: 24px;
 		margin: 0;
 		word-wrap: break-word;
+		letter-spacing: -0.03em;
+		margin-bottom: auto;
 	}
 	&__close {
 		position: absolute;
@@ -900,14 +945,12 @@
 		}
 	}
 	&__charac-block {
-		margin-top: auto;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
-		margin-bottom: 10px;
 		&:last-child {
-			margin-bottom: 0;
+			margin-top: 10px;
 		}
 	}
 	&__charac-name {
@@ -917,7 +960,7 @@
 		text-overflow: ellipsis;
 		font-weight: bold;
 		font-size: 24px;
-		line-height: 25px;
+		line-height: 24px;
 		margin: 0;
 	}
 	&__charac-select {
@@ -925,9 +968,10 @@
 		background-color: transparent;
 		border-radius: 4px;
 		border: 1px solid $border-color;
-		padding: 5px 10px;
+		padding: 12px 10px;
 		padding-right: 35px;
 		font-size: 24px;
+		line-height: 24px;
 		text-overflow: ellipsis;
 		white-space: nowrap;
 		overflow: hidden;
@@ -967,6 +1011,10 @@
 		}
 	}
 	.restaurant-block {
+		&__title {
+			font-size: 20px;
+			line-height: 20px;
+		}
 		&__descr {
 			font-size: 13px;
 			line-height: 20px;
@@ -1019,10 +1067,14 @@
 			font-size: 25px;
 		}
 		&__tocart {
+			.goods-block__amount {
+				height: 39px;
+				max-width: 165px;
+			}
 			.goods-block__amount--plus,
 			.goods-block__amount--minus {
-				width: 36px;
-				height: 36px;
+				width: 39px;
+				height: 39px;
 				font-size: 20px;
 				line-height: 20px;
 			}
@@ -1034,6 +1086,7 @@
 				font-size: 20px;
 				max-width: 85px;
 				padding-left: 15px;
+				height: 39px;
 			}
 		}
 		&__title {
@@ -1051,6 +1104,9 @@
 			}
 			&-select {
 				font-size: 20px;
+				line-height: 20px;
+				padding-top: 10px;
+				padding-bottom: 10px;
 			}
 		}
 		&--charac {
@@ -1062,26 +1118,101 @@
 }
 
 @media (max-width: 991px) {
+	.restaurant-page {
+		aside {
+			padding-right: 15px;
+			+div {
+				padding-left: 15px;
+			}
+		}
+		.container {
+			width: 100%;
+		}
+		.filters {
+			margin-bottom: 5px;
+			&__toggler {
+				font-size: 12px;
+			}
+			&__radio-buttons {
+				label {
+					font-size: 12px;
+					padding: 4px 0 !important;
+				}
+			}
+			&__sort-block {
+				margin-top: 0 !important;
+				margin-bottom: 10px;
+			}
+		}
+	}
+	.restaurant-logo {
+		padding-top: 19px;
+		padding-bottom: 19px;
+		margin-bottom: 20px;
+		&__img {
+			max-height: 170px;
+		}
+	}
+	.search-field {
+		&__input {
+			font-size: 12px;
+		}
+	}
 	.goods-filter {
 		&__item {
 			font-size: 12px;
-			padding-top: 10px;
-			padding-bottom: 10px;
+			line-height: 14px;
+			padding-top: 9px;
+			padding-bottom: 7px;
 		}
 	}
 	.restaurant-block {
 		padding-top: 15px;
+		padding-left: 35px;
+		padding-right: 35px;
+		margin-bottom: 20px;
+		&__title-wrap {
+			padding-bottom: 10px;
+			margin-bottom: 15px;
+		}
 		&__title {
 			font-size: 17px;
-			padding-bottom: 10px;
+		}
+		&__raiting {
+			width: 90px;
+			height: 13px;
+			.company-block__stars,
+			.company-block__stars-masks {
+				width: 90px;
+			}
+			.company-block__star,
+			.company-block__star-mask {
+				width: 13px;
+				height: 13px;
+			}
+			.company-block__progress {
+				height: 13px;
+			}
+		}
+		&__info {
+			.company-block__option-name {
+				margin-bottom: 8px;
+			}
+			.company-block__option-value {
+				font-size: 10px;
+			}
 		}
 		&__descr {
 			font-size: 11px;
+			line-height: 15px;
 			display: -webkit-box;
 			-webkit-line-clamp: 3;
 			-webkit-box-orient: vertical;
 			text-overflow: ellipsis;
 			overflow: hidden;
+		}
+		&__favorites {
+			right: -16px;
 		}
 		&__tab-link {
 			font-size: 9px;
@@ -1093,14 +1224,24 @@
 		&__item {
 			width: 48%;
 			margin-bottom: 20px;
+			padding-top: 20px;
+			padding-bottom: 15px;
 			&-title {
 				font-size: 12px;
+				margin-bottom: 15px;
+			}
+			&-img {
+				padding-left: 10px;
+				padding-right: 10px;
 			}
 			&:hover {
 				.goods-tooltip {
 					display: none;
 				}
 			}
+		}
+		&__favorites {
+			right: 0;
 		}
 		&__price {
 			font-size: 12px;
@@ -1140,17 +1281,65 @@
 		}
 	}
 	.goods-popup {
+		padding: 15px;
+		&__fav {
+			position: absolute;
+			top: 10px;
+			right: 8px;
+			z-index: 50;
+			label {
+				background-size: 25px 25px;
+				width: 25px;
+				height: 25px;
+			}
+		}
+		&__tocart-btn {
+			font-size: 15px;
+			padding: 9px 10px;
+		}
+		&__tocart {
+			.goods-block__amount {
+				height: 33px;
+				max-width: 150px;
+			}
+			.goods-block__amount--plus,
+			.goods-block__amount--minus {
+				width: 33px;
+				height: 33px;
+				font-size: 20px;
+				line-height: 20px;
+			}
+			.goods-block__amount--minus:before {
+				font-size: 19px;
+				right: 46px;
+			}
+			.goods-block__amount--value {
+				font-size: 19px;
+				max-width: 75px;
+				padding-left: 15px;
+				height: 33px;
+			}
+		}
 		&__title {
 			font-size: 15px;
-			line-height: 18px;
+			line-height: 15px;
 			font-weight: bold;
+			max-height: 38px;
 		}
 		&__descr {
-			font-size: 15px;
-			max-height: 303px;
+			font-size: 12px;
+			line-height: 15px;
+			max-height: 313px;
 		}
 		&__price {
 			font-size: 18px;
+			line-height: 18px;
+			margin-top: 10px;
+			margin-bottom: 12px;
+		}
+		&__close {
+			top: 8px;
+			right: 10px;
 		}
 		&__charac {
 			&-name {
@@ -1159,11 +1348,14 @@
 			}
 			&-select {
 				font-size: 15px;
+				line-height: 15px;
+				padding-top: 8px;
+				padding-bottom: 8px;
 			}
 		}
 		&--charac {
 			.goods-popup__descr {
-				max-height: 245px;
+				max-height: 255px;
 			}
 		}
 	}

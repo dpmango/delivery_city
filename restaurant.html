@@ -109,7 +109,7 @@
 				<!--слайдер новостей-->
 				<div class="row">
 					<aside class="col-sm-12 col-md-4 col-lg-3 col-xl-3">
-					
+
 						<div class="restaurant-logo">
 							<div class="restaurant-logo__img">
 								<img src="img/shop.png" alt="">
@@ -443,6 +443,10 @@
 					</div>
 				</div>
 			</div>
+			<form action="#" class="goods-popup__fav restaurant-block__favorites">
+					<input type="checkbox" id="goods-fav1">
+					<label for="goods-fav1"></label>
+				</form>
 		</div>
 		<div class="goods-popup__half goods-popup__info">
 			<h2 class="goods-popup__title">Название товара в две строчки максимальное количество символов</h2>
@@ -470,6 +474,10 @@
 					</div>
 				</div>
 			</div>
+			<form action="#" class="goods-popup__fav restaurant-block__favorites">
+					<input type="checkbox" id="goods-fav2">
+					<label for="goods-fav2"></label>
+				</form>
 		</div>
 		<div class="goods-popup__half goods-popup__info">
 			<h2 class="goods-popup__title">Название товара в две строчки максимальное количество символов</h2>
@@ -503,6 +511,10 @@
 					</div>
 				</div>
 			</div>
+			<form action="#" class="goods-popup__fav restaurant-block__favorites">
+					<input type="checkbox" id="goods-fav3">
+					<label for="goods-fav3"></label>
+				</form>
 		</div>
 		<div class="goods-popup__half goods-popup__info">
 			<h2 class="goods-popup__title">Название товара в две строчки максимальное количество символов</h2>
@@ -1028,6 +1040,13 @@
 				e.preventDefault();
 				$('.goods-popup').fadeOut(200);
 				$('.goods-overlay').fadeOut(200);
+			});
+			$(document).mouseup(function(a) {
+				var popupOpened = $('.goods-popup');
+				if (popupOpened.has(a.target).length === 0) {
+					popupOpened.fadeOut(200);
+					$('.goods-overlay').fadeOut(200);
+				}
 			});
 
 			/* Кнопка "В корзину/Выбрать" и количество товара */
