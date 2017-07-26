@@ -1,0 +1,111 @@
+.restaurant-logo {
+	background-color: #fff;
+	padding: 25px;
+	border: 1px solid $border-color;
+	border-radius: 4px;
+	margin-bottom: 40px;
+	&__img {
+		width: 100%;
+		max-height: 227px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+		img {
+			display: inline-block;
+			vertical-align: middle;
+			height: auto;
+			width: 100%;
+		}
+	}
+}
+
+.search-field {
+	background-color: #fff;
+	border-radius: 4px;
+	margin-bottom: 13px;
+	width: 100%;
+	position: relative;
+	&__input {
+		display: block;
+		width: 100%;
+		border: 0;
+		padding: 6px 15px;
+		font-size: 14px;
+		border: 1px solid $border-color;
+		border-radius: 4px;
+		&:focus {
+			outline: 0;
+			border: 1px solid #c9c9c9;
+		}
+	}
+	&__btn {
+		position: absolute;
+		padding: 0;
+		border: 0;
+		background-color: transparent;
+		background-repeat: no-repeat;
+		background-image: url(../img/search-icon.svg);
+		background-size: 18px 18px;
+		width: 18px;
+		height: 18px;
+		right: 7px;
+		top: 9px;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+.goods-filter {
+	margin-bottom: 15px;
+	&__item {
+		font-weight: bold;
+		color: #000;
+		text-decoration: none;
+		font-size: 14px;
+		display: block;
+		padding: 13px 30px 11px 7px;
+		position: relative;
+		span {
+			max-width: 100%;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			display: inline-block;
+			letter-spacing: -0.05em;
+		}
+		&.active,
+		&:hover {
+			background-color: $button-color;
+			color: #fff !important;
+			text-decoration: none;
+		}
+		&--more {
+			&:after {
+				content: '';
+				position: absolute;
+				background-repeat: no-repeat;
+				background-image: url(../img/arrow-right.png);
+				width: 8px;
+				height: 13px;
+				top: 50%;
+				transform: translate(0, -50%);
+				right: 10px;
+			}
+		}
+		&.active {
+			&:after {
+				content: '';
+				position: absolute;
+				background-repeat: no-repeat;
+				background-image: url(../img/arrow-down.png);
+				width: 13px;
+				height: 8px;
+				top: 50%;
+				transform: translate(0, -50%);
+				right: 10px;
+			}
+		}
+	}
+}

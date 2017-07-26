@@ -28,7 +28,13 @@
 @import "footer/footer"; /*стили футера*/
 @import "_company-block.scss"; /*стили блока компании в списке компаний*/
 @import "_modals.scss"; /*модальные окна*/
-@import "restaurant/_restaurant.scss"; 
+
+@import "restaurant/_restaurant.scss"; /* Страница рестонара */
+@import "restaurant/_restaurant-sidebar.scss";
+@import "restaurant/_restaurant-block.scss";
+@import "restaurant/_restaurant-tabs.scss";
+@import "restaurant/_restaurant-popups.scss";
+@import "restaurant/_restaurant-media.scss";
 
 body {
   background-color: $body-background!important;
