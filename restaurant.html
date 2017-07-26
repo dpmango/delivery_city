@@ -349,7 +349,10 @@
 								<div class="goods-news__info">
 									<h3 class="goods-news__title">Шестая пицца бесплатно! Название акции бла бла бла блабаблаблалаолаоблfsdfsdfsfsdf</h3>
 									<p class="goods-news__descr">Сам текст акции ларгрфзруар грф згцруз га з гйрцзшга зг йзгрцзг руагшр зф зцр угша згрф зр цгзур а г х ф гврыхагр хфггры гврахр хрфр хщуха эфшоэ уэаоэо эфоэ ышоэ шво аэ эфшоэышвоэшашофооашш шфов аэшофэуа мгцругм ржгргр жгр жгарм Сам текст акции ларгрфзруар грф згцруз га з гйрцзшга зг йзгрцзг руагшр зф зцр угша згрф зр цгзур а г х ф гврыхагр хфггры гврахр хрфр хщуха эфшоэ уэаоэо эфоэ ышоэ шво аэ эфшоэышвоэшашофооашш шфов аэшофэуа мгцругм ржгргр жгр жгарм</p>
-									<div class="goods-news__btn-wrap"><a href="#" class="goods-news__more">Подробнее</a></div>
+									<div class="goods-news__btn-wrap">
+										<a href="#" class="goods-news__more">Подробнее</a>
+										<a href="#" class="goods-news__short">Кратко</a>
+									</div>
 								</div>
 							</div>
 							<div class="goods-news__item">
@@ -357,7 +360,8 @@
 								<div class="goods-news__info">
 									<h3 class="goods-news__title">Шестая пицца бесплатно! Название акции бла бла бла блабаблаблалаолаоблfsdfsdfsdfsd</h3>
 									<p class="goods-news__descr">Сам текст акции ларгрфзруар грф згцруз га з гйрцзшга зг йзгрцзг руагшр зф зцр угша згрф зр цгзур а г х ф гврыхагр хфггры гврахр хрфр хщуха эфшоэ уэаоэо эфоэ ышоэ шво аэ эфшоэышвоэшашофооашш шфов аэшофэуа мгцругм ржгргр жгр жгарм жгар жмгражргм гам аг ашгмргмр гарм гшаржмграг гвfsfsfsd Сам текст акции ларгрфзруар грф згцруз га з гйрцзшга зг йзгрцзг руагшр зф зцр угша згрф зр цгзур а г х ф гврыхагр хфггры гврахр хрфр хщуха эфшоэ уэаоэо эфоэ ышоэ швшофэуа мгцругм ржгргр жгр жгарм жгар жмгражргм гам аг ашгмргмр гарм гшаржмграг гвfsfsfsd Сам текст акции ларгрфзруар грф згцруз га з гйрцзшга зг йзгрцзг руагшр зф зцр угша згрф зр цг</p>
-									<div class="goods-news__btn-wrap"><a href="#" class="goods-news__more">Подробнее</a></div>
+									<div class="goods-news__btn-wrap"><a href="#" class="goods-news__more">Подробнее</a>
+									<a href="#" class="goods-news__short">Кратко</a></div>
 								</div>
 							</div>
 						</div>
@@ -948,7 +952,6 @@
 	<script src="js/jQuery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/readmore.js"></script>
 	<script>
 		$(document).ready(function() {
 			var navbar = $(".header__navbar");
@@ -1080,7 +1083,7 @@
 				$('.goods-reviews__tab').removeClass('active');
 				$(this).addClass('active');
 				$('.goods-reviews__item').css('display', 'none');
-				$('.goods-reviews__item--good').css('display', 'block');
+				$('.goods-reviews__item--good').css('display', 'block').addClass('active');
 			});
 			$('.goods-reviews__tab--bad').on('click', function(e) {
 				e.preventDefault();
@@ -1140,12 +1143,20 @@
 				dots: true,
 				nav: false
 			});
-
-			$('.goods-news__descr').readmore({
-				lessLink: '<a href="#" class="more">Кратко</a>',
-				moreLink: '<a href="#" class="more">Подробнее</a>',
-				collapsedHeight: 48,
-				speed: 200
+			
+			/* Подробнее, кратно в новостях */
+			
+			$('.goods-news__more').on('click', function(e) {
+				e.preventDefault();
+				$(this).hide(0);
+				$(this).next('.goods-news__short').show(0);
+				$(this).parent('.goods-news__btn-wrap').prev('.goods-news__descr').css('max-height', '100%');
+			});
+			$('.goods-news__short').on('click', function(e){
+				e.preventDefault();
+				$(this).hide(0);
+				$(this).prev('.goods-news__more').show(0);
+				$(this).parent('.goods-news__btn-wrap').prev('.goods-news__descr').css('max-height', '48px');
 			});
 		});
 	</script>

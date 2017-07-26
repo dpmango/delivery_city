@@ -299,11 +299,14 @@
 		font-size: 14px;
 		line-height: 16px;
 		margin-bottom: 0;
+		overflow: hidden;
+		max-height: 48px;
 	}
 	&__btn-wrap {
 		text-align: right;
 	}
-	&__more {
+	&__more,
+	&__short {
 		color: $button-color !important;
 		font-size: 14px;
 		text-decoration: none;
@@ -311,6 +314,9 @@
 			text-decoration: none;
 			color: #8f3c32 !important;
 		}
+	}
+	&__short {
+		display: none;
 	}
 	&.active {
 		display: block;
