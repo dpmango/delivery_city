@@ -9,20 +9,32 @@
 	z-index: 2000;
 }
 
-.goods-popup {
-	display: none;
+.goods-popup-slider-wrap {
+	display: block;
 	position: absolute;
-	z-index: 3000;
+	z-index: -10;
+	opacity: 0;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	width: 85%;
+	max-width: 975px;
+}
+.goods-popup-slider {
+	width: 100%;
+	display: block;
+}
+
+.goods-popup {
+	display: flex !important;
 	background-color: #fff;
 	padding: 30px;
 	border-radius: 4px;
 	flex-direction: row;
 	justify-content: space-between;
-	width: 85%;
-	max-width: 975px;
+	width: 100%;
+	position: relative;
+//	max-width: 975px;
 	&__half {
 		width: 49%;
 		position: relative;

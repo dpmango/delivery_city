@@ -1,5 +1,7 @@
 .restaurant-page {
 	font-family: 'Open Sans', sans-serif !important;
+	z-index: 1;
+	position: relative;
 	.wrapper {
 		position: relative;
 	}

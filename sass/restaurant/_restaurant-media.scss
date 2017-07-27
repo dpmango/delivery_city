@@ -375,6 +375,22 @@
 			}
 		}
 	}
+	.slick-prev,
+	.slick-next {
+		width: 20px;
+		height: 40px;
+		&:before {
+			background-size: 20px 40px;
+			width: 20px;
+			height: 40px;
+		}
+	}
+	.slick-prev {
+		left: -35px;
+	}
+	.slick-next {
+		right: -35px;
+	}
 }
 
 @media (max-width: 767px) {
