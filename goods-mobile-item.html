@@ -768,9 +768,13 @@
 			});
 			$('.goods-block__amount--minus').on('click', function() {
 				var currentValue = $(this).prev('.goods-block__amount--value').val();
-				if (currentValue > 0) {
+				if (currentValue > 1) {
 					var finalValue = parseInt(currentValue) - parseInt(1);
 					$(this).prev('.goods-block__amount--value').val(finalValue);
+				}
+				if (currentValue == 1) {
+					$(this).parent('.goods-block__amount').hide();
+					$(this).parent('.goods-block__amount').prev('.goods-block__tocart-btn').show();
 				}
 			});
 

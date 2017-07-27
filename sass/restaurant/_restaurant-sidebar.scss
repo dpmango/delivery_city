@@ -36,7 +36,7 @@
 		border-radius: 4px;
 		&:focus {
 			outline: 0;
-			border: 1px solid #c9c9c9;
+			border-color: darken($border-color, 15%);
 		}
 	}
 	&__btn {

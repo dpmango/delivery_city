@@ -133,7 +133,7 @@
 			transform: translate(-50%, -50%);
 		}
 		&:hover {
-			background-color: #8f3c32;
+			background-color: darken($button-color, 25%);
 			text-decoration: none;
 		}
 	}

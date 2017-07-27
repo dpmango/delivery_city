@@ -64,8 +64,8 @@
 			&:hover,
 			&:focus {
 				background-color: $button-color;
-				border-color: #8f3c32;
-				box-shadow: 0 -1px 0 0 #8f3c32;
+				border-color: darken($button-color, 25%);
+				box-shadow: 0 -1px 0 0 darken($button-color, 25%);
 				color: #fff !important;
 				text-decoration: none;
 				&:after {
@@ -90,6 +90,10 @@
 		&-img {
 			padding-left: 20px;
 			padding-right: 20px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: #fff;
 			img {
 				display: block;
 				height: auto;
@@ -116,7 +120,7 @@
 		&:hover {
 			color: #000;
 			text-decoration: none;
-			border-color: darken($border-color, 10%);
+			border-color: darken($border-color, 15%);
 			.goods-tooltip {
 				visibility: visible;
 				opacity: 1;
@@ -152,7 +156,7 @@
 		height: 30px;
 		font-size: 14px;
 		&:hover {
-			background-color: #8f3c32;
+			background-color: darken($button-color, 25%);
 		}
 	}
 	&__amount {
@@ -175,7 +179,7 @@
 		height: 30px;
 		&:hover {
 			cursor: pointer;
-			background-color: #8f3c32;
+			background-color: darken($button-color, 25%);
 		}
 		&:focus {
 			outline: 0;
@@ -313,7 +317,7 @@
 		text-decoration: none;
 		&:hover {
 			text-decoration: none;
-			color: #8f3c32 !important;
+			color: darken($button-color, 25%) !important;
 		}
 	}
 	&__short {
@@ -360,7 +364,7 @@
 				top: 1px;
 				left: 0;
 				background-repeat: no-repeat;
-				background-image: url(../img/clock-icon.svg);
+				background-image: url(../img/clock-icon-gr.svg);
 				background-size: 15px 15px;
 				width: 15px;
 				height: 15px;
@@ -384,13 +388,15 @@
 				&.active {
 					color: #d04040;
 					&:before {
-						content: '•';
+						content: '';
 						position: absolute;
-						width: 3px;
-						height: 3px;
-						top: 3px;
+						width: 4px;
+						height: 4px;
+						background-color: #d04040;
+						border-radius: 50%;
+						top: 50%;
+						transform: translateY(-50%);
 						left: -13px;
-						font-size: 20px;
 					}
 				}
 			}
@@ -450,13 +456,13 @@
 		}
 	}
 	&__email:before {
-		background-image: url(../img/mail-icon.svg);
+		background-image: url(../img/mail-icon-gr.svg);
 	}
 	&__site:before {
-		background-image: url(../img/web-icon.svg);
+		background-image: url(../img/web-icon-gr.svg);
 	}
 	&__tel:before {
-		background-image: url(../img/tel-icon.svg);
+		background-image: url(../img/tel-icon-gr.svg);
 	}
 	&__categories {
 		background-color: #fff;
