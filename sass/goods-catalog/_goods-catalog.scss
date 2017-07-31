@@ -18,6 +18,7 @@
 		&.active {
 			color: #000 !important;
 			border-bottom: 1px solid $button-color;
+			background-color: #f8f8f8;
 		}
 	}
 	&__items {
@@ -158,6 +159,10 @@
 }
 
 .goods-info-slider {
+	&__slide {
+		padding-left: 1px;
+		padding-right: 1px;
+	}
 	.restaurant-block__favorites {
 		display: inline-block;
 	}
@@ -182,6 +187,19 @@
 		padding-left: 25px;
 		padding-right: 25px;
 	}
+	.goods-block__amount {
+		height: 38px;
+		&--plus,
+		&--minus {
+			height: 38px;
+			width: 38px;
+		}
+		&--value {
+			height: 38px;
+			max-width: 38px;
+			font-size: 18px;
+		}
+	}
 	.restaurant-block__favorites label {
 		width: 28px;
 		height: 26px;
@@ -202,9 +220,18 @@
 	}
 	&__descr {
 		font-size: 14px;
-		max-height: 150px;
-		overflow-y: scroll;
-		margin-bottom: 10px;
+		margin-bottom: 20px;
 		margin-top: 25px;
+		word-break: break-all;
+	}
+}
+
+@media (min-width: 425px) {
+	.goods-catalog-mobile {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.goods-info-slider .goods-popup__charac-select {
+		max-width: 300px;
 	}
 }

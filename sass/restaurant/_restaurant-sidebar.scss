@@ -86,26 +86,35 @@
 				content: '';
 				position: absolute;
 				background-repeat: no-repeat;
-				background-image: url(../img/arrow-right.png);
+				background-image: url(../img/arrow-right.svg);
 				width: 8px;
 				height: 13px;
 				top: 50%;
 				transform: translate(0, -50%);
 				right: 10px;
 			}
+			&:hover:after {
+				background-image: url(../img/arrow-right-w.svg);
+			}
 		}
 		&.active {
 			&:after {
-				content: '';
-				position: absolute;
-				background-repeat: no-repeat;
-				background-image: url(../img/arrow-down.png);
-				width: 13px;
-				height: 8px;
-				top: 50%;
-				transform: translate(0, -50%);
-				right: 10px;
+				background-image: url(../img/arrow-right-w.svg);
+				transform: translate(0, -50%) rotate(90deg);
 			}
+		}
+	}
+	&__addition {
+		display: none;
+		font-weight: bold;
+		color: #000;
+		text-decoration: none;
+		font-size: 14px;
+		padding: 13px 30px 11px 17px;
+		position: relative;
+		&:hover {
+			text-decoration: underline;
+			color: #000;
 		}
 	}
 }

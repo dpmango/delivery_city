@@ -60,9 +60,11 @@
 				transform: translate(0, -50%);
 				right: 10px;
 			}
-			&.active,
-			&:hover,
-			&:focus {
+			&:hover {
+				text-decoration: none;
+				color: #000;
+			}
+			&.active {
 				background-color: $button-color;
 				border-color: darken($button-color, 25%);
 				box-shadow: 0 -1px 0 0 darken($button-color, 25%);
@@ -76,6 +78,19 @@
 			}
 		}
 	}
+	&__addition {
+		display: none;
+		font-size: 14px;
+			padding: 15px 10px 15px 20px;
+			padding-right: 33px;
+			color: #000;
+			position: relative;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			text-decoration: none;
+		border-bottom: 1px solid $int-el-txt-color;
+	}
 	&__item {
 		width: 31%;
 		border-radius: 4px;
@@ -83,6 +98,8 @@
 		padding: 30px 18px 20px 18px;
 		background-color: #fff;
 		position: relative;
+		display: flex;
+		flex-direction: column;
 		a {
 			color: #000;
 			text-decoration: none;
@@ -110,12 +127,20 @@
 			text-overflow: ellipsis;
 			white-space: nowrap;
 			letter-spacing: -0.05em;
+			&--twoline {
+				white-space: normal;
+				display: -webkit-box;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
+				max-height: 48px;
+			}
 		}
 		&-panel {
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
 			align-items: center;
+			margin-top: auto;
 		}
 		&:hover {
 			color: #000;
@@ -262,6 +287,10 @@
 		text-align: center;
 		padding: 15px 15px;
 		margin: 0;
+	}
+	&:hover {
+		visibility: hidden;
+		display: none;
 	}
 }
 

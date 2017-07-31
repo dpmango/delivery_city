@@ -155,8 +155,11 @@
 						<div class="goods-filter">
 							<a href="#" class="goods-filter__item"><span>Максимальное количество сим (96)</span></a>
 							<a href="#" class="goods-filter__item goods-filter__item--more"><span>Максимальное количество символов (96)</span></a>
-							<a href="#" class="goods-filter__item goods-filter__item--more active"><span>Максимальное количество символов</span></a>
+							<a href="#" class="goods-filter__addition">Дополнительный пункт</a>
 							<a href="#" class="goods-filter__item goods-filter__item--more"><span>Максимальное количество символов</span></a>
+							<a href="#" class="goods-filter__addition">Дополнительный пункт</a>
+							<a href="#" class="goods-filter__item goods-filter__item--more"><span>Максимальное количество символов</span></a>
+							<a href="#" class="goods-filter__addition">Дополнительный пункт</a>
 							<a href="#" class="goods-filter__item"><span>Максимальное количество символов</span></a>
 						</div>
 					</aside>
@@ -266,7 +269,7 @@
 							<div class="goods-block__item">
 								<a href="#" data-id="first-good">
 									<div class="goods-block__item-img"><img src="img/goods.png" alt=""></div>
-									<h3 class="goods-block__item-title">Название максимальное количество символов</h3>
+									<h3 class="goods-block__item-title goods-block__item-title--twoline">Название максимальное количество символов</h3>
 								</a>
 								<div class="goods-block__item-panel">
 									<div class="goods-block__price">12 345 <span>₽</span></div>
@@ -282,7 +285,8 @@
 								</div>
 								<div class="goods-tooltip goods-tooltip--first">
 									<img src="img/goods.png" alt="" class="goods-tooltip__img">
-									<p class="goods-tooltip__descr">580 гр. Состав: бла бла бала аблабабалл бваллбыа лыбалылаылаблаыаб - 999шт., что- то еще какой нибудь ролл - 89 шт., калифорния в пицце - 66 шт., бла нпс характеристики тут пишутся короче. Элемент растягивается в высоту в зависимости от текста. Строчка 8 блалблаллалалалалалалаллас Строчка 9 балоыагршрщшуркщшагпука Строчка 10 баловрадгыгшукраршгрфдгв Строчка11 лдыоволрдло ыдлрдлрла ам Строчка 12 вдоаром рдылорвадыыыа
+									<p class="goods-tooltip__descr">580 гр. Состав: бла бла бала аблабабалл бваллбыа лыбалылаылаблаыаб - 999шт., что- то еще какой нибудь ролл - 89 шт., калифорния в пицце - 66 шт.
+									какой нибудь ролл - 89 шт., калифорния в пицце - 66 шт.
 									</p>
 								</div>
 							</div>
@@ -337,10 +341,16 @@
 							<form action="#" class="search-field"><input type="text" class="search-field__input" placeholder="Поиск блюда"><button type="submit" class="search-field__btn"></button></form>
 							<div class="goods-block__catalog">
 								<a href="#" class="goods-block__catalog-link">Роллы (90)</a>
+								<a href="#" class="goods-block__addition">Дополнительный пункт</a>
 								<a href="#" class="goods-block__catalog-link">Суши (99)</a>
-								<a href="#" class="goods-block__catalog-link active">Максимальное количество симвооооловооов</a>
+								<a href="#" class="goods-block__addition">Дополнительный пункт</a>
 								<a href="#" class="goods-block__catalog-link">Максимальное количество симвооооловооов</a>
+								<a href="#" class="goods-block__addition">Дополнительный пункт</a>
+								<a href="#" class="goods-block__catalog-link">Максимальное количество симвооооловооов</a>
+								<a href="#" class="goods-block__addition">Дополнительный пункт</a>
 								<a href="#" class="goods-block__catalog-link">Максимальное количество симво (9)</a>
+								<a href="#" class="goods-block__addition">Дополнительный пункт</a>
+								
 							</div>
 						</div>
 						<div class="goods-news tab-item" id="goods-news">
@@ -1063,6 +1073,28 @@
 	</script>
 	<script>
 		$(document).ready(function() {
+			/* Дропдауны */
+			$('.goods-filter__item--more').on('click', function(e) {
+				e.preventDefault();
+				if ($(this).hasClass('active')) {
+					$(this).removeClass('active');
+					$(this).next('.goods-filter__addition').slideUp(200);
+				} else {
+					$(this).addClass('active');
+					$(this).next('.goods-filter__addition').slideDown(200);
+				}
+			});
+			$('.goods-block__catalog-link').on('click', function(e) {
+				e.preventDefault();
+				if ($(this).hasClass('active')) {
+					$(this).removeClass('active');
+					$(this).next('.goods-block__addition').slideUp(200);
+				} else {
+					$(this).addClass('active');
+					$(this).next('.goods-block__addition').slideDown(200);
+				}
+			});
+			
 
 			/* Табы-переключатели */
 			$('.restaurant-block__tab-link').on('click', function(e) {
@@ -1109,11 +1141,13 @@
 			$('.goods-block__item a').on('click', function(e) {
 				e.preventDefault();
 				var dataId = $(this).attr('data-id');
+				$('body').addClass('no-scroll');
 				$('.goods-overlay').fadeIn(200);
 				$('.goods-popup-slider-wrap').fadeIn(200);
 			});
 			$('.goods-popup__close').on('click', function(e) {
 				e.preventDefault();
+				$('body').removeClass('no-scroll');
 				$('.goods-popup-slider-wrap').fadeOut(200);
 				$('.goods-overlay').fadeOut(200);
 			});
@@ -1121,6 +1155,7 @@
 				var popupOpened = $('.goods-popup-slider-wrap');
 				if (popupOpened.has(a.target).length === 0) {
 					popupOpened.fadeOut(200);
+					$('body').removeClass('no-scroll');
 					$('.goods-overlay').fadeOut(200);
 				}
 			});

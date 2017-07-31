@@ -1,7 +1,66 @@
 @media (max-width: 5000px) {
 	.restaurant-page {
 		.container {
-			width: 1210px;
+			width: 1170px;
+		}
+	}
+}
+
+@media (max-width: 1440px) {
+	.goods-popup {
+		&__slide {
+			min-width: 100%;
+		}
+		&__price {
+			font-size: 25px;
+		}
+		&__tocart {
+			.goods-block__amount {
+				height: 39px;
+				max-width: 165px;
+			}
+			.goods-block__amount--plus,
+			.goods-block__amount--minus {
+				width: 39px;
+				height: 39px;
+				font-size: 20px;
+				line-height: 20px;
+			}
+			.goods-block__amount--minus:before {
+				font-size: 20px;
+				right: 53px;
+			}
+			.goods-block__amount--value {
+				font-size: 20px;
+				max-width: 85px;
+				padding-left: 15px;
+				height: 39px;
+			}
+		}
+		&__title {
+			font-size: 20px;
+		}
+		&__descr {
+			font-size: 16px;
+			line-height: 20px;
+			max-height: 423px;
+		}
+		&__charac {
+			&-name {
+				font-size: 20px;
+				line-height: 20px;
+			}
+			&-select {
+				font-size: 20px;
+				line-height: 20px;
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}
+		}
+		&--charac {
+			.goods-popup__descr {
+				max-height: 323px;
+			}
 		}
 	}
 }
@@ -62,59 +121,8 @@
 		line-height: 20px;
 	}
 	.goods-popup {
-		&__slide {
-			min-width: 100%;
-		}
-		&__price {
-			font-size: 25px;
-		}
-		&__tocart {
-			.goods-block__amount {
-				height: 39px;
-				max-width: 165px;
-			}
-			.goods-block__amount--plus,
-			.goods-block__amount--minus {
-				width: 39px;
-				height: 39px;
-				font-size: 20px;
-				line-height: 20px;
-			}
-			.goods-block__amount--minus:before {
-				font-size: 20px;
-				right: 53px;
-			}
-			.goods-block__amount--value {
-				font-size: 20px;
-				max-width: 85px;
-				padding-left: 15px;
-				height: 39px;
-			}
-		}
-		&__title {
-			font-size: 20px;
-		}
-		&__descr {
-			font-size: 16px;
-			line-height: 20px;
-			max-height: 423px;
-		}
-		&__charac {
-			&-name {
-				font-size: 20px;
-				line-height: 20px;
-			}
-			&-select {
-				font-size: 20px;
-				line-height: 20px;
-				padding-top: 10px;
-				padding-bottom: 10px;
-			}
-		}
-		&--charac {
-			.goods-popup__descr {
-				max-height: 323px;
-			}
+		&__tocart-btn {
+			font-size: 18px;
 		}
 	}
 }
@@ -161,7 +169,8 @@
 		}
 	}
 	.goods-filter {
-		&__item {
+		&__item,
+		&__addition {
 			font-size: 12px;
 			line-height: 14px;
 			padding-top: 9px;

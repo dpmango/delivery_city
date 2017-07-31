@@ -699,7 +699,8 @@
 	</script>
 	<script>
 		$(document).ready(function() {
-			/*  */
+			
+			/* Слайдер товаров */
 			$('.goods-img-slider').slick({
 				dots: false,
 				infinite: true,
@@ -708,7 +709,8 @@
 				slidesToShow: 1,
 				centerMode: true,
 				variableWidth: true,
-				asNavFor: '.goods-info-slider'
+				asNavFor: '.goods-info-slider',
+				waitForAnimate: false
 			});
 			$('.goods-info-slider').slick({
 				dots: false,
@@ -718,7 +720,8 @@
 				slidesToShow: 1,
 				slidesToScroll: 1,
 				asNavFor: '.goods-img-slider',
-				focusOnSelect: false
+				focusOnSelect: false,
+				waitForAnimate: false
 			});
 
 			/* Табы-переключатели */
@@ -792,6 +795,12 @@
 				$(this).hide(0);
 				$(this).prev('.goods-news__more').show(0);
 				$(this).parent('.goods-news__btn-wrap').prev('.goods-news__descr').css('max-height', '48px');
+			});
+			
+			$('.goods-catalog-mobile__category').on('click', function(e){
+				e.preventDefault();
+				$('.goods-catalog-mobile__category').removeClass('active');
+				$(this).addClass('active');
 			});
 		});
 	</script>
