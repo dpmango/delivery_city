@@ -264,6 +264,16 @@
 	.goods-tooltip {
 		display: none;
 	}
+	.goods-info {
+		&__info {
+			flex-wrap: wrap;
+		}
+		&__worktime,
+		&__contacts,
+		&__categories {
+			width: 48%;
+		}
+	}
 	.goods-news {
 		&__title {
 			font-size: 17px;
@@ -532,6 +542,14 @@
 		&__info {
 			width: 100%;
 		}
+		&__worktime,
+		&__contacts,
+		&__categories {
+			width: 100%;
+		}
+		&__worktime {
+			margin-right: 0;
+		}
 		&__map {
 			width: 100%;
 			margin-top: 10px;
@@ -541,11 +559,10 @@
 		}
 	}
 	.goods-reviews {
-		.search-field {
-			display: block;
-		}
-		&__tabs {
-			display: none;
+		&__tab {
+			font-size: 11px;
+			padding-left: 7px;
+			padding-right: 7px;
 		}
 		&__item {
 			padding: 10px;

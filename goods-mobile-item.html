@@ -66,7 +66,7 @@
 					</div>
 					<div class="header__search hidden-md-up"></div>
 					<div class="header__mobile-cart-wrapper hidden-md-up">
-						<a class="header__mobile-cart" href="#"><span class="header__cart-counter">99</span></a>
+						<a class="header__mobile-cart" href="#"><span class="header__cart-counter">99</span><span class="cart-popup">Добавлено в корзину</span></a>
 					</div>
 
 				</div>
@@ -86,11 +86,15 @@
 						</div>
 						<div class="col-md-6 col-lg-5 col-xl-5">
 							<ul class="header__navbar-items header__navbar-items_buttons">
-								<!--
-								<li><a class="header__navbar-item_cart" href="#" data-toggle="modal" data-target="#reg-modal"><span>Корзина</span>
-                            <span class="header__navbar-item_cart-counter">99</span>
-                        </a></li>
--->
+								<li><a class="header__navbar-item_personal-account" href="#"><span class="points">999999</span><span>Личный кабинет</span></a>
+								</li>
+								<li><a class="header__navbar-item_orders-history" href="#"><span>История заказов</span></a></li>
+								<li>
+									<a class="header__navbar-item_cart" href="#"> <span>Корзина</span>
+										<span class="header__navbar-item_cart-counter">99</span>
+										<span class="cart-popup">Добавлено в корзину</span>
+									</a>
+								</li>
 								<li><a class="header__navbar-item_login" href="#" data-toggle="modal" data-target="#login-modal"><span>Вход</span></a></li>
 							</ul>
 						</div>
@@ -762,6 +766,16 @@
 			$('.goods-block__tocart-btn').on('click', function() {
 				$(this).hide();
 				$(this).next('.goods-block__amount').css('display', 'flex');
+				$('.cart-popup').css({
+					'visibility': 'visible',
+					'opacity': '1'
+				})
+				setTimeout(function() {
+					$('.cart-popup').css({
+					'visibility': 'hidden',
+					'opacity': '0'
+				})
+				}, 1000);
 			})
 
 			$('.goods-block__amount--plus').on('click', function() {

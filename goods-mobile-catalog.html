@@ -66,7 +66,7 @@
 					</div>
 					<div class="header__search hidden-md-up"></div>
 					<div class="header__mobile-cart-wrapper hidden-md-up">
-						<a class="header__mobile-cart" href="#"><span class="header__cart-counter">99</span></a>
+						<a class="header__mobile-cart" href="#"><span class="header__cart-counter">99</span><span class="cart-popup">Добавлено в корзину</span></a>
 					</div>
 
 				</div>
@@ -86,11 +86,15 @@
 						</div>
 						<div class="col-md-6 col-lg-5 col-xl-5">
 							<ul class="header__navbar-items header__navbar-items_buttons">
-								<!--
-								<li><a class="header__navbar-item_cart" href="#" data-toggle="modal" data-target="#reg-modal"><span>Корзина</span>
-                            <span class="header__navbar-item_cart-counter">99</span>
-                        </a></li>
--->
+								<li><a class="header__navbar-item_personal-account" href="#"><span class="points">999999</span><span>Личный кабинет</span></a>
+								</li>
+								<li><a class="header__navbar-item_orders-history" href="#"><span>История заказов</span></a></li>
+								<li>
+									<a class="header__navbar-item_cart" href="#"> <span>Корзина</span>
+										<span class="header__navbar-item_cart-counter">99</span>
+										<span class="cart-popup">Добавлено в корзину</span>
+									</a>
+								</li>
 								<li><a class="header__navbar-item_login" href="#" data-toggle="modal" data-target="#login-modal"><span>Вход</span></a></li>
 							</ul>
 						</div>
@@ -139,8 +143,8 @@
 									<a href="goods-mobile-item.html" class="goods-catalog-mobile__img"><img src="img/shushi-img.jpg" alt=""></a>
 									<div class="goods-catalog-mobile__info">
 										<a href="goods-mobile-item.html">
-											<h2 class="goods-catalog-mobile__title">Максимальное количество когда длинное название пример в три строчки бл...</h2>
-											<p class="goods-catalog-mobile__descr">Максимальное количество когда длинное название пример в три строчки бл...</p>
+											<h2 class="goods-catalog-mobile__title">Максимальное количество когда длинное название пример в три строчки бл Lorem ipsum dolor sit </h2>
+											<p class="goods-catalog-mobile__descr"></p>
 										</a>
 										<div class="goods-catalog-mobile__price-wrap"><span class="goods-catalog-mobile__price">9999 ₽</span>
 											<div class="goods-block__tocart-wrap">
@@ -158,8 +162,8 @@
 									<a href="goods-mobile-item.html" class="goods-catalog-mobile__img"><img src="img/rolls-img.jpg" alt=""></a>
 									<div class="goods-catalog-mobile__info">
 										<a href="goods-mobile-item.html">
-											<h2 class="goods-catalog-mobile__title">Максимальное количество когда длинное название пример в три строчки бл...</h2>
-											<p class="goods-catalog-mobile__descr">Максимальное количество когда длинное название пример в три строчки бл...</p>
+											<h2 class="goods-catalog-mobile__title">Максимальное количество </h2>
+											<p class="goods-catalog-mobile__descr">Максимальное количество когда длинное название пример в три Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, facilis.</p>
 										</a>
 										<div class="goods-catalog-mobile__price-wrap"><span class="goods-catalog-mobile__price">9999 ₽</span>
 											<a href="goods-mobile-item.html" class="goods-catalog-mobile__more"></a>
@@ -170,8 +174,8 @@
 									<a href="goods-mobile-item.html" class="goods-catalog-mobile__img"><img src="img/burger-img.jpg" alt=""></a>
 									<div class="goods-catalog-mobile__info">
 										<a href="goods-mobile-item.html">
-											<h2 class="goods-catalog-mobile__title">Максимальное количество когда длинное название пример в три строчки бл...</h2>
-											<p class="goods-catalog-mobile__descr">Максимальное количество когда длинное название пример в три строчки бл...</p>
+											<h2 class="goods-catalog-mobile__title">Максимальное количество когда длинное название пример </h2>
+											<p class="goods-catalog-mobile__descr">Максимальное количество </p>
 										</a>
 										<div class="goods-catalog-mobile__price-wrap"><span class="goods-catalog-mobile__price">9999 ₽</span>
 											<div class="goods-block__tocart-wrap">
@@ -730,6 +734,16 @@
 			$('.goods-block__tocart-btn').on('click', function() {
 				$(this).hide();
 				$(this).next('.goods-block__amount').css('display', 'flex');
+				$('.cart-popup').css({
+					'visibility': 'visible',
+					'opacity': '1'
+				})
+				setTimeout(function() {
+					$('.cart-popup').css({
+					'visibility': 'hidden',
+					'opacity': '0'
+				})
+				}, 1000);
 			})
 
 			$('.goods-block__amount--plus').on('click', function() {

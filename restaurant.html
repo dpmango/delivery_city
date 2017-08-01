@@ -66,7 +66,8 @@
 					</div>
 					<div class="header__search hidden-md-up"></div>
 					<div class="header__mobile-cart-wrapper hidden-md-up">
-						<a class="header__mobile-cart" href="#"><span class="header__cart-counter">99</span></a>
+						<a class="header__mobile-cart" href="#"><span class="header__cart-counter">99</span>
+						<span class="cart-popup">Добавлено в корзину</span></a>
 					</div>
 
 				</div>
@@ -86,11 +87,15 @@
 						</div>
 						<div class="col-md-6 col-lg-5 col-xl-5">
 							<ul class="header__navbar-items header__navbar-items_buttons">
-								<!--
-								<li><a class="header__navbar-item_cart" href="#" data-toggle="modal" data-target="#reg-modal"><span>Корзина</span>
-                            <span class="header__navbar-item_cart-counter">99</span>
-                        </a></li>
--->
+								<li><a class="header__navbar-item_personal-account" href="#"><span class="points">999999</span><span>Личный кабинет</span></a>
+								</li>
+								<li><a class="header__navbar-item_orders-history" href="#"><span>История заказов</span></a></li>
+								<li>
+									<a class="header__navbar-item_cart" href="#"> <span>Корзина</span>
+										<span class="header__navbar-item_cart-counter">99</span>
+										<span class="cart-popup">Добавлено в корзину</span>
+									</a>
+								</li>
 								<li><a class="header__navbar-item_login" href="#" data-toggle="modal" data-target="#login-modal"><span>Вход</span></a></li>
 							</ul>
 						</div>
@@ -168,7 +173,7 @@
 						<div class="restaurant-block">
 							<div class="restaurant-block__desktop">
 								<div class="restaurant-block__title-wrap">
-									<h2 class="restaurant-block__title">Название ресторана максимальное количество символов</h2>
+									<h1 class="restaurant-block__title">Название ресторана максимальное количество символов</h1>
 									<div class="restaurant-block__raiting company-block__review-rating">
 										<div class="company-block__stars">
 											<div class="company-block__star"></div>
@@ -210,7 +215,7 @@
 								</div>
 								<div class="restaurant-block__mobile-info">
 									<div class="restaurant-block__title-wrap">
-										<h2 class="restaurant-block__title">Максимальное количество символов</h2>
+										<h1 class="restaurant-block__title">Максимальное количество символов</h1>
 										<form action="#" class="restaurant-block__favorites">
 											<input type="checkbox" id="fav-mobile1">
 											<label for="fav-mobile1"></label>
@@ -285,8 +290,7 @@
 								</div>
 								<div class="goods-tooltip goods-tooltip--first">
 									<img src="img/goods.png" alt="" class="goods-tooltip__img">
-									<p class="goods-tooltip__descr">580 гр. Состав: бла бла бала аблабабалл бваллбыа лыбалылаылаблаыаб - 999шт., что- то еще какой нибудь ролл - 89 шт., калифорния в пицце - 66 шт.
-									какой нибудь ролл - 89 шт., калифорния в пицце - 66 шт.
+									<p class="goods-tooltip__descr">580 гр. Состав: бла бла бала аблабабалл бваллбыа лыбалылаылаблаыаб - 999шт., что- то еще какой нибудь ролл - 89 шт., калифорния в пицце - 66 шт. какой нибудь ролл - 89 шт., калифорния в пицце - 66 шт.
 									</p>
 								</div>
 							</div>
@@ -350,7 +354,7 @@
 								<a href="#" class="goods-block__addition">Дополнительный пункт</a>
 								<a href="#" class="goods-block__catalog-link">Максимальное количество симво (9)</a>
 								<a href="#" class="goods-block__addition">Дополнительный пункт</a>
-								
+
 							</div>
 						</div>
 						<div class="goods-news tab-item" id="goods-news">
@@ -419,14 +423,15 @@
 								<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d51553.75133033797!2d37.618012035869576!3d55.746565265308206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1500827199187" frameborder="0" style="border:0" allowfullscreen></iframe>
 							</div>
 						</div>
-						<div class="goods-reviews tab-item" id="goods-reviews">
-							<form action="#" class="search-field"><input type="text" class="search-field__input" placeholder="Поиск блюда"><button type="submit" class="search-field__btn"></button></form>
+						<div class="goods-reviews tab-item active" id="goods-reviews">
+							
 							<div class="goods-reviews__tabs">
 								<a href="#" class="goods-reviews__tab goods-reviews__tab--all active">Все отзывы</a>
 								<a href="#" class="goods-reviews__tab goods-reviews__tab--good">Только хорошие</a>
 								<a href="#" class="goods-reviews__tab goods-reviews__tab--bad">Только плохие</a>
 							</div>
-							<div class="goods-reviews__item goods-reviews__item--good">
+							<div class="goods-reviews__wrapper">
+							<div class="goods-reviews__item active goods-reviews__item--good">
 								<div class="goods-reviews__title-wrap">
 									<h3 class="goods-reviews__title">Имя Фамилия бла бла бла длинное максимальное количество символоооооооооооов оооооо</h3>
 									<div class="goods-reviews__review">Положительный отзыв</div>
@@ -435,7 +440,7 @@
 								<p class="goods-reviews__descr">ОТЗЫЫЫВ! фбыталоук зуыиафврцсш рщцшфгвис зшнй зцвшнс йшфн ицвзшис зшфнизвшсни зшри йгн гщ й йуисгщг щф вгс щгн щнгф щни щгрищ снищ вщнс ищни щф цвисщ фщгищнищнвн сифщнищни вщнси фщни щв!й цнвснпщн фроцвсщпфп шпвсзшпфзшгпвзшнсп шзн шнпз зух8хй8снх8нуцх8сн х8ф гврсзг фгпв сщгнпргфнщгсеншргнвысзфш!</p>
 								<div class="goods-reviews__date-wrap"><span class="goods-reviews__date">05.09.2014 в 20:47</span></div>
 							</div>
-							<div class="goods-reviews__item goods-reviews__item--bad">
+							<div class="goods-reviews__item active goods-reviews__item--bad">
 								<div class="goods-reviews__title-wrap">
 									<h3 class="goods-reviews__title">Имя Фамилия бла бла бла длинное максимальное количество символоооооооооооов оооооо</h3>
 									<div class="goods-reviews__review">Отрицательный отзыв</div>
@@ -444,13 +449,14 @@
 								<p class="goods-reviews__descr">ОТЗЫЫЫВ! фбыталоук зуыиафврцсш рщцшфгвис зшнй зцвшнс йшфн ицвзшис зшфнизвшсни зшри йгн гщ й йуисгщг щф вгс щгн щнгф щни щгрищ снищ вщнс ищни щф цвисщ фщгищнищнвн сифщнищни вщнси фщни щв!й цнвснпщн фроцвсщпфп шпвсзшпфзшгпвзшнсп шзн шнпз зух8хй8снх8нуцх8сн х8ф гврсзг фгпв сщгнпргфнщгсеншргнвысзфш!</p>
 								<div class="goods-reviews__date-wrap"><span class="goods-reviews__date">05.09.2014 в 20:47</span></div>
 							</div>
-							<div class="goods-reviews__item">
+							<div class="goods-reviews__item active ">
 								<div class="goods-reviews__title-wrap">
 									<h3 class="goods-reviews__title">Имя Фамилия бла бла бла длинное максимальное количество символоооооооооооов</h3>
 									<div class="goods-reviews__review"></div>
 								</div>
 								<p class="goods-reviews__descr">ОТЗЫЫЫВ! фбыталоук зуыиафврцсш рщцшфгвис зшнй зцвшнс йшфн ицвзшис зшфнизвшсни зшри йгн гщ й йуисгщг щф вгс щгн щнгф щни щгрищ снищ вщнс ищни щф цвисщ фщгищнищнвн сифщнищни вщнси фщни щв!й цнвснпщн фроцвсщпфп шпвсзшпфзшгпвзшнсп шзн шнпз зух8хй8снх8нуцх8сн х8ф гврсзг фгпв сщгнпргфнщгсеншргнвысзфш!</p>
 								<div class="goods-reviews__date-wrap"><span class="goods-reviews__date">05.09.2014 в 20:47</span></div>
+							</div>
 							</div>
 						</div>
 					</div>
@@ -965,6 +971,8 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/slick.min.js"></script>
+	<script src="js/trans.js"transition></script>
+	
 	<script>
 		$(document).ready(function() {
 			var navbar = $(".header__navbar");
@@ -1094,7 +1102,7 @@
 					$(this).next('.goods-block__addition').slideDown(200);
 				}
 			});
-			
+
 
 			/* Табы-переключатели */
 			$('.restaurant-block__tab-link').on('click', function(e) {
@@ -1106,27 +1114,33 @@
 				$('.tab-item').removeClass('active');
 				$('.tab-item#' + dataId).addClass('active');
 			});
+			setTimeout(function() {
+				$('.goods-reviews').removeClass('active').css({
+					'visibility': 'visible',
+					'display': 'none',
+				});
+			}, 500);
 
 			/* Табы в отзывах */
 			$('.goods-reviews__tab--all').on('click', function(e) {
 				e.preventDefault();
 				$('.goods-reviews__tab').removeClass('active');
 				$(this).addClass('active');
-				$('.goods-reviews__item').css('display', 'block');
+				$('.goods-reviews__item').addClass('active');
 			});
 			$('.goods-reviews__tab--good').on('click', function(e) {
 				e.preventDefault();
 				$('.goods-reviews__tab').removeClass('active');
 				$(this).addClass('active');
-				$('.goods-reviews__item').css('display', 'none');
-				$('.goods-reviews__item--good').css('display', 'block').addClass('active');
+				$('.goods-reviews__item').removeClass('active');
+				$('.goods-reviews__item--good').addClass('active');
 			});
 			$('.goods-reviews__tab--bad').on('click', function(e) {
 				e.preventDefault();
 				$('.goods-reviews__tab').removeClass('active');
 				$(this).addClass('active');
-				$('.goods-reviews__item').css('display', 'none');
-				$('.goods-reviews__item--bad').css('display', 'block');
+				$('.goods-reviews__item').removeClass('active');
+				$('.goods-reviews__item--bad').addClass('active');
 			});
 
 
@@ -1172,6 +1186,16 @@
 			$('.goods-block__tocart-btn').on('click', function() {
 				$(this).hide();
 				$(this).next('.goods-block__amount').css('display', 'flex');
+				$('.cart-popup').css({
+					'visibility': 'visible',
+					'opacity': '1'
+				})
+				setTimeout(function() {
+					$('.cart-popup').css({
+					'visibility': 'hidden',
+					'opacity': '0'
+				})
+				}, 1000);
 			})
 
 			$('.goods-block__amount--plus').on('click', function() {
@@ -1216,95 +1240,8 @@
 				$(this).parent('.goods-news__btn-wrap').prev('.goods-news__descr').css('max-height', '48px');
 			});
 		});
-
-		/* Magic line */
-//		var $el, leftPos, newWidth,
-//			$mainNav = $(".restaurant-block__tabs");
-//
-//		$mainNav.append("<span id='magic-line'></span>");
-//		var $magicLine = $("#magic-line");
-//
-//		$magicLine
-//			.width($(".restaurant-block__tab-link").innerWidth())
-//			.css("left", $(".restaurant-block__tab-link").position().left)
-//			.data("origLeft", $magicLine.position().left)
-//			.data("origWidth", $magicLine.innerWidth());
-//
-//		$(".restaurant-block__tab-link").hover(function() {
-//
-//			$el = $(this);
-//			leftPos = $el.position().left;
-//			newWidth = $el.innerWidth();
-//			$magicLine.stop().animate({
-//				left: leftPos,
-//				width: newWidth
-//			});
-//		}, function() {
-//			$magicLine.stop().animate({
-//				left: $magicLine.data("origLeft"),
-//				width: $magicLine.data("origWidth")
-//			});
-//		});
-//
-//
-//		//global variables
-		var magicLine;
-		var hoverItem;
-		var curremtItem;
-
-		function hoverMagicLine() {
-			magicLine.stop().animate({
-				left: hoverItem.position().left,
-				width: hoverItem.innerWidth()
-			});
-		}
-
-		function returnMagicLine() {
-			magicLine.stop().animate({
-				left: magicLine.data("origLeft"),
-				width: magicLine.data("origWidth")
-			});
-		}
-
-
-		function recalibrateMagicLine() {
-			magicLine.width(currentItem.outerWidth())
-				.css("left", currentItem.position().left)
-				.data("origLeft", currentItem.position().left)
-				.data("origWidth", currentItem.outerWidth());
-		}
-
-		function makeMagicLine() {
-			$(".restaurant-block__tabs").append("<span id='magic-line'></span>");
-			magicLine = $("#magic-line");
-			currentItem = $(".restaurant-block__tab-link.active");
-			recalibrateMagicLine();
-		}
-
-
-		$(document).ready(function() {
-			makeMagicLine();
-			// on mouse hover, move magicLine
-			$(".restaurant-block__tab-link").hover(function() {
-				hoverItem = $(this);
-				hoverMagicLine();
-			}, function() {
-				returnMagicLine();
-			});
-
-			$(".restaurant-block__tab-link").click(function() {
-				currentItem.removeClass('active');
-				$(this).addClass('active');
-				currentItem = $(this);
-				recalibrateMagicLine();
-			});
-		});
-
-
-		$(window).resize(function() {
-			recalibrateMagicLine();
-		});
 	</script>
+	<script src="js/magicline.js"></script>
 </body>
 
 </html>

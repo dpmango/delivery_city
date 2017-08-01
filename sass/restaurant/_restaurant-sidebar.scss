@@ -75,7 +75,6 @@
 			display: inline-block;
 			letter-spacing: -0.05em;
 		}
-		&.active,
 		&:hover {
 			background-color: $button-color;
 			color: #fff !important;
@@ -93,14 +92,14 @@
 				transform: translate(0, -50%);
 				right: 10px;
 			}
+			&.active {
+				&:after {
+					background-image: url(../img/arrow-right.svg);
+					transform: translate(0, -50%) rotate(90deg);
+				}
+			}
 			&:hover:after {
 				background-image: url(../img/arrow-right-w.svg);
-			}
-		}
-		&.active {
-			&:after {
-				background-image: url(../img/arrow-right-w.svg);
-				transform: translate(0, -50%) rotate(90deg);
 			}
 		}
 	}
@@ -113,8 +112,9 @@
 		padding: 13px 30px 11px 17px;
 		position: relative;
 		&:hover {
-			text-decoration: underline;
-			color: #000;
+			background-color: $button-color;
+			color: #fff !important;
+			text-decoration: none;
 		}
 	}
 }

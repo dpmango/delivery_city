@@ -87,14 +87,6 @@
 		font-size: 0;
 		flex: 1;
 		position: relative;
-		#magic-line {
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 100px;
-			height: 2px;
-			background-color: $button-color;
-		}
 	}
 	&__tab-link {
 		text-decoration: none;
@@ -138,4 +130,14 @@
 			background-image: url(../img/heart.svg);
 		}
 	}
+}
+
+.magic-line,
+.magic-line2 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100px;
+	height: 2px;
+	background-color: $button-color;
 }
