@@ -36,6 +36,11 @@
 				padding-left: 15px;
 				height: 39px;
 			}
+			&-btn {
+				height: 39px;
+				padding: 9px 10px;
+				font-size: 21px;
+			}
 		}
 		&__title {
 			font-size: 20px;
@@ -94,18 +99,25 @@
 		}
 		&__price {
 			font-size: 15px;
+			white-space: nowrap;
+		}
+		&__amount {
+			height: 27px;
 		}
 		&__tocart-btn {
 			font-size: 13px;
+			height: 27px;
+			max-width: 81px;
 		}
 		&__amount--plus,
 		&__amount--minus {
-			width: 25px;
-			height: 25px;
+			width: 27px;
+			height: 27px;
 		}
 		&__amount--value {
 			font-size: 16px;
-			max-width: 30px;
+			max-height: 27px;
+			max-width: 27px;
 		}
 	}
 	.goods-news {
@@ -123,6 +135,10 @@
 	.goods-popup {
 		&__tocart-btn {
 			font-size: 18px;
+			height: 39px;
+		}
+		.goods-block__amount--value {
+			max-height: 39px;
 		}
 	}
 }
@@ -257,8 +273,13 @@
 		&__price {
 			font-size: 12px;
 		}
+		&__tocart-wrap {
+			max-height: 27px;
+		}
 		&__tocart-btn {
 			font-size: 12px;
+			min-width: 81px;
+			padding-top: 6px;
 		}
 	}
 	.goods-tooltip {
@@ -331,8 +352,14 @@
 		&__tocart-btn {
 			font-size: 15px;
 			padding: 9px 10px;
+			height: 33px;
+			min-width: 0;
+			max-width: 100%;
 		}
 		&__tocart {
+			.goods-block__tocart-wrap {
+				max-height: 33px;
+			}
 			.goods-block__amount {
 				height: 33px;
 				max-width: 150px;

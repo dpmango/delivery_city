@@ -971,7 +971,7 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/slick.min.js"></script>
-	<script src="js/trans.js"transition></script>
+	<script src="js/equalHeights.js"></script>
 	
 	<script>
 		$(document).ready(function() {
@@ -1080,7 +1080,14 @@
 		});
 	</script>
 	<script>
+		$(window).resize(function() {
+			var blockHeight = $('.restaurant-block').innerHeight();
+			$('.restaurant-logo').innerHeight(blockHeight);
+		});
 		$(document).ready(function() {
+			var blockHeight = $('.restaurant-block').innerHeight();
+			$('.restaurant-logo').innerHeight(blockHeight);
+			
 			/* Дропдауны */
 			$('.goods-filter__item--more').on('click', function(e) {
 				e.preventDefault();
@@ -1143,32 +1150,24 @@
 				$('.goods-reviews__item--bad').addClass('active');
 			});
 
-
 			/* Попап товара */
-			setTimeout(function() {
-				$('.goods-popup-slider-wrap').css({
-					"display": "none",
-					"z-index": "3000",
-					"opacity": "1"
-				});
-			}, 2000);
 			$('.goods-block__item a').on('click', function(e) {
 				e.preventDefault();
 				var dataId = $(this).attr('data-id');
-				$('body').addClass('no-scroll');
 				$('.goods-overlay').fadeIn(200);
-				$('.goods-popup-slider-wrap').fadeIn(200);
+				$('.goods-popup-slider-wrap').fadeIn(200).addClass('active');
+				$('body').addClass('no-scroll');
 			});
 			$('.goods-popup__close').on('click', function(e) {
 				e.preventDefault();
 				$('body').removeClass('no-scroll');
-				$('.goods-popup-slider-wrap').fadeOut(200);
+				$('.goods-popup-slider-wrap').fadeOut(200).removeClass('active');
 				$('.goods-overlay').fadeOut(200);
 			});
 			$(document).mouseup(function(a) {
 				var popupOpened = $('.goods-popup-slider-wrap');
 				if (popupOpened.has(a.target).length === 0) {
-					popupOpened.fadeOut(200);
+					popupOpened.fadeOut(200).removeClass('active');
 					$('body').removeClass('no-scroll');
 					$('.goods-overlay').fadeOut(200);
 				}
