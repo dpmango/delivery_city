@@ -4,18 +4,26 @@
 	position: relative;
 	.wrapper {
 		position: relative;
-		overflow-x: hidden;
 	}
 	.filters__content {
 		display: block;
+		padding: 0 15px;
 	}
 	.filters__toggler {
 		color: #000;
+		padding: 8px 15px 8px 15px;
+		line-height: 19px;
+	}
+	.filters__radio-buttons label {
+		padding: 5px 0 !important;
+	}
+	.filters__radio-buttons input[type="radio"]:checked + label {
+		border: 0;
 	}
 	aside {
 		padding-right: 0;
 		+div {
-			padding-left: 30px;
+			padding-left: 40px;
 		}
 	}
 	.header__navbar-item_personal-account {
@@ -60,13 +68,13 @@
 		position: absolute;
 		background-color: $button-color;
 		color: #fff;
-		font-size: 14px;
+		font-size: 15px;
 		text-align: center;
-		padding: 5px 15px;
+		padding: 14px 15px;
 		border-radius: 4px;
 		min-width: 190px;
 		right: 0;
-		bottom: -45px;
+		bottom: -55px;
 		z-index: 3000;
 		transition: all 0.4s;
 		&:before {

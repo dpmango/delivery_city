@@ -67,7 +67,8 @@
 					<div class="header__search hidden-md-up"></div>
 					<div class="header__mobile-cart-wrapper hidden-md-up">
 						<a class="header__mobile-cart" href="#"><span class="header__cart-counter">99</span>
-						<span class="cart-popup">Добавлено в корзину</span></a>
+						<span class="cart-popup js-cart-popup">Добавлено в корзину</span>
+						<span class="cart-popup cart-popup--del">Удалено из корзины</span></a>
 					</div>
 
 				</div>
@@ -93,7 +94,8 @@
 								<li>
 									<a class="header__navbar-item_cart" href="#"> <span>Корзина</span>
 										<span class="header__navbar-item_cart-counter">99</span>
-										<span class="cart-popup">Добавлено в корзину</span>
+										<span class="cart-popup js-cart-popup">Добавлено в корзину</span>
+										<span class="cart-popup cart-popup--del">Удалено из корзины</span>
 									</a>
 								</li>
 								<li><a class="header__navbar-item_login" href="#" data-toggle="modal" data-target="#login-modal"><span>Вход</span></a></li>
@@ -193,7 +195,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="restaurant-block__info company-block__footer">
+								<div class="restaurant-block__info">
 									<div class="company-block__options">
 										<span class="company-block__option-name">Мин. заказ</span>
 										<span class="company-block__option-value">500 <span class="ruble">₽</span></span>
@@ -239,7 +241,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="restaurant-block__info company-block__footer">
+									<div class="restaurant-block__info">
 										<div class="company-block__options">
 											<span class="company-block__option-name">Мин. заказ</span>
 											<span class="company-block__option-value">500 <span class="ruble">₽</span></span>
@@ -424,39 +426,39 @@
 							</div>
 						</div>
 						<div class="goods-reviews tab-item active" id="goods-reviews">
-							
+
 							<div class="goods-reviews__tabs">
 								<a href="#" class="goods-reviews__tab goods-reviews__tab--all active">Все отзывы</a>
 								<a href="#" class="goods-reviews__tab goods-reviews__tab--good">Только хорошие</a>
 								<a href="#" class="goods-reviews__tab goods-reviews__tab--bad">Только плохие</a>
 							</div>
 							<div class="goods-reviews__wrapper">
-							<div class="goods-reviews__item active goods-reviews__item--good">
-								<div class="goods-reviews__title-wrap">
-									<h3 class="goods-reviews__title">Имя Фамилия бла бла бла длинное максимальное количество символоооооооооооов оооооо</h3>
-									<div class="goods-reviews__review">Положительный отзыв</div>
-									<div class="goods-reviews__review goods-reviews__review--mobile"></div>
+								<div class="goods-reviews__item active goods-reviews__item--good">
+									<div class="goods-reviews__title-wrap">
+										<h3 class="goods-reviews__title">Имя Фамилия бла бла бла длинное максимальное количество символоооооооооооов оооооо</h3>
+										<div class="goods-reviews__review">Положительный отзыв</div>
+										<div class="goods-reviews__review goods-reviews__review--mobile"></div>
+									</div>
+									<p class="goods-reviews__descr">ОТЗЫЫЫВ! фбыталоук зуыиафврцсш рщцшфгвис зшнй зцвшнс йшфн ицвзшис зшфнизвшсни зшри йгн гщ й йуисгщг щф вгс щгн щнгф щни щгрищ снищ вщнс ищни щф цвисщ фщгищнищнвн сифщнищни вщнси фщни щв!й цнвснпщн фроцвсщпфп шпвсзшпфзшгпвзшнсп шзн шнпз зух8хй8снх8нуцх8сн х8ф гврсзг фгпв сщгнпргфнщгсеншргнвысзфш!</p>
+									<div class="goods-reviews__date-wrap"><span class="goods-reviews__date">05.09.2014 в 20:47</span></div>
 								</div>
-								<p class="goods-reviews__descr">ОТЗЫЫЫВ! фбыталоук зуыиафврцсш рщцшфгвис зшнй зцвшнс йшфн ицвзшис зшфнизвшсни зшри йгн гщ й йуисгщг щф вгс щгн щнгф щни щгрищ снищ вщнс ищни щф цвисщ фщгищнищнвн сифщнищни вщнси фщни щв!й цнвснпщн фроцвсщпфп шпвсзшпфзшгпвзшнсп шзн шнпз зух8хй8снх8нуцх8сн х8ф гврсзг фгпв сщгнпргфнщгсеншргнвысзфш!</p>
-								<div class="goods-reviews__date-wrap"><span class="goods-reviews__date">05.09.2014 в 20:47</span></div>
-							</div>
-							<div class="goods-reviews__item active goods-reviews__item--bad">
-								<div class="goods-reviews__title-wrap">
-									<h3 class="goods-reviews__title">Имя Фамилия бла бла бла длинное максимальное количество символоооооооооооов оооооо</h3>
-									<div class="goods-reviews__review">Отрицательный отзыв</div>
-									<div class="goods-reviews__review goods-reviews__review--mobile"></div>
+								<div class="goods-reviews__item active goods-reviews__item--bad">
+									<div class="goods-reviews__title-wrap">
+										<h3 class="goods-reviews__title">Имя Фамилия бла бла бла длинное максимальное количество символоооооооооооов оооооо</h3>
+										<div class="goods-reviews__review">Отрицательный отзыв</div>
+										<div class="goods-reviews__review goods-reviews__review--mobile"></div>
+									</div>
+									<p class="goods-reviews__descr">ОТЗЫЫЫВ! фбыталоук зуыиафврцсш рщцшфгвис зшнй зцвшнс йшфн ицвзшис зшфнизвшсни зшри йгн гщ й йуисгщг щф вгс щгн щнгф щни щгрищ снищ вщнс ищни щф цвисщ фщгищнищнвн сифщнищни вщнси фщни щв!й цнвснпщн фроцвсщпфп шпвсзшпфзшгпвзшнсп шзн шнпз зух8хй8снх8нуцх8сн х8ф гврсзг фгпв сщгнпргфнщгсеншргнвысзфш!</p>
+									<div class="goods-reviews__date-wrap"><span class="goods-reviews__date">05.09.2014 в 20:47</span></div>
 								</div>
-								<p class="goods-reviews__descr">ОТЗЫЫЫВ! фбыталоук зуыиафврцсш рщцшфгвис зшнй зцвшнс йшфн ицвзшис зшфнизвшсни зшри йгн гщ й йуисгщг щф вгс щгн щнгф щни щгрищ снищ вщнс ищни щф цвисщ фщгищнищнвн сифщнищни вщнси фщни щв!й цнвснпщн фроцвсщпфп шпвсзшпфзшгпвзшнсп шзн шнпз зух8хй8снх8нуцх8сн х8ф гврсзг фгпв сщгнпргфнщгсеншргнвысзфш!</p>
-								<div class="goods-reviews__date-wrap"><span class="goods-reviews__date">05.09.2014 в 20:47</span></div>
-							</div>
-							<div class="goods-reviews__item active ">
-								<div class="goods-reviews__title-wrap">
-									<h3 class="goods-reviews__title">Имя Фамилия бла бла бла длинное максимальное количество символоооооооооооов</h3>
-									<div class="goods-reviews__review"></div>
+								<div class="goods-reviews__item active ">
+									<div class="goods-reviews__title-wrap">
+										<h3 class="goods-reviews__title">Имя Фамилия бла бла бла длинное максимальное количество символоооооооооооов</h3>
+										<div class="goods-reviews__review"></div>
+									</div>
+									<p class="goods-reviews__descr">ОТЗЫЫЫВ! фбыталоук зуыиафврцсш рщцшфгвис зшнй зцвшнс йшфн ицвзшис зшфнизвшсни зшри йгн гщ й йуисгщг щф вгс щгн щнгф щни щгрищ снищ вщнс ищни щф цвисщ фщгищнищнвн сифщнищни вщнси фщни щв!й цнвснпщн фроцвсщпфп шпвсзшпфзшгпвзшнсп шзн шнпз зух8хй8снх8нуцх8сн х8ф гврсзг фгпв сщгнпргфнщгсеншргнвысзфш!</p>
+									<div class="goods-reviews__date-wrap"><span class="goods-reviews__date">05.09.2014 в 20:47</span></div>
 								</div>
-								<p class="goods-reviews__descr">ОТЗЫЫЫВ! фбыталоук зуыиафврцсш рщцшфгвис зшнй зцвшнс йшфн ицвзшис зшфнизвшсни зшри йгн гщ й йуисгщг щф вгс щгн щнгф щни щгрищ снищ вщнс ищни щф цвисщ фщгищнищнвн сифщнищни вщнси фщни щв!й цнвснпщн фроцвсщпфп шпвсзшпфзшгпвзшнсп шзн шнпз зух8хй8снх8нуцх8сн х8ф гврсзг фгпв сщгнпргфнщгсеншргнвысзфш!</p>
-								<div class="goods-reviews__date-wrap"><span class="goods-reviews__date">05.09.2014 в 20:47</span></div>
-							</div>
 							</div>
 						</div>
 					</div>
@@ -972,7 +974,7 @@
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/slick.min.js"></script>
 	<script src="js/equalHeights.js"></script>
-	
+
 	<script>
 		$(document).ready(function() {
 			var navbar = $(".header__navbar");
@@ -1087,7 +1089,7 @@
 		$(document).ready(function() {
 			var blockHeight = $('.restaurant-block').innerHeight();
 			$('.restaurant-logo').innerHeight(blockHeight);
-			
+
 			/* Дропдауны */
 			$('.goods-filter__item--more').on('click', function(e) {
 				e.preventDefault();
@@ -1178,22 +1180,25 @@
 				slidesToShow: 1,
 				slidesToScroll: 1,
 				dots: false,
-				arrows: true
+				arrows: true,
+				pauseOnFocus: false,
+				pauseOnHover: false,
+				draggable: false
 			});
 
 			/* Кнопка "В корзину/Выбрать" и количество товара */
 			$('.goods-block__tocart-btn').on('click', function() {
 				$(this).hide();
 				$(this).next('.goods-block__amount').css('display', 'flex');
-				$('.cart-popup').css({
+				$('.js-cart-popup').css({
 					'visibility': 'visible',
 					'opacity': '1'
 				})
 				setTimeout(function() {
 					$('.cart-popup').css({
-					'visibility': 'hidden',
-					'opacity': '0'
-				})
+						'visibility': 'hidden',
+						'opacity': '0'
+					})
 				}, 1000);
 			})
 
@@ -1201,6 +1206,16 @@
 				var currentValue = $(this).next('.goods-block__amount--value').val();
 				var finalValue = parseInt(currentValue) + parseInt(1);
 				$(this).next('.goods-block__amount--value').val(finalValue);
+				$('.js-cart-popup').css({
+					'visibility': 'visible',
+					'opacity': '1'
+				})
+				setTimeout(function() {
+					$('.cart-popup').css({
+						'visibility': 'hidden',
+						'opacity': '0'
+					})
+				}, 1000);
 			});
 			$('.goods-block__amount--minus').on('click', function() {
 				var currentValue = $(this).prev('.goods-block__amount--value').val();
@@ -1212,6 +1227,16 @@
 					$(this).parent('.goods-block__amount').hide();
 					$(this).parent('.goods-block__amount').prev('.goods-block__tocart-btn').show();
 				}
+				$('.cart-popup--del').css({
+					'visibility': 'visible',
+					'opacity': '1'
+				})
+				setTimeout(function() {
+					$('.cart-popup').css({
+						'visibility': 'hidden',
+						'opacity': '0'
+					})
+				}, 1000);
 			});
 
 			/* Слайдер в попапе товара */

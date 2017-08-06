@@ -39,6 +39,8 @@
 	justify-content: space-between;
 	width: 100%;
 	position: relative;
+	margin-left: 5px;
+	margin-right: 5px;
 //	max-width: 975px;
 	&__half {
 		width: 49%;
@@ -115,7 +117,8 @@
 			font-size: 30px;
 			font-weight: 400;
 			max-width: 120px;
-			padding-left: 22px;
+			padding-left: 20px;
+			letter-spacing: -0.1em;
 			text-align: left;
 			height: 50px;
 		}
@@ -152,7 +155,7 @@
 		max-height: 503px;
 		overflow-y: scroll;
 		font-size: 18px;
-		line-height: 24px;
+		line-height: 25px;
 		margin: 0;
 		word-wrap: break-word;
 		letter-spacing: -0.03em;
@@ -246,7 +249,7 @@
 			flex-direction: column;
 		}
 		.goods-popup__descr {
-			max-height: 385px;
+			max-height: 400px;
 		}
 	}
 }

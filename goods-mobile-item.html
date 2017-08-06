@@ -66,7 +66,8 @@
 					</div>
 					<div class="header__search hidden-md-up"></div>
 					<div class="header__mobile-cart-wrapper hidden-md-up">
-						<a class="header__mobile-cart" href="#"><span class="header__cart-counter">99</span><span class="cart-popup">Добавлено в корзину</span></a>
+						<a class="header__mobile-cart" href="#"><span class="header__cart-counter">99</span><span class="cart-popup js-cart-popup">Добавлено в корзину</span>
+						<span class="cart-popup cart-popup--del">Удалено из корзины</span></a>
 					</div>
 
 				</div>
@@ -92,7 +93,8 @@
 								<li>
 									<a class="header__navbar-item_cart" href="#"> <span>Корзина</span>
 										<span class="header__navbar-item_cart-counter">99</span>
-										<span class="cart-popup">Добавлено в корзину</span>
+										<span class="cart-popup js-cart-popup">Добавлено в корзину</span>
+										<span class="cart-popup cart-popup--del">Удалено из корзины</span>
 									</a>
 								</li>
 								<li><a class="header__navbar-item_login" href="#" data-toggle="modal" data-target="#login-modal"><span>Вход</span></a></li>
@@ -766,15 +768,15 @@
 			$('.goods-block__tocart-btn').on('click', function() {
 				$(this).hide();
 				$(this).next('.goods-block__amount').css('display', 'flex');
-				$('.cart-popup').css({
+				$('.js-cart-popup').css({
 					'visibility': 'visible',
 					'opacity': '1'
 				})
 				setTimeout(function() {
 					$('.cart-popup').css({
-					'visibility': 'hidden',
-					'opacity': '0'
-				})
+						'visibility': 'hidden',
+						'opacity': '0'
+					})
 				}, 1000);
 			})
 
@@ -782,6 +784,16 @@
 				var currentValue = $(this).next('.goods-block__amount--value').val();
 				var finalValue = parseInt(currentValue) + parseInt(1);
 				$(this).next('.goods-block__amount--value').val(finalValue);
+				$('.js-cart-popup').css({
+					'visibility': 'visible',
+					'opacity': '1'
+				})
+				setTimeout(function() {
+					$('.cart-popup').css({
+						'visibility': 'hidden',
+						'opacity': '0'
+					})
+				}, 1000);
 			});
 			$('.goods-block__amount--minus').on('click', function() {
 				var currentValue = $(this).prev('.goods-block__amount--value').val();
@@ -793,6 +805,16 @@
 					$(this).parent('.goods-block__amount').hide();
 					$(this).parent('.goods-block__amount').prev('.goods-block__tocart-btn').show();
 				}
+				$('.cart-popup--del').css({
+					'visibility': 'visible',
+					'opacity': '1'
+				})
+				setTimeout(function() {
+					$('.cart-popup').css({
+						'visibility': 'hidden',
+						'opacity': '0'
+					})
+				}, 1000);
 			});
 
 

@@ -56,6 +56,12 @@
 		}
 	}
 	&__info {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		.company-block__options {
+			width: 24%;
+		}
 		.company-block__option-name {
 			margin-bottom: 12px;
 		}
@@ -95,7 +101,7 @@
 		font-size: 11px;
 		display: inline-block;
 		vertical-align: middle;
-		padding: 10px 39px;
+		padding: 10px 38px;
 		color: #000;
 		border-bottom: 2px solid transparent;
 		position: relative;

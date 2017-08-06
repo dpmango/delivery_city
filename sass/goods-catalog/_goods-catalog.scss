@@ -70,7 +70,7 @@
 				content: '';
 				display: block;
 				background-repeat: no-repeat;
-				background-image: url(../img/cart2.png);
+				background-image: url(../img/cart2.svg);
 				width: 23px;
 				height: 24px;
 			}
@@ -109,7 +109,7 @@
 		overflow: hidden;
 	}
 	&__descr {
-		font-size: 14px;
+		font-size: 13px;
 		line-height: 15px;
 		margin: 0;
 		color: $int-el-txt-color;
@@ -142,7 +142,7 @@
 			content: '';
 			display: block;
 			background-repeat: no-repeat;
-			background-image: url(../img/arrow-right-w.svg);
+			background-image: url(../img/arrow-right-new.svg);
 			background-size: 10px 22px;
 			width: 10px;
 			height: 22px;

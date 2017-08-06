@@ -33,7 +33,7 @@
 			.goods-block__amount--value {
 				font-size: 20px;
 				max-width: 85px;
-				padding-left: 15px;
+				padding-left: 17px;
 				height: 39px;
 			}
 			&-btn {
@@ -64,7 +64,7 @@
 		}
 		&--charac {
 			.goods-popup__descr {
-				max-height: 323px;
+				max-height: 343px;
 			}
 		}
 	}
@@ -120,6 +120,9 @@
 			max-width: 27px;
 		}
 	}
+	.goods-tooltip {
+		width: 114%;
+	}
 	.goods-news {
 		&__title {
 			font-size: 16px;
@@ -146,9 +149,9 @@
 @media (max-width: 991px) {
 	.restaurant-page {
 		aside {
-			padding-right: 15px;
+			padding-right: 10px;
 			+div {
-				padding-left: 15px;
+				padding-left: 10px;
 			}
 		}
 		.container {
@@ -255,6 +258,8 @@
 			padding-bottom: 15px;
 			&-title {
 				font-size: 12px;
+				line-height: 18px;
+				max-height: 40px;
 				margin-bottom: 15px;
 			}
 			&-img {
@@ -287,12 +292,44 @@
 	}
 	.goods-info {
 		&__info {
-			flex-wrap: wrap;
+			align-items: stretch;
 		}
 		&__worktime,
 		&__contacts,
 		&__categories {
-			width: 48%;
+			width: 32%;
+			min-width: 1px;
+			margin-bottom: 0;
+		}
+		&__worktime {
+			padding-left: 15px;
+			padding-right: 15px;
+			padding-bottom: 15px;
+			&-hours {
+				span {
+					margin-bottom: 2px;
+				}
+			}
+			&-days {
+				span {
+					margin-bottom: 2px;
+				}
+			}
+		}
+		&__contacts {
+			padding-left: 15px;
+			padding-right: 15px;
+			padding-bottom: 15px;
+		}
+		&__categories {
+			width: 31%;
+			&-link {
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+		}
+		&__email, &__site, &__tel {
+			margin-bottom: 3px;
 		}
 	}
 	.goods-news {
@@ -417,7 +454,7 @@
 		}
 		&--charac {
 			.goods-popup__descr {
-				max-height: 255px;
+				max-height: 332px;
 			}
 		}
 	}
@@ -437,6 +474,10 @@
 	.slick-next {
 		right: -35px;
 	}
+	.restaurant-page .cart-popup {
+		padding: 6px 15px;
+		bottom: -45px;
+	}
 }
 
 @media (max-width: 767px) {
@@ -446,6 +487,9 @@
 		}
 	}
 	.restaurant-page {
+		.wrapper {
+			overflow-x: hidden;
+		}
 		aside {
 			display: none;
 		}
@@ -568,11 +612,13 @@
 		flex-direction: column;
 		&__info {
 			width: 100%;
+			flex-direction: column;
 		}
 		&__worktime,
 		&__contacts,
 		&__categories {
 			width: 100%;
+			margin-bottom: 10px;
 		}
 		&__worktime {
 			margin-right: 0;
@@ -615,6 +661,14 @@
 			font-size: 12px;
 			line-height: 14px;
 			max-height: 71px;
+		}
+	}
+}
+
+@media (max-width: 575px) {
+	.restaurant-block {
+		.company-block__options {
+			width: 33%;
 		}
 	}
 }
