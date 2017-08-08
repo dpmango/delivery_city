@@ -475,7 +475,7 @@
 		}
 		&--charac {
 			.goods-popup__descr {
-				max-height: 332px;
+				max-height: 255px;
 			}
 		}
 	}
@@ -648,8 +648,40 @@
 			width: 100%;
 			margin-bottom: 10px;
 		}
+		&__email,
+		&__site,
+		&__tel {
+			font-size: 14px;
+		}
 		&__worktime {
 			margin-right: 0;
+			&-days-wrap {
+				flex-direction: row;
+			}
+			&-half {
+				&:first-child {
+					margin-right: 10px;
+				}
+			}
+			&-title {
+				font-size: 14px;
+			}
+			&-days,
+			&-hours {
+				span {
+					font-size: 14px;
+					line-height: 19px;
+				}
+			}
+		}
+		&__contacts {
+			span,
+			a {
+				font-size: 14px;
+			}
+		}
+		&__categories-link {
+			font-size: 14px;
 		}
 		&__map {
 			width: 100%;
@@ -712,6 +744,11 @@
 }
 
 @media (max-width: 575px) {
+	.restaurant-page {
+		.content {
+			padding-top: 60px;
+		}
+	}
 	.goods-info {
 		&__categories {
 			width: calc(100% + 20px);

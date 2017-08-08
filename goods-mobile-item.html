@@ -714,9 +714,10 @@
 				speed: 300,
 				slidesToShow: 1,
 				centerMode: true,
-				variableWidth: true,
+				centerPadding: '22px',
+//				variableWidth: true,
 				asNavFor: '.goods-info-slider',
-				waitForAnimate: false
+				waitForAnimate: false,
 			});
 			$('.goods-info-slider').slick({
 				dots: false,
@@ -727,7 +728,8 @@
 				slidesToScroll: 1,
 				asNavFor: '.goods-img-slider',
 				focusOnSelect: false,
-				waitForAnimate: false
+				waitForAnimate: false,
+				adaptiveHeight: true
 			});
 
 			/* Табы-переключатели */

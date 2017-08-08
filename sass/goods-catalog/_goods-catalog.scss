@@ -85,6 +85,9 @@
 		.goods-block__amount--value {
 			height: 36px;
 			max-height: 36px;
+			font-weight: 600;
+			font-size: 14px;
+			max-width: 35px;
 		}
 		.goods-block__amount {
 			height: 36px;
@@ -98,10 +101,10 @@
 	&__title {
 		font-size: 14px;
 		line-height: 15px;
+		font-weight: 600;
 		margin-top: 0;
 		margin-bottom: 10px;
 		line-height: 14px;
-		font-weight: 400;
 		display: -webkit-box;
 		-webkit-line-clamp: 3;
 		-webkit-box-orient: vertical;
@@ -124,12 +127,13 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		align-items: center;
 	}
 	&__price {
 		font-size: 14px;
+		font-weight: 600;
 		margin: 0;
 		color: #000;
-		align-self: flex-end;
 	}
 	&__more {
 		border-radius: 4px;
@@ -164,14 +168,14 @@
 	&__slide {
 		&.slick-active {
 			img {
-				padding-left: 3px;
-				padding-right: 3px;
+//				padding-left: 3px;
+//				padding-right: 3px;
 			}
 		}
 		img {
 			display: block;
 			height: auto;
-			width: 95%;
+			width: 94%;
 			margin-left: auto;
 			margin-right: auto;
 		}
