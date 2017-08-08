@@ -242,13 +242,13 @@
 										</div>
 									</div>
 									<div class="restaurant-block__info">
-										<div class="company-block__options">
+										<div class="company-block__options company-block__options--first">
 											<span class="company-block__option-name">Мин. заказ</span>
-											<span class="company-block__option-value">500 <span class="ruble">₽</span></span>
+											<span class="company-block__option-value">999 <span class="ruble">₽</span></span>
 										</div>
-										<div class="company-block__options">
+										<div class="company-block__options company-block__options--second">
 											<span class="company-block__option-name">Доставка</span>
-											<span class="company-block__option-value">0 <span class="ruble">₽</span></span>
+											<span class="company-block__option-value">99999 <span class="ruble">₽</span></span>
 										</div>
 										<div class="company-block__options">
 											<span class="company-block__option-name">Время доставки</span>
@@ -1158,12 +1158,14 @@
 				var dataId = $(this).attr('data-id');
 				$('.goods-overlay').fadeIn(200);
 				$('.goods-popup-slider-wrap').fadeIn(200).addClass('active');
+				$('.goods-popup-slider').slick();
 				$('body').addClass('no-scroll');
 			});
 			$('.goods-popup__close').on('click', function(e) {
 				e.preventDefault();
 				$('body').removeClass('no-scroll');
 				$('.goods-popup-slider-wrap').fadeOut(200).removeClass('active');
+				$('.goods-popup-slider').slick('unslick');
 				$('.goods-overlay').fadeOut(200);
 			});
 			$(document).mouseup(function(a) {
@@ -1171,6 +1173,7 @@
 				if (popupOpened.has(a.target).length === 0) {
 					popupOpened.fadeOut(200).removeClass('active');
 					$('body').removeClass('no-scroll');
+					$('.goods-popup-slider').slick('unslick');
 					$('.goods-overlay').fadeOut(200);
 				}
 			});
@@ -1183,7 +1186,8 @@
 				arrows: true,
 				pauseOnFocus: false,
 				pauseOnHover: false,
-				draggable: false
+				draggable: false,
+				adaptiveHeight: false
 			});
 
 			/* Кнопка "В корзину/Выбрать" и количество товара */

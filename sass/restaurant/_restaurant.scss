@@ -91,6 +91,11 @@
 	}
 }
 
+.header__navbar_fixed .header__navbar-item_login {
+	background: url(../img/log_in-icon.svg) no-repeat center center;
+  flex: 1 1 0%;
+} 
+
 .no-scroll {
 	overflow: hidden;
 }

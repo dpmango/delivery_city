@@ -1,9 +1,5 @@
 @media (max-width: 5000px) {
-	.restaurant-page {
-		.container {
-			width: 1170px;
-		}
-	}
+	
 }
 
 @media (max-width: 1440px) {
@@ -226,7 +222,7 @@
 		}
 		&__info {
 			.company-block__option-name {
-				margin-bottom: 8px;
+				margin-bottom: 7px;
 			}
 			.company-block__option-value {
 				font-size: 10px;
@@ -302,30 +298,55 @@
 			margin-bottom: 0;
 		}
 		&__worktime {
-			padding-left: 15px;
-			padding-right: 15px;
+			padding-left: 10px;
+			padding-right: 10px;
 			padding-bottom: 15px;
+			&-title {
+				font-size: 12px;
+				line-height: 18px;
+			}
 			&-hours {
 				span {
+					font-size: 12px;
+					line-height: 18px;
 					margin-bottom: 2px;
 				}
 			}
 			&-days {
+				padding-left: 20px;
+				margin-right: 10px;
 				span {
+					font-size: 12px;
+					line-height: 18px;
 					margin-bottom: 2px;
+					&.active:before {
+						left: -19px;
+					}
 				}
 			}
 		}
 		&__contacts {
-			padding-left: 15px;
-			padding-right: 15px;
+			padding-left: 20px;
+			padding-right: 20px;
 			padding-bottom: 15px;
+			span,
+			a {
+				font-size: 12px;
+				margin-bottom: 12px;
+			}
+		}
+		&__email,
+		&__site,
+		&__tel {
+			font-size: 12px;
 		}
 		&__categories {
 			width: 31%;
 			&-link {
-				padding-left: 15px;
-				padding-right: 15px;
+				padding-left: 20px;
+				padding-right: 20px;
+				text-align: left;
+				font-size: 12px;
 			}
 		}
 		&__email, &__site, &__tel {
@@ -423,7 +444,7 @@
 			font-size: 15px;
 			line-height: 15px;
 			font-weight: bold;
-			max-height: 38px;
+			max-height: 35px;
 		}
 		&__descr {
 			font-size: 12px;
@@ -492,6 +513,9 @@
 		}
 		aside {
 			display: none;
+			+div {
+				padding-left: 15px;
+			}
 		}
 		.container {
 			padding-left: 10px;
@@ -504,7 +528,7 @@
 		}
 	}
 	.restaurant-block {
-		padding: 10px 10px 0 10px;
+		padding: 12px 10px 0 12px;
 		border: 0;
 		border-radius: 0;
 		width: calc(100% + 20px);
@@ -541,13 +565,13 @@
 			font-size: 14px;
 			text-transform: capitalize;
 			padding: 10px 2px;
-			margin-right: 16px;
+			margin-right: 23px;
 			color: #7b7b7b !important;
 			&:hover,
 			&.active {
 				color: #000 !important;
 			}
-			&:last-child {
+			&:last-of-type {
 				margin-right: 0;
 			}
 			&--desktop {
@@ -566,6 +590,7 @@
 				display: block;
 				right: 0;
 				margin-left: 10px;
+				top: -5px;
 			}
 		}
 	}
@@ -589,14 +614,15 @@
 		}
 		&__img {
 			margin-right: 10px;
+			width: 87px;
 		}
 		&__info {
-			width: calc(100% - 110px);
+			width: calc(100% - 97px);
 		}
 		&__title {
 			font-size: 14px;
 			line-height: 14px;
-			font-weight: 400;
+			font-weight: 700;
 			margin-bottom: 5px;
 		}
 		&__descr {
@@ -606,6 +632,7 @@
 		&__more,
 		&__short {
 			font-size: 12px;
+			line-height: 12px;
 		}
 	}
 	.goods-info {
@@ -613,6 +640,7 @@
 		&__info {
 			width: 100%;
 			flex-direction: column;
+			margin-bottom: 0;
 		}
 		&__worktime,
 		&__contacts,
@@ -625,17 +653,32 @@
 		}
 		&__map {
 			width: 100%;
-			margin-top: 10px;
+			margin-top: 0;
 			iframe {
 				height: 300px;
 			}
 		}
+		&__categories {
+			border: 0;
+			border-top: 1px solid #efefef;
+		}
+		&__categories-link {
+			border: 0;
+			border-bottom: 1px solid #efefef;
+			border-radius: 0;
+		}
 	}
 	.goods-reviews {
+		&__tabs {
+			padding-left: 8px;
+			padding-right: 8px;
+			display: flex;
+			justify-content: space-between;
+		}
 		&__tab {
 			font-size: 11px;
-			padding-left: 7px;
-			padding-right: 7px;
+			padding-left: 2px;
+			padding-right: 2px;
 		}
 		&__item {
 			padding: 10px;
@@ -649,6 +692,9 @@
 				display: inline-block;
 				width: 19px;
 				height: 17px;
+				&:after {
+					top: -4px;
+				}
 			}
 		}
 		&__descr {
@@ -666,9 +712,29 @@
 }
 
 @media (max-width: 575px) {
+	.goods-info {
+		&__categories {
+			width: calc(100% + 20px);
+			transform: translateX(-10px);
+		}
+	}
 	.restaurant-block {
 		.company-block__options {
-			width: 33%;
+			width: auto;
+			&--first {
+				margin-right: 17px;
+			}
+			&--second {
+				margin-right: 8px;
+			}
+		}
+		.company-block__option-name {
+			font-size: 10px;
+			color: #000;
+			letter-spacing: -0.03em;
+		}
+		.company-block__option-value {
+			font-size: 11px;
 		}
 	}
 }
