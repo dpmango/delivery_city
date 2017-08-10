@@ -27,6 +27,11 @@
 			display: none !important;
 		}
 	}
+	.currency {
+		width: 11px;
+		height: 14px;
+		background-size: 11px 14px;
+	}
 	&__catalog {
 		background-color: #fff;
 		width: calc(100% + 20px);

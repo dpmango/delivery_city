@@ -1,3 +1,14 @@
+.currency {
+	background-repeat: no-repeat;
+	background-image: url(../img/ruble.svg);
+	background-size: 7px 10px;
+	background-position: 50%;
+	width: 7px;
+	height: 10px;
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateY(-1px);
+}
 .restaurant-block {
 	background-color: #fff;
 	padding: 25px 40px 0 40px;

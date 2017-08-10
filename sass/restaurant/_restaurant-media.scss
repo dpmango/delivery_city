@@ -79,6 +79,11 @@
 		}
 	}
 	.goods-block {
+		.currency {
+			width: 10px;
+			height: 12px;
+			background-size: 10px 12px;
+		}
 		&__item {
 			width: 32%;
 			padding: 27px 15px 18px 15px;
@@ -181,6 +186,11 @@
 		padding-left: 35px;
 		padding-right: 35px;
 		margin-bottom: 20px;
+		.currency {
+			width: 5px;
+			height: 8px;
+			background-size: 5px 8px;
+		}
 		&__title-wrap {
 			padding-bottom: 10px;
 			margin-bottom: 15px;
@@ -231,6 +241,11 @@
 		}
 	}
 	.goods-block {
+		.currency {
+			width: 8px;
+			height: 10px;
+			background-size: 8px 10px;
+		}
 		&__item {
 			width: 48%;
 			margin-bottom: 20px;
@@ -537,6 +552,11 @@
 		border-radius: 0;
 		width: calc(100% + 20px);
 		transform: translateX(-10px);
+		.currency {
+			width: 6px;
+			height: 9px;
+			background-size: 6px 9px;
+		}
 		&__favorites {
 			display: none;
 		}
