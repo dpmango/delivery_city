@@ -1,3 +1,7 @@
+* {
+	-webkit-overflow-scrolling: touch
+}
+
 .restaurant-page {
 	font-family: 'Open Sans', sans-serif !important;
 	z-index: 1;
@@ -17,7 +21,7 @@
 	.filters__radio-buttons label {
 		padding: 5px 0 !important;
 	}
-	.filters__radio-buttons input[type="radio"]:checked + label {
+	.filters__radio-buttons input[type="radio"]:checked+label {
 		border: 0;
 	}
 	aside {
@@ -96,8 +100,8 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 30% 50%;
-  flex: 1 1 0%;
-} 
+	flex: 1 1 0%;
+}
 
 .no-scroll {
 	overflow: hidden;
