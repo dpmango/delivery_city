@@ -89,6 +89,9 @@
 		white-space: nowrap;
 		text-decoration: none;
 		border-bottom: 1px solid $int-el-txt-color;
+		&--third {
+			padding-left: 30px;
+		}
 		&:hover {
 			background-color: $button-color;
 			color: #fff !important;
@@ -211,6 +214,8 @@
 		border-radius: 4px;
 		width: 28px;
 		height: 30px;
+		-webkit-appearance: none;
+		appearance: none;
 		&:hover {
 			cursor: pointer;
 			background-color: darken($button-color, 25%);
@@ -336,8 +341,8 @@
 	}
 	&__title {
 		font-weight: bold;
-		font-size: 18px;
-		line-height: 18px;
+		font-size: 14px;
+		line-height: 14px;
 		margin-bottom: 14px;
 		margin-top: 0;
 		overflow: hidden;
@@ -349,7 +354,7 @@
 	}
 	&__descr {
 		font-size: 14px;
-		line-height: 16px;
+		line-height: 24px;
 		margin-bottom: 0;
 		overflow: hidden;
 		max-height: 48px;
@@ -457,7 +462,7 @@
 						border-radius: 50%;
 						top: 50%;
 						transform: translateY(-50%);
-						left: -31px;
+						left: -23px;
 					}
 				}
 			}
@@ -647,7 +652,7 @@
 			content: '';
 			position: absolute;
 			right: 0;
-			top: 2px;
+			top: 0;
 			width: 19px;
 			height: 17px;
 			background-repeat: no-repeat;

@@ -29,6 +29,7 @@
 	margin-bottom: 13px;
 	width: 100%;
 	position: relative;
+	box-shadow: none !important;
 	&__input {
 		display: block;
 		width: 100%;
@@ -37,6 +38,9 @@
 		font-size: 14px;
 		border: 1px solid $border-color;
 		border-radius: 4px;
+		box-shadow: none !important;
+		-webkit-appearance: none;
+		appearance: none;
 		&:focus {
 			outline: 0;
 			border-color: darken($border-color, 15%);
@@ -112,8 +116,19 @@
 		color: #000;
 		text-decoration: none;
 		font-size: 14px;
-		padding: 13px 30px 11px 17px;
+		padding: 13px 30px 11px 20px;
 		position: relative;
+		span {
+			max-width: 100%;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			display: inline-block;
+			letter-spacing: -0.05em;
+		}
+		&--third {
+			padding-left: 30px;
+		}
 		&:hover {
 			background-color: $button-color;
 			color: #fff !important;

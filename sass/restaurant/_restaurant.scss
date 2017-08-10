@@ -92,7 +92,10 @@
 }
 
 .header__navbar_fixed .header__navbar-item_login {
-	background: url(../img/log_in-icon.svg) no-repeat center center;
+	background-image: url(../img/log_in-icon.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 30% 50%;
   flex: 1 1 0%;
 } 
 

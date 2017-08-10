@@ -41,10 +41,13 @@
 	position: relative;
 	margin-left: 5px;
 	margin-right: 5px;
-//	max-width: 975px;
 	&__half {
 		width: 49%;
 		position: relative;
+		&:first-child {
+			display: flex;
+			flex-direction: column;
+		}
 	}
 	&__slider {
 		display: block;
@@ -80,13 +83,14 @@
 		}
 	}
 	&__price {
-		font-size: 30px;
-		line-height: 30px;
+		font-size: 18px;
+		line-height: 26px;
 		text-align: center;
 		margin-top: 15px;
 		margin-bottom: 20px;
 	}
 	&__tocart {
+		margin-top: auto;
 		.goods-block__tocart-wrap {
 			text-align: center;
 		}
@@ -139,9 +143,9 @@
 		}
 	}
 	&__title {
-		font-size: 24px;
-		line-height: 24px;
-		margin-bottom: 13px;
+		font-size: 16px;
+		line-height: 22px;
+		margin-bottom: 12px;
 		display: -webkit-box;
 		-webkit-line-clamp: 2;
 		-webkit-box-orient: vertical;
@@ -152,10 +156,10 @@
 		max-height: 50px;
 	}
 	&__descr {
-		max-height: 503px;
+		max-height: 513px;
 		overflow-y: scroll;
-		font-size: 18px;
-		line-height: 25px;
+		font-size: 14px;
+		line-height: 16px;
 		margin: 0;
 		word-wrap: break-word;
 		letter-spacing: -0.03em;

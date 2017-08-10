@@ -4,11 +4,9 @@
 
 @media (max-width: 1440px) {
 	.goods-popup {
+		min-height: 613px;
 		&__slide {
 			min-width: 100%;
-		}
-		&__price {
-			font-size: 25px;
 		}
 		&__tocart {
 			.goods-block__amount {
@@ -38,13 +36,8 @@
 				font-size: 21px;
 			}
 		}
-		&__title {
-			font-size: 20px;
-		}
 		&__descr {
-			font-size: 16px;
-			line-height: 20px;
-			max-height: 423px;
+			max-height: 497px;
 		}
 		&__charac {
 			&-name {
@@ -60,7 +53,7 @@
 		}
 		&--charac {
 			.goods-popup__descr {
-				max-height: 343px;
+				max-height: 402px;
 			}
 		}
 	}
@@ -118,15 +111,6 @@
 	}
 	.goods-tooltip {
 		width: 114%;
-	}
-	.goods-news {
-		&__title {
-			font-size: 16px;
-			margin-bottom: 15px;
-		}
-		&__more {
-			font-size: 13px;
-		}
 	}
 	.goods-reviews__descr {
 		line-height: 20px;
@@ -313,14 +297,14 @@
 				}
 			}
 			&-days {
-				padding-left: 20px;
+				padding-left: 18px;
 				margin-right: 10px;
 				span {
 					font-size: 12px;
 					line-height: 18px;
 					margin-bottom: 2px;
 					&.active:before {
-						left: -19px;
+						left: -17px;
 					}
 				}
 			}
@@ -355,18 +339,23 @@
 	}
 	.goods-news {
 		&__title {
-			font-size: 17px;
+			font-size: 12px;
 			margin-bottom: 10px;
 		}
 		&__img {
+			width: 95px;
 			margin-right: 15px;
 		}
+		&__info {
+			width: calc(100% - 110px);
+		}
 		&__descr {
-			font-size: 14px;
+			font-size: 11px;
+			line-height: 21px;
 		}
 		&__more,
 		&__short {
-			font-size: 14px;
+			font-size: 12px;
 		}
 	}
 	.goods-reviews {
@@ -396,6 +385,8 @@
 	}
 	.goods-popup {
 		padding: 15px;
+		min-height: 507px;
+		max-height: 507px;
 		&__fav {
 			position: absolute;
 			top: 10px;
@@ -441,19 +432,12 @@
 			}
 		}
 		&__title {
-			font-size: 15px;
-			line-height: 15px;
 			font-weight: bold;
-			max-height: 35px;
 		}
 		&__descr {
-			font-size: 12px;
-			line-height: 15px;
-			max-height: 313px;
+			max-height: 418px;
 		}
 		&__price {
-			font-size: 18px;
-			line-height: 18px;
 			margin-top: 10px;
 			margin-bottom: 12px;
 		}
@@ -475,7 +459,7 @@
 		}
 		&--charac {
 			.goods-popup__descr {
-				max-height: 255px;
+				max-height: 335px;
 			}
 		}
 	}
@@ -499,6 +483,26 @@
 		padding: 6px 15px;
 		bottom: -45px;
 	}
+	.restaurant-page .header__navbar-item_personal-account .points {
+		font-size: 12px;
+		&:after {
+			border-width: 9px 0 8px 14px;
+		}
+	}
+}
+
+@media (max-width: 865px) {
+	.goods-popup {
+		min-height: 475px;
+		max-height: 475px;
+		&__descr {
+			max-height: 385px;
+		}
+		&--charac .goods-popup__descr {
+			max-height: 305px;
+		}
+	}
+	
 }
 
 @media (max-width: 767px) {
@@ -620,8 +624,6 @@
 			width: calc(100% - 97px);
 		}
 		&__title {
-			font-size: 14px;
-			line-height: 14px;
 			font-weight: 700;
 			margin-bottom: 5px;
 		}
@@ -708,7 +710,7 @@
 			justify-content: space-between;
 		}
 		&__tab {
-			font-size: 11px;
+			font-size: 14px;
 			padding-left: 2px;
 			padding-right: 2px;
 		}
@@ -753,6 +755,15 @@
 		&__categories {
 			width: calc(100% + 20px);
 			transform: translateX(-10px);
+		}
+	}
+	.goods-reviews__tab {
+		text-transform: full-width;
+		&--short {
+			display: none;
+		}
+		span {
+			text-transform: capitalize;
 		}
 	}
 	.restaurant-block {
