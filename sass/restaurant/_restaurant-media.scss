@@ -1,59 +1,16 @@
-@media (max-width: 5000px) {
-	
-}
+@media (max-width: 5000px) {}
 
 @media (max-width: 1440px) {
 	.goods-popup {
-		min-height: 613px;
 		&__slide {
 			min-width: 100%;
 		}
-		&__tocart {
-			.goods-block__amount {
-				height: 39px;
-				max-width: 165px;
-			}
-			.goods-block__amount--plus,
-			.goods-block__amount--minus {
-				width: 39px;
-				height: 39px;
-				font-size: 20px;
-				line-height: 20px;
-			}
-			.goods-block__amount--minus:before {
-				font-size: 20px;
-				right: 53px;
-			}
-			.goods-block__amount--value {
-				font-size: 20px;
-				max-width: 85px;
-				padding-left: 17px;
-				height: 39px;
-			}
-			&-btn {
-				height: 39px;
-				padding: 9px 10px;
-				font-size: 21px;
-			}
-		}
 		&__descr {
-			max-height: 497px;
-		}
-		&__charac {
-			&-name {
-				font-size: 20px;
-				line-height: 20px;
-			}
-			&-select {
-				font-size: 20px;
-				line-height: 20px;
-				padding-top: 10px;
-				padding-bottom: 10px;
-			}
+			max-height: 300px;
 		}
 		&--charac {
 			.goods-popup__descr {
-				max-height: 402px;
+				max-height: 200px;
 			}
 		}
 	}
@@ -122,11 +79,12 @@
 	}
 	.goods-popup {
 		&__tocart-btn {
-			font-size: 18px;
-			height: 39px;
+			font-size: 16px;
+			height: 42px;
+			padding: 13px 20px;
 		}
 		.goods-block__amount--value {
-			max-height: 39px;
+			max-height: 42px;
 		}
 	}
 }
@@ -348,7 +306,9 @@
 				font-size: 12px;
 			}
 		}
-		&__email, &__site, &__tel {
+		&__email,
+		&__site,
+		&__tel {
 			margin-bottom: 3px;
 		}
 	}
@@ -366,7 +326,8 @@
 		}
 		&__descr {
 			font-size: 11px;
-			line-height: 21px;
+			line-height: 20px;
+			max-height: 43px;
 		}
 		&__more,
 		&__short {
@@ -400,7 +361,6 @@
 	}
 	.goods-popup {
 		padding: 15px;
-		min-height: 507px;
 		max-height: 507px;
 		&__fav {
 			position: absolute;
@@ -508,7 +468,7 @@
 
 @media (max-width: 865px) {
 	.goods-popup {
-		min-height: 475px;
+//		min-height: 475px;
 		max-height: 475px;
 		&__descr {
 			max-height: 385px;
@@ -517,7 +477,6 @@
 			max-height: 305px;
 		}
 	}
-	
 }
 
 @media (max-width: 767px) {
@@ -649,7 +608,7 @@
 		}
 		&__descr {
 			font-size: 12px;
-			line-height: 16px;
+			line-height: 14px;
 		}
 		&__more,
 		&__short {
@@ -736,6 +695,13 @@
 		}
 		&__item {
 			padding: 10px;
+			&--bad {
+				.goods-reviews__review {
+					&:after {
+						top: 2px;
+					}
+				}
+			}
 		}
 		&__title {
 			width: calc(100% - 25px);

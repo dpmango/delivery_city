@@ -178,7 +178,8 @@
 	&__topcart-wrap {
 		max-width: 95px;
 	}
-	&__tocart-btn {
+	&__tocart-btn,
+	&__take-btn {
 		display: inline-block;
 		border: 0;
 		outline: 0;
@@ -198,6 +199,9 @@
 		white-space: nowrap;
 		&:hover {
 			background-color: darken($button-color, 25%);
+		}
+		&:focus {
+			outline: 0;
 		}
 	}
 	&__amount {
@@ -219,8 +223,8 @@
 		border-radius: 4px;
 		width: 28px;
 		height: 30px;
-		-webkit-appearance: none;
-		appearance: none;
+		-webkit-appearance: none !important;
+		appearance: none !important;
 		&:hover {
 			cursor: pointer;
 			background-color: darken($button-color, 25%);
@@ -586,10 +590,11 @@
 	}
 	&__tab {
 		display: inline-block;
-		padding: 10px 35px 8px 35px;
+		padding: 10px 35px 9px 35px;
 		text-decoration: none;
 		color: #000;
 		font-size: 14px;
+		line-height: 14px;
 		position: relative;
 		&:hover,
 		&.active {
@@ -628,6 +633,7 @@
 				color: $bad-color;
 				&:after {
 					background-image: url(../img/dislike-icon.svg);
+					top: 5px;
 				}
 			}
 		}

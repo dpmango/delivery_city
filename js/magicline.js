@@ -57,8 +57,10 @@ function makeMagicLine2() {
 
 
 $(document).ready(function () {
-	makeMagicLine();
-	makeMagicLine2();
+	setTimeout(function(){
+		makeMagicLine();
+		makeMagicLine2();
+	}, 200)
 	// on mouse hover, move magicLine
 	$(".restaurant-block__tab-link").hover(function () {
 		hoverItem = $(this);

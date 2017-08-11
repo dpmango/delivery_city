@@ -329,7 +329,7 @@
 									<div class="goods-block__price">От 1235 <i class="currency"></i></div>
 									<form action="" class="goods-block__favorites restaurant-block__favorites"><input type="checkbox" id="good-item3"><label for="good-item3"></label></form>
 									<div class="goods-block__tocart-wrap">
-										<button class="goods-block__tocart-btn">Выбрать</button>
+										<button class="goods-block__take-btn">Выбрать</button>
 										<div class="goods-block__amount">
 											<button type="button" class="goods-block__amount--plus">+</button>
 											<input type="text" class="goods-block__amount--value" value="1" readonly min="1">
@@ -461,7 +461,7 @@
 								</div>
 								<div class="goods-info__categories">
 									<a href="#" class="goods-info__categories-link">Партнерам</a>
-									<a href="#" class="goods-info__categories-link active">Обратная связь</a>
+									<a href="#" class="goods-info__categories-link">Обратная связь</a>
 									<a href="#" class="goods-info__categories-link">О нас</a>
 									<a href="#" class="goods-info__categories-link">Пользовательское соглашение</a>
 								</div>
@@ -555,14 +555,14 @@
 	<div class="goods-popup-slider-wrap">
 		<div class="goods-popup-slider">
 			<div class="goods-popup" id="first-good">
-				<div class="goods-popup__half">
+				<div class="goods-popup__half goods-popup__half--base">
 					<div class="goods-popup__slider">
 						<div class="goods-popup__slide"><img src="img/goods-photo.jpg" alt="slide"></div>
 						<div class="goods-popup__slide"><img src="img/goods-photo.jpg" alt="slide"></div>
 						<div class="goods-popup__slide"><img src="img/goods-photo.jpg" alt="slide"></div>
 						<div class="goods-popup__slide"><img src="img/goods-photo.jpg" alt="slide"></div>
 					</div>
-					<div class="goods-popup__price">От 1234 <i class="currency"></i></div>
+					<div class="goods-popup__price">1234 <i class="currency"></i></div>
 					<div class="goods-popup__tocart">
 						<div class="goods-block__tocart-wrap">
 							<button class="goods-block__tocart-btn goods-popup__tocart-btn">В корзину</button>
@@ -587,14 +587,14 @@
 			</div>
 
 			<div class="goods-popup goods-popup--charac" id="second-good">
-				<div class="goods-popup__half">
+				<div class="goods-popup__half goods-popup__half--base">
 					<div class="goods-popup__slider">
 						<div class="goods-popup__slide"><img src="img/goods-photo.jpg" alt="slide"></div>
 						<div class="goods-popup__slide"><img src="img/goods-photo.jpg" alt="slide"></div>
 						<div class="goods-popup__slide"><img src="img/goods-photo.jpg" alt="slide"></div>
 						<div class="goods-popup__slide"><img src="img/goods-photo.jpg" alt="slide"></div>
 					</div>
-					<div class="goods-popup__price">От 1234 <i class="currency"></i></div>
+					<div class="goods-popup__price">1234 <i class="currency"></i></div>
 					<div class="goods-popup__tocart">
 						<div class="goods-block__tocart-wrap">
 							<button class="goods-block__tocart-btn goods-popup__tocart-btn">В корзину</button>
@@ -624,14 +624,14 @@
 			</div>
 
 			<div class="goods-popup goods-popup--charac" id="third-good">
-				<div class="goods-popup__half">
+				<div class="goods-popup__half goods-popup__half--base">
 					<div class="goods-popup__slider">
 						<div class="goods-popup__slide"><img src="img/goods-photo.jpg" alt="slide"></div>
 						<div class="goods-popup__slide"><img src="img/goods-photo.jpg" alt="slide"></div>
 						<div class="goods-popup__slide"><img src="img/goods-photo.jpg" alt="slide"></div>
 						<div class="goods-popup__slide"><img src="img/goods-photo.jpg" alt="slide"></div>
 					</div>
-					<div class="goods-popup__price">От 1234 <i class="currency"></i></div>
+					<div class="goods-popup__price">1234 <i class="currency"></i></div>
 					<div class="goods-popup__tocart">
 						<div class="goods-block__tocart-wrap">
 							<button class="goods-block__tocart-btn goods-popup__tocart-btn">В корзину</button>
@@ -1128,14 +1128,7 @@
 		});
 	</script>
 	<script>
-		$(window).resize(function() {
-			var blockHeight = $('.restaurant-block').innerHeight();
-			$('.restaurant-logo').innerHeight(blockHeight);
-		});
 		$(document).ready(function() {
-			var blockHeight = $('.restaurant-block').innerHeight();
-			$('.restaurant-logo').innerHeight(blockHeight);
-
 			/* Дропдауны */
 			$('.goods-filter__item--more').on('click', function(e) {
 				e.preventDefault();
@@ -1203,7 +1196,7 @@
 			});
 
 			/* Попап товара */
-			$('.goods-block__item a').on('click', function(e) {
+			$('.goods-block__item a, .goods-block__take-btn').on('click', function(e) {
 				e.preventDefault();
 				var dataId = $(this).attr('data-id');
 				$('.goods-overlay').fadeIn(200);
@@ -1325,8 +1318,55 @@
 				e.preventDefault();
 				$(this).hide(0);
 				$(this).prev('.goods-news__more').show(0);
-				$(this).parent('.goods-news__btn-wrap').prev('.goods-news__descr').css('max-height', '48px');
+				if (window.innerWidth < 991) {
+					$(this).parent('.goods-news__btn-wrap').prev('.goods-news__descr').css('max-height', '43px');
+				} else {
+					$(this).parent('.goods-news__btn-wrap').prev('.goods-news__descr').css('max-height', '48px');
+				}
 			});
+			
+			/* Одинаковая высота */
+			setTimeout(function(){
+				var blockHeight = $('.restaurant-block').innerHeight();
+				$('.restaurant-logo').innerHeight(blockHeight);
+			}, 200)
+			
+			var descrHeight = $('.goods-popup__half--base').innerHeight();
+			$('.goods-popup__descr').css('max-height', descrHeight - 60);
+			$('.goods-popup--charac .goods-popup__descr').css('max-height', descrHeight - 155);
+			if (window.innerWidth < 1100) {
+				$('.goods-popup__descr').css('max-height', descrHeight - 68);
+				$('.goods-popup--charac .goods-popup__descr').css('max-height', descrHeight - 165);
+			}
+			if (window.innerWidth < 991) {
+				$('.goods-popup__descr').css('max-height', descrHeight - 60);
+				$('.goods-popup--charac .goods-popup__descr').css('max-height', descrHeight - 140);
+			}
+			if (window.innerWidth < 830) {
+				$('.goods-popup__descr').css('max-height', descrHeight - 121);
+				$('.goods-popup--charac .goods-popup__descr').css('max-height', descrHeight - 202);
+			}
+			
+		});
+		$(window).resize(function() {
+			var blockHeight = $('.restaurant-block').innerHeight();
+			$('.restaurant-logo').innerHeight(blockHeight);
+			
+			var descrHeight = $('.goods-popup__half--base').innerHeight();
+			$('.goods-popup__descr').css('max-height', descrHeight - 60);
+			$('.goods-popup--charac .goods-popup__descr').css('max-height', descrHeight - 155);
+			if (window.innerWidth < 1100) {
+				$('.goods-popup__descr').css('max-height', descrHeight - 68);
+				$('.goods-popup--charac .goods-popup__descr').css('max-height', descrHeight - 165);
+			}
+			if (window.innerWidth < 991) {
+				$('.goods-popup__descr').css('max-height', descrHeight - 60);
+				$('.goods-popup--charac .goods-popup__descr').css('max-height', descrHeight - 140);
+			}
+			if (window.innerWidth < 830) {
+				$('.goods-popup__descr').css('max-height', descrHeight - 121);
+				$('.goods-popup--charac .goods-popup__descr').css('max-height', descrHeight - 202);
+			}
 		});
 	</script>
 	<script src="js/magicline.js"></script>
