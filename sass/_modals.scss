@@ -169,7 +169,10 @@
     background-size: contain;
   }
 }
-
+#filters-modal {
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
 .filters-modal {
   padding: 15px;
   max-height: calc(100vh - 20px);

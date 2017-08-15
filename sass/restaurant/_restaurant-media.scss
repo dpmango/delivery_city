@@ -30,6 +30,7 @@
 		&__descr {
 			font-size: 13px;
 			line-height: 20px;
+			max-height: 64px;
 		}
 		&__raiting {
 			top: 0;
@@ -755,7 +756,6 @@
 		}
 	}
 	.goods-reviews__tab {
-		text-transform: full-width;
 		&--short {
 			display: none;
 		}

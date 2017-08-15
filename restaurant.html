@@ -165,9 +165,9 @@
 							<a href="#" class="goods-filter__addition goods-filter__item goods-filter__item--more"><span>Дополнительный пункт пункт пункт</span></a>
 							<a href="#" class="goods-filter__addition goods-filter__addition--third"><span>Дополнительный пункт пункт пункт</span></a>
 							<a href="#" class="goods-filter__item goods-filter__item--more"><span>Максимальное количество символов</span></a>
-								<a href="#" class="goods-filter__addition"><span>Дополнительный пункт пункт пункт</span></a>
+							<a href="#" class="goods-filter__addition"><span>Дополнительный пункт пункт пункт</span></a>
 							<a href="#" class="goods-filter__item goods-filter__item--more"><span>Максимальное количество символов</span></a>
-								<a href="#" class="goods-filter__addition"><span>Дополнительный пункт пункт пункт</span></a>
+							<a href="#" class="goods-filter__addition"><span>Дополнительный пункт пункт пункт</span></a>
 							<a href="#" class="goods-filter__item"><span>Максимальное количество символов</span></a>
 						</div>
 					</aside>
@@ -388,67 +388,67 @@
 								<div class="goods-info__worktime">
 									<h3 class="goods-info__worktime-title">Время работы:</h3>
 									<div class="goods-info__worktime-days-wrap">
-									<div class="goods-info__worktime-half">
-										<div class="goods-info__worktime-wrap">
-											<div class="goods-info__worktime-days">
-												<span>пн</span>
+										<div class="goods-info__worktime-half">
+											<div class="goods-info__worktime-wrap">
+												<div class="goods-info__worktime-days">
+													<span>пн</span>
+												</div>
+												<div class="goods-info__worktime-hours">
+													<span>10:00-22:00</span>
+												</div>
 											</div>
-											<div class="goods-info__worktime-hours">
-												<span>10:00-22:00</span>
+											<div class="goods-info__worktime-wrap active">
+												<div class="goods-info__worktime-days">
+													<span>вт</span>
+												</div>
+												<div class="goods-info__worktime-hours">
+													<span>10:00-22:00</span>
+												</div>
+											</div>
+											<div class="goods-info__worktime-wrap">
+												<div class="goods-info__worktime-days">
+													<span>ср</span>
+												</div>
+												<div class="goods-info__worktime-hours">
+													<span>10:00-22:00</span>
+												</div>
+											</div>
+											<div class="goods-info__worktime-wrap">
+												<div class="goods-info__worktime-days">
+													<span>чт</span>
+												</div>
+												<div class="goods-info__worktime-hours">
+													<span>10:00-22:00</span>
+												</div>
 											</div>
 										</div>
-										<div class="goods-info__worktime-wrap active">
-											<div class="goods-info__worktime-days">
-												<span>вт</span>
-											</div>
-											<div class="goods-info__worktime-hours">
-												<span>10:00-22:00</span>
-											</div>
-										</div>
-										<div class="goods-info__worktime-wrap">
-											<div class="goods-info__worktime-days">
-												<span>ср</span>
-											</div>
-											<div class="goods-info__worktime-hours">
-												<span>10:00-22:00</span>
-											</div>
-										</div>
-										<div class="goods-info__worktime-wrap">
-											<div class="goods-info__worktime-days">
-												<span>чт</span>
-											</div>
-											<div class="goods-info__worktime-hours">
-												<span>10:00-22:00</span>
-											</div>
-										</div>
-									</div>
 
-									<div class="goods-info__worktime-half">
-										<div class="goods-info__worktime-wrap">
-											<div class="goods-info__worktime-days">
-												<span>пт</span>
+										<div class="goods-info__worktime-half">
+											<div class="goods-info__worktime-wrap">
+												<div class="goods-info__worktime-days">
+													<span>пт</span>
+												</div>
+												<div class="goods-info__worktime-hours">
+													<span>10:00-22:00</span>
+												</div>
 											</div>
-											<div class="goods-info__worktime-hours">
-												<span>10:00-22:00</span>
+											<div class="goods-info__worktime-wrap">
+												<div class="goods-info__worktime-days">
+													<span>сб</span>
+												</div>
+												<div class="goods-info__worktime-hours">
+													<span>10:00-22:00</span>
+												</div>
+											</div>
+											<div class="goods-info__worktime-wrap">
+												<div class="goods-info__worktime-days">
+													<span>вс</span>
+												</div>
+												<div class="goods-info__worktime-hours">
+													<span>10:00-22:00</span>
+												</div>
 											</div>
 										</div>
-										<div class="goods-info__worktime-wrap">
-											<div class="goods-info__worktime-days">
-												<span>сб</span>
-											</div>
-											<div class="goods-info__worktime-hours">
-												<span>10:00-22:00</span>
-											</div>
-										</div>
-										<div class="goods-info__worktime-wrap">
-											<div class="goods-info__worktime-days">
-												<span>вс</span>
-											</div>
-											<div class="goods-info__worktime-hours">
-												<span>10:00-22:00</span>
-											</div>
-										</div>
-									</div>
 									</div>
 								</div>
 								<div class="goods-info__contacts">
@@ -1139,7 +1139,10 @@
 					$(this).next('.goods-filter__addition').next('.goods-filter__addition--third').slideUp(200);
 				} else {
 					$(this).addClass('active');
-					$(this).next('.goods-filter__addition').slideDown(200);
+					$(this).next('.goods-filter__addition').slideDown(200, function() {
+						if ($(this).is(':visible'))
+							$(this).css('display', 'block');
+					});
 				}
 			});
 			$('.goods-block__catalog-link').on('click', function(e) {
@@ -1151,7 +1154,10 @@
 					$(this).next('.goods-block__addition').next('.goods-block__addition--third').slideUp(200);
 				} else {
 					$(this).addClass('active');
-					$(this).next('.goods-block__addition').slideDown(200);
+					$(this).next('.goods-block__addition').slideDown(200, function() {
+						if ($(this).is(':visible'))
+							$(this).css('display', 'block');
+					});
 				}
 			});
 
@@ -1326,7 +1332,7 @@
 			});
 
 			/* Одинаковая высота */
-			setTimeout(function(){
+			setTimeout(function() {
 				var blockHeight = $('.restaurant-block').innerHeight();
 				$('.restaurant-logo').innerHeight(blockHeight);
 			}, 200)

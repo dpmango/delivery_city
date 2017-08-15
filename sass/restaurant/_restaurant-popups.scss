@@ -165,6 +165,7 @@
 		overflow: hidden;
 		max-width: 90%;
 		max-height: 50px;
+		tranform: none;
 	}
 	&__descr {
 		max-height: 513px;
@@ -176,6 +177,7 @@
 		letter-spacing: -0.03em;
 		margin-bottom: auto;
 		padding-right: 25px;
+		tranform: none;
 	}
 	&__close {
 		position: absolute;
