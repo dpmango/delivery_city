@@ -163,7 +163,7 @@
 							<a href="#" class="goods-filter__item"><span>Максимальное количество сим (96)</span></a>
 							<a href="#" class="goods-filter__item goods-filter__item--more"><span>Максимальное количество символов (96)</span></a>
 							<a href="#" class="goods-filter__addition goods-filter__item goods-filter__item--more"><span>Дополнительный пункт пункт пункт</span></a>
-							<a href="#" class="goods-filter__addition goods-filter__addition--third"><span>Третий уровень</span></a>
+							<a href="#" class="goods-filter__addition goods-filter__addition--third"><span>Дополнительный пункт пункт пункт</span></a>
 							<a href="#" class="goods-filter__item goods-filter__item--more"><span>Максимальное количество символов</span></a>
 								<a href="#" class="goods-filter__addition"><span>Дополнительный пункт пункт пункт</span></a>
 							<a href="#" class="goods-filter__item goods-filter__item--more"><span>Максимальное количество символов</span></a>
@@ -397,9 +397,9 @@
 												<span>10:00-22:00</span>
 											</div>
 										</div>
-										<div class="goods-info__worktime-wrap">
+										<div class="goods-info__worktime-wrap active">
 											<div class="goods-info__worktime-days">
-												<span class="active">вт</span>
+												<span>вт</span>
 											</div>
 											<div class="goods-info__worktime-hours">
 												<span>10:00-22:00</span>
@@ -453,11 +453,11 @@
 								</div>
 								<div class="goods-info__contacts">
 									<h3 class="goods-info__email">Почта</h3>
-									<span>email@dgjsakdisu.ru</span>
+									<a href="mailto:email@dgjsakdisu.ru">email@dgjsakdisu.ru</a>
 									<h3 class="goods-info__site">Сайт</h3>
 									<a href="#">Dosty(гипперссылка)</a>
 									<h3 class="goods-info__tel">Телефон</h3>
-									<span>8 800 555 35 35 35</span>
+									<a href="tel:88005553333">8 800 555 35 35 35</a>
 								</div>
 								<div class="goods-info__categories">
 									<a href="#" class="goods-info__categories-link">Партнерам</a>
@@ -1324,13 +1324,13 @@
 					$(this).parent('.goods-news__btn-wrap').prev('.goods-news__descr').css('max-height', '48px');
 				}
 			});
-			
+
 			/* Одинаковая высота */
 			setTimeout(function(){
 				var blockHeight = $('.restaurant-block').innerHeight();
 				$('.restaurant-logo').innerHeight(blockHeight);
 			}, 200)
-			
+
 			var descrHeight = $('.goods-popup__half--base').innerHeight();
 			$('.goods-popup__descr').css('max-height', descrHeight - 60);
 			$('.goods-popup--charac .goods-popup__descr').css('max-height', descrHeight - 155);
@@ -1346,12 +1346,12 @@
 				$('.goods-popup__descr').css('max-height', descrHeight - 121);
 				$('.goods-popup--charac .goods-popup__descr').css('max-height', descrHeight - 202);
 			}
-			
+
 		});
 		$(window).resize(function() {
 			var blockHeight = $('.restaurant-block').innerHeight();
 			$('.restaurant-logo').innerHeight(blockHeight);
-			
+
 			var descrHeight = $('.goods-popup__half--base').innerHeight();
 			$('.goods-popup__descr').css('max-height', descrHeight - 60);
 			$('.goods-popup--charac .goods-popup__descr').css('max-height', descrHeight - 155);

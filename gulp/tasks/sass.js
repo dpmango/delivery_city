@@ -18,7 +18,7 @@ var processors = [
   short(),
   svginline(),
   autoprefixer({
-    browsers: ['last 10 versions'],
+    browsers: ['last 5 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'],
     remove: true, // remove outdated prefixes?
     // cascade: false
   }),

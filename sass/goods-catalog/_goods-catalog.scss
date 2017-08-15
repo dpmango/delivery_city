@@ -3,6 +3,9 @@
 	box-sizing: border-box !important;
 }
 .goods-catalog-mobile {
+  .goods-popup__charac-select{
+    border-color: #aaa;
+  }
 	&__categories {
 		font-size: 0;
 		background-color: #fff;
@@ -20,8 +23,11 @@
 		font-size: 12px;
 		padding: 17px 10px;
 		text-decoration: none;
+    border: 0;
 		color: #a0a0a0 !important;
 		&.active {
+      position: relative;
+      z-index: 2;
 			color: #000 !important;
 			border-bottom: 1px solid $button-color;
 			background-color: #f8f8f8;
@@ -75,7 +81,7 @@
 				height: 24px;
 			}
 		}
-		.goods-block__amount--plus, 
+		.goods-block__amount--plus,
 		.goods-block__amount--minus {
 			width: 36px;
 			height: 36px;

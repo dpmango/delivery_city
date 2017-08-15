@@ -80,6 +80,9 @@ $(document).ready(function () {
 		$(this).addClass('active');
 		currentItem = $(this);
 		recalibrateMagicLine();
+    if ( $(this).data('id') == 'goods-reviews' ){
+      recalibrateMagicLine2();
+    }
 	});
 	$(".goods-reviews__tab").click(function () {
 		currentItem2.removeClass('active');

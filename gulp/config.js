@@ -18,9 +18,9 @@ var config = {
   },
   dest: {
     root  : destPath,
-    css   : destPath + '/css',
-    js    : destPath + '/js',
-    img   : destPath + '/img'
+    css   : destPath + 'css',
+    js    : destPath + 'js',
+    img   : destPath + 'img'
   },
 
   setEnv: function(env) {

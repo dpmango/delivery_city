@@ -196,6 +196,7 @@
 		height: 30px;
 		min-width: 89px;
 		font-size: 14px;
+    font-weight: normal;
 		white-space: nowrap;
 		&:hover {
 			background-color: darken($button-color, 25%);
@@ -219,10 +220,13 @@
 		font-size: 14px;
 		border: 0;
 		color: #fff;
+    padding: 0;
 		background-color: $button-color;
 		border-radius: 4px;
 		width: 28px;
 		height: 30px;
+    text-align: center;
+    box-shadow: none;
 		-webkit-appearance: none !important;
 		appearance: none !important;
 		&:hover {
@@ -360,6 +364,8 @@
 	}
 	&__info {
 		width: calc(100% - 120px);
+    display: flex;
+    flex-direction: column;
 	}
 	&__descr {
 		font-size: 14px;
@@ -369,7 +375,9 @@
 		max-height: 48px;
 	}
 	&__btn-wrap {
+    margin-top: auto;
 		text-align: right;
+    margin-bottom: -2px;
 	}
 	&__more,
 	&__short {
@@ -395,7 +403,7 @@
 	justify-content: space-between;
 	align-items: stretch;
 	&__info {
-		width: 100%px;
+		width: 100%;
 		margin-bottom: 30px;
 		display: flex;
 		flex-direction: row;
@@ -442,15 +450,25 @@
 			flex-direction: row;
 			justify-content: space-between;
 			align-items: flex-start;
+      &.active{
+        color: #d04040;
+        span{
+          color: #d04040;
+        }
+        .goods-info__worktime-days span:before{
+          display: inline-block;
+        }
+      }
 		}
 		&-days-wrap {
 			display: flex;
 			flex-direction: column;
 		}
 		&-half {
-			
+
 		}
 		&-days {
+      flex: 0 0 50px;
 			margin-right: 17px;
 			padding-left: 33px;
 			span {
@@ -460,19 +478,17 @@
 				font-size: 14px;
 				line-height: 24px;
 				color: #000;
-				&.active {
-					color: #d04040;
-					&:before {
-						content: '';
-						position: absolute;
-						width: 4px;
-						height: 4px;
-						background-color: #d04040;
-						border-radius: 50%;
-						top: 50%;
-						transform: translateY(-50%);
-						left: -23px;
-					}
+				&:before {
+          display: none;
+					content: '';
+					position: absolute;
+					width: 4px;
+					height: 4px;
+					background-color: #d04040;
+					border-radius: 50%;
+					top: 50%;
+					transform: translateY(-50%);
+					left: -23px;
 				}
 			}
 		}
@@ -512,15 +528,20 @@
 		color: $int-el-txt-color;
 		+span,
 		+a {
+      display: inline-block;
+      padding-left: 18px;
 			font-size: 14px;
 			text-decoration: none;
-			color: #000;
+			color: #000 !important;
 			display: inline-block;
 			margin-bottom: 15px;
 			&:last-child {
 				margin-bottom: 0;
 			}
 		}
+    +a:hover{
+      color: #d04040 !important;
+    }
 		&:before {
 			content: '';
 			position: absolute;
@@ -603,7 +624,7 @@
 		}
 	}
 	&__wrapper {
-		
+
 	}
 	&__item {
 		border: 1px solid $border-color;
