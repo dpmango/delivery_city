@@ -4,6 +4,8 @@
 	position: relative;
 	.wrapper {
 		position: relative;
+    overflow-y: visible;
+    -webkit-overflow-scrolling: touch;
 	}
 	.filters__content {
 		display: block;

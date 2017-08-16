@@ -29,6 +29,7 @@ html, body, body {
   max-width: 100vw;
   min-width: 320px;
   overflow-x: hidden;
+  overflow-y: visible;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-overflow-scrolling: touch;
@@ -38,7 +39,7 @@ html, body, body {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
       -ms-flex: 1;
-          flex: 1 1 0%;
+          flex: 1 1;
   padding: 30px 0;
 }
 
@@ -3952,7 +3953,7 @@ tbody.collapse.show {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
       -ms-flex: 1;
-          flex: 1 1 0%;
+          flex: 1 1;
 }
 
 .header__navbar_fixed .header__navbar-item_cart {
@@ -3960,7 +3961,7 @@ tbody.collapse.show {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
       -ms-flex: 1;
-          flex: 1 1 0%;
+          flex: 1 1;
 }
 
 .header__navbar_fixed .header__navbar-item_cart .header__navbar-item_cart-counter {
@@ -3975,7 +3976,7 @@ tbody.collapse.show {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
       -ms-flex: 1;
-          flex: 1 1 0%;
+          flex: 1 1;
 }
 
 .header__navbar_fixed .header__navbar-item_orders-history {
@@ -3983,7 +3984,7 @@ tbody.collapse.show {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
       -ms-flex: 1;
-          flex: 1 1 0%;
+          flex: 1 1;
 }
 
 .header__breadcrumbs-item_unactive {
@@ -4286,6 +4287,9 @@ tbody.collapse.show {
     width: 100%;
     z-index: 850;
     padding: 10px 15px;
+  }
+  .header.stop-scroll {
+    position: absolute;
   }
 }
 
@@ -5090,7 +5094,7 @@ select::-ms-expand {
   -webkit-box-flex: 2;
   -webkit-flex: 2;
       -ms-flex: 2;
-          flex: 2 1 0%;
+          flex: 2 1;
   max-height: 40px;
   overflow: hidden;
 }
@@ -5396,7 +5400,7 @@ select::-ms-expand {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
       -ms-flex: 1;
-          flex: 1 1 0%;
+          flex: 1 1;
   overflow: hidden;
 }
 
@@ -6057,7 +6061,7 @@ select::-ms-expand {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
       -ms-flex: 1;
-          flex: 1 1 0%;
+          flex: 1 1;
 }
 
 .company-block__options.company-block__options_spacer {
@@ -6560,7 +6564,7 @@ select::-ms-expand {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
       -ms-flex: 1;
-          flex: 1 1 0%;
+          flex: 1 1;
 }
 
 .geolocation-form__modal_header {
@@ -6693,6 +6697,8 @@ select::-ms-expand {
 
 .restaurant-page .wrapper {
   position: relative;
+  overflow-y: visible;
+  -webkit-overflow-scrolling: touch;
 }
 
 .restaurant-page .filters__content {
@@ -6806,7 +6812,7 @@ select::-ms-expand {
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 0%;
       -ms-flex: 1 1 0%;
-          flex: 1 1 0%;
+          flex: 1 1;
 }
 
 .no-scroll {
@@ -7094,7 +7100,7 @@ select::-ms-expand {
   -webkit-box-flex: 1px;
   -webkit-flex: 1px;
       -ms-flex: 1px;
-          flex: 1px 1 0%;
+          flex: 1px 1;
   margin-bottom: 0;
   letter-spacing: -0.05em;
 }
@@ -7179,7 +7185,7 @@ select::-ms-expand {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
       -ms-flex: 1;
-          flex: 1 1 0%;
+          flex: 1 1;
   position: relative;
 }
 
@@ -7955,7 +7961,7 @@ select::-ms-expand {
   -webkit-box-flex: 1px;
   -webkit-flex: 1px;
       -ms-flex: 1px;
-          flex: 1px 1 0%;
+          flex: 1px 1;
 }
 
 .goods-info__worktime-hours span {

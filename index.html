@@ -1119,6 +1119,17 @@
                 $(".header__geolocation-form-map-button").trigger("click");
             }, 500)
         });
+        // fix for header under ios content
+        $(window).scroll(function() {
+          stopHeaderScroll();
+        });
+        function stopHeaderScroll(){
+          if ( $(window).scrollTop() < 0 ){
+            $('.header').addClass('stop-scroll');
+          } else {
+            $('.header').removeClass('stop-scroll');
+          }
+        }
     });
 
 

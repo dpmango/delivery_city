@@ -221,5 +221,8 @@
     width: 100%;
     z-index: 850;
     padding: 10px 15px;
+    &.stop-scroll{
+      position: absolute;
+    }
   }
 }

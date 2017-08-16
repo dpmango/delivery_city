@@ -800,12 +800,25 @@
 				$(this).prev('.goods-news__more').show(0);
 				$(this).parent('.goods-news__btn-wrap').prev('.goods-news__descr').css('max-height', '48px');
 			});
-			
+
 			$('.goods-catalog-mobile__category').on('click', function(e){
 				e.preventDefault();
 				$('.goods-catalog-mobile__category').removeClass('active');
 				$(this).addClass('active');
 			});
+
+      // fix for header under ios content
+      $(window).scroll(function() {
+        stopHeaderScroll();
+      });
+      function stopHeaderScroll(){
+        if ( $(window).scrollTop() < 0 ){
+          $('.header').addClass('stop-scroll');
+        } else {
+          $('.header').removeClass('stop-scroll');
+        }
+      }
+      
 		});
 	</script>
 </body>
