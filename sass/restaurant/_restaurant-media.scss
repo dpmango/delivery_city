@@ -72,6 +72,17 @@
 			max-width: 27px;
 		}
 	}
+	.goods-info {
+		&__worktime {
+			padding-left: 22px;
+		}
+		&__contacts {
+			padding-left: 25px;
+			a, span {
+				padding-left: 15px;
+			}
+		}
+	}
 	.goods-tooltip {
 		width: 114%;
 	}
@@ -292,6 +303,7 @@
 			a {
 				font-size: 12px;
 				margin-bottom: 12px;
+				padding-left: 0;
 			}
 		}
 		&__email,
