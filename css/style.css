@@ -9509,6 +9509,7 @@ select::-ms-expand {
 }
 
 .goods-catalog-mobile__title {
+  position: relative;
   font-size: 14px;
   line-height: 15px;
   font-weight: 600;
@@ -9521,6 +9522,18 @@ select::-ms-expand {
   -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
   overflow: hidden;
+}
+
+.goods-catalog-mobile__title:after {
+  display: inline-block;
+  content: ' ';
+  position: absolute;
+  bottom: -2px;
+  height: 3px;
+  left: 0;
+  right: 0;
+  background: white;
+  z-index: 1;
 }
 
 .goods-catalog-mobile__descr {
