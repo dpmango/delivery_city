@@ -165,7 +165,8 @@
 		overflow: hidden;
 		max-width: 90%;
 		max-height: 50px;
-		tranform: none;
+		transform: none;
+		-webkit-font-smoothing: antialiased;
 	}
 	&__descr {
 		max-height: 513px;
@@ -177,7 +178,8 @@
 		letter-spacing: -0.03em;
 		margin-bottom: auto;
 		padding-right: 25px;
-		tranform: none;
+		transform: none;
+		-webkit-font-smoothing: antialiased;
 	}
 	&__close {
 		position: absolute;
